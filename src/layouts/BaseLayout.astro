@@ -1,0 +1,63 @@
+---
+interface Props {
+  title: string;
+    description?: string;
+    }
+
+    const { title, description = 'Claudia Insider -- Your SF real estate guide. Neighborhood insights, buyer & seller resources, and financial literacy for the Bay Area.' } = Astro.props;
+    ---
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+          <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                  <meta name="description" content={description} />
+                      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+                          <title>{title} | Claudia Insider</title>
+                            </head>
+                              <body>
+                                  <nav>
+                                        <a href="/" class="logo">Claudia Insider</a>
+                                            </nav>
+                                                <main>
+                                                      <slot />
+                                                          </main>
+                                                              <footer>
+                                                                    <p>&copy; {new Date().getFullYear()} Claudia Insider. All rights reserved.</p>
+                                                                        </footer>
+                                                                          </body>
+                                                                          </html>
+
+                                                                          <style is:global>
+                                                                            *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+                                                                              body {
+                                                                                  font-family: system-ui, -apple-system, sans-serif;
+                                                                                      line-height: 1.6;
+                                                                                          color: #3a352e;
+                                                                                              background: #faf8f5;
+                                                                                                }
+                                                                                                  nav {
+                                                                                                      padding: 1.5rem 2rem;
+                                                                                                          border-bottom: 1px solid #e4ded5;
+                                                                                                            }
+                                                                                                              .logo {
+                                                                                                                  font-size: 1.25rem;
+                                                                                                                      font-weight: 600;
+                                                                                                                          text-decoration: none;
+                                                                                                                              color: #1c1915;
+                                                                                                                                }
+                                                                                                                                  main {
+                                                                                                                                      min-height: 60vh;
+                                                                                                                                          padding: 2rem;
+                                                                                                                                              max-width: 1200px;
+                                                                                                                                                  margin: 0 auto;
+                                                                                                                                                    }
+                                                                                                                                                      footer {
+                                                                                                                                                          padding: 2rem;
+                                                                                                                                                              text-align: center;
+                                                                                                                                                                  color: #887e72;
+                                                                                                                                                                      font-size: 0.85rem;
+                                                                                                                                                                          border-top: 1px solid #e4ded5;
+                                                                                                                                                                            }
+                                                                                                                                                                            </style>
