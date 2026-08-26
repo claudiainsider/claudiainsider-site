@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The San Francisco Insider — August 2026</title>
+<title>The San Francisco Insider â August 2026</title>
 <!--[if mso]><style>body{font-family:Georgia,'Times New Roman',serif!important;}h1,h2,h3{font-family:Georgia,'Times New Roman',serif!important;}.sans{font-family:'Trebuchet MS','Helvetica Neue',Arial,sans-serif!important;}</style><![endif]-->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500;600&display=swap');
@@ -14,16 +14,16 @@
   .email-wrapper { max-width: 640px; margin: 0 auto; background: #FFFDF9; }
 
   /* HEADER */
-  .header { background: #4C2C20; padding: 48px 40px 40px; text-align: center; }
+  .header { background: #4C2C20; padding: 36px 40px 28px; text-align: center; }
   .header-tagline { font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #C4B8A0; margin: 0 0 8px; font-weight: 500; }
   .header-title { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; font-size: 42px; font-weight: 300; color: #ECE8DC; margin: 0; letter-spacing: 1px; font-style: italic; }
   .header-subtitle { font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #C4B8A0; margin: 14px 0 0; font-weight: 400; }
-  .header-date { font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #ECCCB0; margin: 20px 0 0; padding-top: 20px; border-top: 1px solid rgba(236,204,176,0.25); font-weight: 500; }
+  .header-date { font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #ECCCB0; margin: 10px 0 0; font-weight: 500; }
 
   /* SECTIONS */
   .section { padding: 40px; }
-  .section-alt { padding: 40px; background: #ECE8DC; }
-  .section-dark { padding: 48px 40px; background: #584848; color: #ECE8DC; }
+  .section-alt { padding: 40px; }
+  .section-dark { padding: 40px; }
   .section-label { font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #9C4014; margin: 0 0 12px; font-weight: 600; }
   .section-label-light { font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #ECCCB0; margin: 0 0 12px; font-weight: 600; }
 
@@ -38,7 +38,7 @@
 
   /* DIVIDERS */
   .divider { border: none; border-top: 1px solid #E4E0E4; margin: 28px 0; }
-  .divider-accent { border: none; border-top: 2px solid #9C4014; margin: 32px 0; width: 60px; }
+  .divider-accent { border: none; border-top: 2px solid #9C4014; margin: 32px auto; width: 60px; }
 
   /* STAT ROW */
   .stat-row { display: flex; justify-content: center; gap: 32px; padding: 28px 0; flex-wrap: wrap; }
@@ -63,10 +63,11 @@
 
   /* INSIDER SPOT */
 
-  /* LISTINGS */
-  .listing-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-  .listing-grid > a { flex: 1 1 calc(50% - 10px); min-width: 250px; max-width: calc(50% - 10px); text-decoration: none; color: inherit; }
-  .listing-card { border: 1px solid #E4E0E4; background: #FFFDF9; overflow: hidden; width: 100%; }
+  /* LISTINGS â horizontal scroll */
+  .listing-scroll-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 12px; }
+  .listing-grid { display: flex; flex-wrap: nowrap; gap: 16px; padding: 0 4px; }
+  .listing-grid > a { flex: 0 0 260px; text-decoration: none; color: inherit; }
+  .listing-card { border: 1px solid #E4E0E4; background: #FFFDF9; overflow: hidden; width: 100%; border-radius: 4px; }
   .listing-card img { width: 100%; height: 160px; object-fit: cover; display: block; }
   .listing-card-body { padding: 16px 18px; }
   .listing-address { font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #4C2C20; margin: 0 0 2px; font-weight: 600; }
@@ -74,7 +75,8 @@
   .listing-specs { font-size: 14px; color: #584848; margin: 0 0 6px; }
   .listing-price { font-family: 'Fraunces', Georgia, serif; font-size: 19px; color: #9C4014; margin: 0 0 6px; }
   .listing-agent { font-size: 12px; color: #C4B8A0; margin: 0; }
-  .listing-card-text { flex: 1 1 calc(50% - 10px); min-width: 250px; border: 1px solid #E4E0E4; background: #FFFDF9; padding: 18px; display: flex; flex-direction: column; justify-content: center; }
+  .listing-card-text { flex: 0 0 260px; border: 1px solid #E4E0E4; background: #FFFDF9; padding: 18px; display: flex; flex-direction: column; justify-content: center; border-radius: 4px; }
+  .listing-scroll-hint { text-align: center; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #C4B8A0; margin: 8px 0 0; }
 
   /* SECTION HEADING BAR */
   .section-heading-bar { background: #4C2C20; padding: 14px 40px; text-align: center; }
@@ -119,8 +121,8 @@
     h2 { font-size: 24px; }
     .stat-row { gap: 16px; }
     .stat-number { font-size: 30px; }
-    .listing-grid > a { flex: 1 1 100%; max-width: 100%; }
-    .listing-card-text { flex: 1 1 100%; }
+    .listing-grid > a { flex: 0 0 240px; }
+    .listing-card-text { flex: 0 0 240px; }
     .coming-soon-box { padding: 24px 20px; }
     .footer { padding: 24px 20px; }
     .signature { padding: 28px 20px; }
@@ -146,23 +148,19 @@
   <!-- 1. FROM MY DESK                              -->
   <!-- ============================================ -->
   <div class="section">
+    <div style="background: #FFFDF9; margin: 0 -40px; padding: 40px;">
     <p class="section-label">From My Desk</p>
 
     <div class="personal-note">
       <p>Hi everyone!</p>
       <p>Welcome to the very first issue of <strong style="color: #9C4014;">The San Francisco Insider</strong>. I've been wanting to do this for quite some time: a once a month newsletter for my community that marries a <em>blog, market update, and money lesson.</em> Something that's valuable, fun, and personable. And of course, never spammy and filled with industry-jargon. I actually break down what's happening in San Francisco real estate, with real numbers and real context. Not just "the market is hot" (although it kind of is right now).</p>
-      <p>This month is all about the gap between list price and what homes actually sell for. It's the single biggest source of confusion I see with buyers, and this year the numbers are genuinely wild. I also have a little personal news at the end — my <em>very first listing</em> is coming to market!</p>
+      <p>This month is all about the gap between list price and what homes actually sell for. It's the single biggest source of confusion I see with buyers, and this year the numbers are genuinely wild. I also have a little personal news at the end â my <em>very first listing</em> is coming to market!</p>
       <p>Lastly, if you have anything in particular you'd like for me to break down or discuss, feel free to respond to this email! I read every single one.</p>
       <p>Thanks for being here :)</p>
-      <p class="sign-off">— Claudia</p>
+      <p class="sign-off">â Claudia</p>
     </div>
-  </div>
-
-  <!-- ============================================ -->
-  <!-- 2. THIS MONTH'S NUMBERS                      -->
-  <!-- ============================================ -->
-  <div class="section" style="padding-top: 0;">
-    <p class="section-label">This Month's Numbers</p>
+    </div><div style="background: #ECE8DC; margin: 0 -40px; padding: 40px; padding-top: 32px;">
+    <p class="section-label" style="margin-top: 0;">This Month's Numbers</p>
     <h2>The Number on the Sign Is Not the Number</h2>
 
     <p class="lead">Last year, 1 in 109 San Francisco homes sold $1 million or more over asking. This year, it's 1 in 10. That's the single stat that defines August's market story, and it says something much bigger about how pricing actually works in this city.</p>
@@ -209,7 +207,8 @@
   <!-- Table heading -->
   <p style="font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 2px; color: #4C2C20; text-transform: uppercase; margin: 0 0 14px 0; font-weight: 600;">SOME OF SAN FRANCISCO'S BIGGEST OVERBIDS OF 2026</p>
   <!-- Table -->
-  <table style="width: 100%; border-collapse: collapse; font-family: 'Jost', sans-serif; font-size: 13px;">
+  <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+  <table style="width: 100%; min-width: 340px; border-collapse: collapse; font-family: 'Jost', sans-serif; font-size: 13px;">
     <thead>
       <tr style="border-bottom: 2px solid #E4E0E4;">
         <th style="text-align: left; padding: 6px 8px 6px 0; font-size: 10px; letter-spacing: 1px; color: #C4B8A0; font-weight: 500; text-transform: uppercase;">Address</th>
@@ -269,608 +268,139 @@
       </tr>
     </tbody>
   </table>
+  </div>
   <!-- Source -->
-  <p style="font-size: 9px; color: #C4B8A0; margin: 16px 0 0 0; letter-spacing: 0.5px;">Source: SFMLS single-family home sales, 1/1/2026–8/18/2026</p>
+  <p style="font-size: 9px; color: #C4B8A0; margin: 16px 0 0 0; letter-spacing: 0.5px;">Source: SFMLS single-family home sales, 1/1/2026â8/18/2026</p>
 </div>
 
-    <p>Some individual results are striking. 2512 Union Street listed at $7.95 million and sold for $15 million — $7.05 million over asking. 58 Woodland Avenue listed just under $2.9 million and sold for $5.5 million, nearly 90% above list.</p>
+    <div style="height: 24px;"></div>
+
+    <p>Some individual results are striking. 2512 Union Street listed at $7.95 million and sold for $15 million â $7.05 million over asking. 58 Woodland Avenue listed just under $2.9 million and sold for $5.5 million, nearly 90% above list.</p>
 
     <h3>What "Over Asking" Actually Means</h3>
 
     <p>"Sold 30% over asking" doesn't necessarily mean someone paid 30% more than the home was worth. In many cases, <strong>the home was intentionally listed below what comparable sales suggested it would command.</strong> The gap is a pricing strategy, not a mistake.</p>
 
-    <p>Take a home worth roughly $2.2 million. A seller could list at $1.895 million, $2.095 million, $2.195 million, or $2.295 million. Each price sends a different signal, attracts a different buyer pool, and can produce a genuinely different outcome. <strong>The highest list price doesn't always produce the highest sale price</strong> — sometimes pricing lower creates the competition that pushes the final number higher.</p>
+    <p>Take a home worth roughly $2.2 million. A seller could list at $1.895 million, $2.095 million, $2.195 million, or $2.295 million. Each price sends a different signal, attracts a different buyer pool, and can produce a genuinely different outcome. <strong>The highest list price doesn't always produce the highest sale price</strong> â sometimes pricing lower creates the competition that pushes the final number higher.</p>
 
     <p>But that strategy isn't right for every property. A desirable single-family home with a deep buyer pool? Aggressive pricing can work beautifully. A condo, a luxury property, a tenant-occupied home, or something with a more limited audience? Completely different approach. <strong>There is no universal "San Francisco pricing strategy."</strong> It has to match the property, the neighborhood, the competition, and the moment.</p>
 
     <p>For buyers, the flip side matters just as much: <strong>don't confuse asking price with affordability.</strong> A listing at $1.8 million might not actually be competing in the $1.8 million market. And <strong>a home sitting at $2.2 million for several weeks might have more negotiating room than the sticker suggests.</strong></p>
-  </div>
 
-  <!-- ============================================ -->
-  <!-- 3. CHARTS — InfoSparks + Market Data         -->
-  <!-- ============================================ -->
-  <div class="section-alt">
+
+    </div><div style="background: #FFFDF9; margin: 0 -40px; padding: 40px;">
+
+    <hr class="divider-accent">
+
     <p class="section-label">The Charts</p>
     <h2>San Francisco by the Numbers</h2>
 
     <!-- Neighborhood Bidding Wars -->
-    <!-- CHART 1: Neighborhood Bidding Wars — Top 10 Sale-to-List Ratios -->
+    <!-- CHART 1: Neighborhood Bidding Wars â Top 10 Sale-to-List Ratios -->
 <div class="chart-block">
-  <svg viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <rect x="0" y="0" width="560" height="340" fill="#FFFDF9" rx="4"/>
-    <!-- Title -->
-    <text x="280" y="24" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#4C2C20" letter-spacing="2" font-weight="600">SALE-TO-LIST RATIO BY NEIGHBORHOOD</text>
-    <!-- 100% baseline -->
-    <line x1="160" y1="38" x2="160" y2="328" stroke="#C4B8A0" stroke-width="1" stroke-dasharray="4,3"/>
-    <text x="160" y="336" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">100%</text>
-    <!-- Gridlines at 110%, 120%, 130%, 140% -->
-    <line x1="231" y1="38" x2="231" y2="328" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="302" y1="38" x2="302" y2="328" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="373" y1="38" x2="373" y2="328" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="444" y1="38" x2="444" y2="328" stroke="#E4E0E4" stroke-width="0.5"/>
-    <!-- Scale: 160 to 480 maps 100% to 145%. Factor: (480-160)/45 = 7.11 px per % -->
-    <!-- Bar 1: Inner Sunset 144.1% -->
-    <text x="155" y="56" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Inner Sunset</text>
-    <rect x="160" y="44" width="314" height="20" fill="#9C4014" rx="2"/>
-    <text x="479" y="57" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 144.1%</text>
-    <!-- Bar 2: Outer Sunset 136% -->
-    <text x="155" y="85" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Outer Sunset</text>
-    <rect x="160" y="73" width="256" height="20" fill="#9C4014" rx="2"/>
-    <text x="421" y="86" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 136%</text>
-    <!-- Bar 3: Parkside 133% -->
-    <text x="155" y="114" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Parkside</text>
-    <rect x="160" y="102" width="235" height="20" fill="#9C4014" rx="2"/>
-    <text x="400" y="115" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 133%</text>
-    <!-- Bar 4: Outer Parkside 131% -->
-    <text x="155" y="143" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Outer Parkside</text>
-    <rect x="160" y="131" width="220" height="20" fill="#9C4014" rx="2"/>
-    <text x="385" y="144" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 131%</text>
-    <!-- Bar 5: Inner Richmond 130% -->
-    <text x="155" y="172" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Inner Richmond</text>
-    <rect x="160" y="160" width="213" height="20" fill="#9C4014" rx="2"/>
-    <text x="378" y="173" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 130%</text>
-    <!-- Bar 6: Central Sunset 128% -->
-    <text x="155" y="201" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Central Sunset</text>
-    <rect x="160" y="189" width="199" height="20" fill="#9C4014" rx="2"/>
-    <text x="364" y="202" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 128%</text>
-    <!-- Bar 7: Forest Hill 125% -->
-    <text x="155" y="230" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Forest Hill</text>
-    <rect x="160" y="218" width="178" height="20" fill="#9C4014" rx="2"/>
-    <text x="343" y="231" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 125%</text>
-    <!-- Bar 8: Bernal Heights 121% -->
-    <text x="155" y="259" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Bernal Heights</text>
-    <rect x="160" y="247" width="149" height="20" fill="#9C4014" rx="2"/>
-    <text x="314" y="260" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 121%</text>
-    <!-- Bar 9: Sunnyside 118% -->
-    <text x="155" y="288" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Sunnyside</text>
-    <rect x="160" y="276" width="128" height="20" fill="#9C4014" rx="2"/>
-    <text x="293" y="289" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 118%</text>
-    <!-- Bar 10: Eureka Valley 115% -->
-    <text x="155" y="317" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#584848">Eureka Valley</text>
-    <rect x="160" y="305" width="107" height="20" fill="#9C4014" rx="2"/>
-    <text x="272" y="318" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#4C2C20" font-weight="600"> 115%</text>
-  </svg>
-  <p class="chart-takeaway"><strong>What it means:</strong> <strong>The biggest overbids aren't in Pacific Heights — they're in the Sunset, Parkside, and Inner Richmond.</strong> Inner Sunset leads the city at 144.1% sale-to-list. Five of the six highest-ranking neighborhoods are in the Sunset/Parkside district.</p>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/44abc9f2-e63e-902e-5ca4-9432137bda7b.png" alt="Chart" width="560" height="340" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
+  <p class="chart-takeaway"><strong>What it means:</strong> <strong>The biggest overbids aren't in Pacific Heights â they're in the Sunset, Parkside, and Inner Richmond.</strong> Inner Sunset leads the city at 144.1% sale-to-list. Five of the six highest-ranking neighborhoods are in the Sunset/Parkside district.</p>
 </div>
 
     <!-- Median Sales Price SFH -->
-    <!-- CHART 2: Median Sales Price — Single Family Homes -->
+    <!-- CHART 2: Median Sales Price â Single Family Homes -->
 <div class="chart-block">
-  <svg viewBox="0 0 590 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <rect x="0" y="0" width="590" height="280" fill="#FFFDF9" rx="4"/>
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#4C2C20" letter-spacing="2" font-weight="600">MEDIAN SALES PRICE — SINGLE FAMILY HOMES</text>
-    <!-- Chart area: x=[70,530] y=[40,245] -->
-    <!-- Y-axis: $1.4M to $2.2M -->
-    <!-- Gridlines -->
-    <line x1="70" y1="245" x2="530" y2="245" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="219.4" x2="530" y2="219.4" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="193.8" x2="530" y2="193.8" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="168.1" x2="530" y2="168.1" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="142.5" x2="530" y2="142.5" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="116.9" x2="530" y2="116.9" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="91.3" x2="530" y2="91.3" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="65.6" x2="530" y2="65.6" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="40" x2="530" y2="40" stroke="#E4E0E4" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="65" y="248" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1.4M</text>
-    <text x="65" y="196" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1.6M</text>
-    <text x="65" y="145" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1.8M</text>
-    <text x="65" y="94" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$2.0M</text>
-    <text x="65" y="43" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$2.2M</text>
-    <!-- X-axis labels at Jan of each year -->
-    <text x="70" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2023</text>
-    <text x="201" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2024</text>
-    <text x="333" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2025</text>
-    <text x="464" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2026</text>
-    <!-- Area fill: polygon from first point along line to last point, then baseline -->
-    <!-- Points: Jan23(70,219) Apr23(103,163) Jul23(136,166) Oct23(169,207) Jan24(201,199) Apr24(234,143) Jul24(267,166) Oct24(300,189) Jan25(333,181) Apr25(366,130) Jul25(399,166) Oct25(431,168) Jan26(464,148) Mar26(486,104) May26(508,53) Jun26(519,66) Jul26(530,58) -->
-    <polygon points="70,219 103,163 136,166 169,207 201,199 234,143 267,166 300,189 333,181 366,130 399,166 431,168 464,148 486,104 508,53 519,66 530,58 530,245 70,245" fill="#9C4014" opacity="0.12"/>
-    <!-- Line -->
-    <polyline points="70,219 103,163 136,166 169,207 201,199 234,143 267,166 300,189 333,181 366,130 399,166 431,168 464,148 486,104 508,53 519,66 530,58" fill="none" stroke="#9C4014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Endpoint label -->
-    <circle cx="530" cy="58" r="3.5" fill="#9C4014"/>
-    <text x="530" y="44" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="13" fill="#4C2C20" font-weight="600">$2.13M</text>
-    <!-- Peak label (May) — offset left to avoid endpoint overlap -->
-    <circle cx="508" cy="53" r="2.5" fill="#9C4014" opacity="0.5"/>
-    <line x1="508" y1="50" x2="480" y2="36" stroke="#C4B8A0" stroke-width="0.5" opacity="0.6"/>
-    <text x="477" y="33" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$2.15M peak</text>
-  </svg>
-  <p class="chart-takeaway"><strong>What it means:</strong> <strong>Median SF home price hit $2.13M in July</strong> — just below May's $2.15M peak and <strong>nearly 25% above last July's $1.71M.</strong> Values are hovering near all-time highs.</p>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/58e296a9-f2eb-2061-8112-b46e0813120b.png" alt="Chart" width="590" height="280" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
+  <p class="chart-takeaway"><strong>What it means:</strong> <strong>Median SF home price hit $2.13M in July</strong> â just below May's $2.15M peak and <strong>nearly 25% above last July's $1.71M.</strong> Values are hovering near all-time highs.</p>
 </div>
 
     <!-- Condo Median Sales Price -->
-    <!-- CHART 3: Median Sales Price — Condos -->
+    <!-- CHART 3: Median Sales Price â Condos -->
 <div class="chart-block">
-  <svg viewBox="0 0 590 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <rect x="0" y="0" width="590" height="280" fill="#FFFDF9" rx="4"/>
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#4C2C20" letter-spacing="2" font-weight="600">MEDIAN SALES PRICE — CONDOS</text>
-    <!-- Chart area: x=[70,530] y=[40,245]. Y: $0.9M to $1.4M -->
-    <!-- Gridlines -->
-    <line x1="70" y1="245" x2="530" y2="245" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="204" x2="530" y2="204" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="163" x2="530" y2="163" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="122" x2="530" y2="122" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="81" x2="530" y2="81" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="40" x2="530" y2="40" stroke="#E4E0E4" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="65" y="248" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$0.9M</text>
-    <text x="65" y="207" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1.0M</text>
-    <text x="65" y="166" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1.1M</text>
-    <text x="65" y="125" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1.2M</text>
-    <text x="65" y="84" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1.3M</text>
-    <text x="65" y="43" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1.4M</text>
-    <!-- X-axis labels -->
-    <text x="70" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2023</text>
-    <text x="201" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2024</text>
-    <text x="333" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2025</text>
-    <text x="464" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2026</text>
-    <!-- Y scale: y = 245 - ((val-0.9)/0.5)*205 -->
-    <!-- Points: Jan23(70,184) Apr23(103,143) Jul23(136,163) Oct23(169,196) Jan24(201,171) Apr24(234,130) Jul24(267,143) Oct24(300,163) Jan25(333,163) Apr25(366,122) Jul25(399,118) Oct25(431,155) Jan26(464,143) Mar26(486,102) May26(508,73) Jun26(519,89) Jul26(530,102) -->
-    <polygon points="70,184 103,143 136,163 169,196 201,171 234,130 267,143 300,163 333,163 366,122 399,118 431,155 464,143 486,102 508,73 519,89 530,102 530,245 70,245" fill="#9C4014" opacity="0.12"/>
-    <polyline points="70,184 103,143 136,163 169,196 201,171 234,130 267,143 300,163 333,163 366,122 399,118 431,155 464,143 486,102 508,73 519,89 530,102" fill="none" stroke="#9C4014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Endpoint label -->
-    <circle cx="530" cy="102" r="3.5" fill="#9C4014"/>
-    <text x="550" y="100" text-anchor="start" font-family="'Fraunces', Georgia, serif" font-size="13" fill="#4C2C20" font-weight="600">$1.25M</text>
-  </svg>
-  <p class="chart-takeaway"><strong>What it means:</strong> Condo median came in at $1,254,500 — down from May's high but still 3.9% above a year ago. The condo market is steadier, not stagnant.</p>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/9a564945-5e41-ed13-e51d-473f8973ff2d.png" alt="Chart" width="590" height="280" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
+  <p class="chart-takeaway"><strong>What it means:</strong> Condo median came in at $1,254,500 â down from May's high but still 3.9% above a year ago. The condo market is steadier, not stagnant.</p>
 </div>
 
     <!-- Price Per Square Foot SFH -->
-    <!-- CHART 4: Median Price Per Square Foot — Single Family Homes -->
+    <!-- CHART 4: Median Price Per Square Foot â Single Family Homes -->
 <div class="chart-block">
-  <svg viewBox="0 0 590 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <rect x="0" y="0" width="590" height="280" fill="#FFFDF9" rx="4"/>
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#4C2C20" letter-spacing="2" font-weight="600">MEDIAN PRICE PER SQ FT — SINGLE FAMILY HOMES</text>
-    <!-- Y: $850 to $1,250 (range 400). y = 245 - ((val-850)/400)*205 -->
-    <!-- Gridlines -->
-    <line x1="70" y1="245" x2="530" y2="245" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="219" x2="530" y2="219" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="194" x2="530" y2="194" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="168" x2="530" y2="168" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="142" x2="530" y2="142" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="117" x2="530" y2="117" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="91" x2="530" y2="91" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="65" x2="530" y2="65" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="40" x2="530" y2="40" stroke="#E4E0E4" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="65" y="248" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$850</text>
-    <text x="65" y="197" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$950</text>
-    <text x="65" y="145" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1,050</text>
-    <text x="65" y="94" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1,150</text>
-    <text x="65" y="43" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1,250</text>
-    <!-- X-axis labels -->
-    <text x="70" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2023</text>
-    <text x="201" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2024</text>
-    <text x="333" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2025</text>
-    <text x="464" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2026</text>
-    <!-- Points: Jan23(70,209) Apr23(103,143) Jul23(136,158) Oct23(169,199) Jan24(201,189) Apr24(234,127) Jul24(267,160) Oct24(300,184) Jan25(333,178) Apr25(366,117) Jul25(399,160) Oct25(431,171) Jan26(464,143) Mar26(486,96) May26(508,76) Jun26(519,65) Jul26(530,67) -->
-    <polygon points="70,209 103,143 136,158 169,199 201,189 234,127 267,160 300,184 333,178 366,117 399,160 431,171 464,143 486,96 508,76 519,65 530,67 530,245 70,245" fill="#9C4014" opacity="0.12"/>
-    <polyline points="70,209 103,143 136,158 169,199 201,189 234,127 267,160 300,184 333,178 366,117 399,160 431,171 464,143 486,96 508,76 519,65 530,67" fill="none" stroke="#9C4014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Endpoint label -->
-    <circle cx="530" cy="67" r="3.5" fill="#9C4014"/>
-    <text x="530" y="53" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="13" fill="#4C2C20" font-weight="600">$1,198</text>
-    <!-- June peak label — offset left to avoid endpoint overlap -->
-    <circle cx="519" cy="65" r="2.5" fill="#9C4014" opacity="0.5"/>
-    <line x1="519" y1="62" x2="488" y2="44" stroke="#C4B8A0" stroke-width="0.5" opacity="0.6"/>
-    <text x="485" y="41" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1,202 peak</text>
-  </svg>
-  <p class="chart-takeaway"><strong>What it means:</strong> $1,198 per square foot for SFH in July — just shy of June's all-time record of $1,202 and 18% higher than a year ago.</p>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/950288b2-0adc-e74f-51d9-1ce2bbfd1e6c.png" alt="Chart" width="590" height="280" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
+  <p class="chart-takeaway"><strong>What it means:</strong> $1,198 per square foot for SFH in July â just shy of June's all-time record of $1,202 and 18% higher than a year ago.</p>
 </div>
 
     <!-- Price Per Square Foot Condo -->
-    <!-- CHART 5: Median Price Per Square Foot — Condos -->
+    <!-- CHART 5: Median Price Per Square Foot â Condos -->
 <div class="chart-block">
-  <svg viewBox="0 0 590 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <rect x="0" y="0" width="590" height="280" fill="#FFFDF9" rx="4"/>
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#4C2C20" letter-spacing="2" font-weight="600">MEDIAN PRICE PER SQ FT — CONDOS</text>
-    <!-- Y: $900 to $1,200 (range 300). y = 245 - ((val-900)/300)*205 -->
-    <!-- Gridlines -->
-    <line x1="70" y1="245" x2="530" y2="245" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="211" x2="530" y2="211" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="177" x2="530" y2="177" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="143" x2="530" y2="143" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="109" x2="530" y2="109" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="74" x2="530" y2="74" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="40" x2="530" y2="40" stroke="#E4E0E4" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="65" y="248" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$900</text>
-    <text x="65" y="214" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$950</text>
-    <text x="65" y="180" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1,000</text>
-    <text x="65" y="146" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1,050</text>
-    <text x="65" y="112" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1,100</text>
-    <text x="65" y="77" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1,150</text>
-    <text x="65" y="43" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">$1,200</text>
-    <!-- X-axis labels -->
-    <text x="70" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2023</text>
-    <text x="201" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2024</text>
-    <text x="333" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2025</text>
-    <text x="464" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2026</text>
-    <!-- Points: Jan23(70,211) Apr23(103,177) Jul23(136,187) Oct23(169,204) Jan24(201,197) Apr24(234,163) Jul24(267,170) Oct24(300,194) Jan25(333,187) Apr25(366,149) Jul25(399,156) Oct25(431,177) Jan26(464,163) Mar26(486,122) May26(508,95) Jun26(519,88) Jul26(530,98) -->
-    <polygon points="70,211 103,177 136,187 169,204 201,197 234,163 267,170 300,194 333,187 366,149 399,156 431,177 464,163 486,122 508,95 519,88 530,98 530,245 70,245" fill="#9C4014" opacity="0.12"/>
-    <polyline points="70,211 103,177 136,187 169,204 201,197 234,163 267,170 300,194 333,187 366,149 399,156 431,177 464,163 486,122 508,95 519,88 530,98" fill="none" stroke="#9C4014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Endpoint label -->
-    <circle cx="530" cy="98" r="3.5" fill="#9C4014"/>
-    <text x="530" y="75" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="13" fill="#4C2C20" font-weight="600">$1,115</text>
-  </svg>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/f9e9fe18-827c-cd35-4cb7-9c706ad8d6f1.png" alt="Chart" width="590" height="280" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
   <p class="chart-takeaway"><strong>What it means:</strong> Condo price-per-foot is tracking steadily, reflecting the broader stability in the SF condo market compared to single-family.</p>
 </div>
 
     <!-- MSI / Inventory SFH -->
-    <!-- CHART 6: Months of Supply — Single Family Homes -->
+    <!-- CHART 6: Months of Supply â Single Family Homes -->
 <div class="chart-block">
-  <svg viewBox="0 0 590 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <rect x="0" y="0" width="590" height="280" fill="#FFFDF9" rx="4"/>
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#4C2C20" letter-spacing="2" font-weight="600">MONTHS OF SUPPLY — SINGLE FAMILY HOMES</text>
-    <!-- Y: 0 to 3.0. y = 245 - (val/3.0)*205 -->
-    <!-- Gridlines -->
-    <line x1="70" y1="245" x2="530" y2="245" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="211" x2="530" y2="211" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="177" x2="530" y2="177" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="143" x2="530" y2="143" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="109" x2="530" y2="109" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="74" x2="530" y2="74" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="40" x2="530" y2="40" stroke="#E4E0E4" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="65" y="248" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">0</text>
-    <text x="65" y="180" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">1.0</text>
-    <text x="65" y="112" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2.0</text>
-    <text x="65" y="43" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">3.0</text>
-    <!-- X-axis labels -->
-    <text x="70" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2023</text>
-    <text x="201" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2024</text>
-    <text x="333" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2025</text>
-    <text x="464" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2026</text>
-    <!-- "Balanced market" reference -->
-    <text x="528" y="37" text-anchor="end" font-family="'Jost', sans-serif" font-size="8" fill="#C4B8A0" font-style="italic">Balanced market: 4-6 months (off chart)</text>
-    <!-- Points: Jan23(70,95) Apr23(103,149) Jul23(136,163) Oct23(169,61) Jan24(201,88) Apr24(234,156) Jul24(267,143) Oct24(300,74) Jan25(333,102) Apr25(366,163) Jul25(399,122) Oct25(431,88) Jan26(464,122) Mar26(486,163) May26(508,170) Jul26(530,177) -->
-    <polygon points="70,95 103,149 136,163 169,61 201,88 234,156 267,143 300,74 333,102 366,163 399,122 431,88 464,122 486,163 508,170 530,177 530,245 70,245" fill="#9C4014" opacity="0.12"/>
-    <polyline points="70,95 103,149 136,163 169,61 201,88 234,156 267,143 300,74 333,102 366,163 399,122 431,88 464,122 486,163 508,170 530,177" fill="none" stroke="#9C4014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Endpoint label -->
-    <circle cx="530" cy="177" r="3.5" fill="#9C4014"/>
-    <text x="530" y="165" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="13" fill="#4C2C20" font-weight="600">1.0</text>
-    <!-- Jul'25 reference -->
-    <circle cx="399" cy="122" r="2.5" fill="#9C4014" opacity="0.5"/>
-    <text x="399" y="114" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">1.8</text>
-  </svg>
-  <p class="chart-takeaway"><strong>What it means:</strong> 1.0 month of supply — aka how fast the shelves would empty if no new listings appeared. July 2025 had 1.8 months. <strong>A "balanced" market is 4-6 months. We're firmly in seller's territory.</strong></p>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/d20a0e53-f50e-7296-1978-e3df575ae7df.png" alt="Chart" width="590" height="280" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
+  <p class="chart-takeaway"><strong>What it means:</strong> 1.0 month of supply â aka how fast the shelves would empty if no new listings appeared. July 2025 had 1.8 months. <strong>A "balanced" market is 4-6 months. We're firmly in seller's territory.</strong></p>
 </div>
 
     <!-- MSI / Inventory Condo -->
-    <!-- CHART 7: Months of Supply — Condos -->
+    <!-- CHART 7: Months of Supply â Condos -->
 <div class="chart-block">
-  <svg viewBox="0 0 590 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <rect x="0" y="0" width="590" height="280" fill="#FFFDF9" rx="4"/>
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#4C2C20" letter-spacing="2" font-weight="600">MONTHS OF SUPPLY — CONDOS</text>
-    <!-- Y: 0 to 5.0. y = 245 - (val/5.0)*205 -->
-    <!-- Gridlines -->
-    <line x1="70" y1="245" x2="530" y2="245" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="204" x2="530" y2="204" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="163" x2="530" y2="163" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="122" x2="530" y2="122" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="81" x2="530" y2="81" stroke="#E4E0E4" stroke-width="0.5"/>
-    <line x1="70" y1="40" x2="530" y2="40" stroke="#E4E0E4" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="65" y="248" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">0</text>
-    <text x="65" y="207" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">1.0</text>
-    <text x="65" y="166" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2.0</text>
-    <text x="65" y="125" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">3.0</text>
-    <text x="65" y="84" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">4.0</text>
-    <text x="65" y="43" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">5.0</text>
-    <!-- Balanced market reference line at 4.0 -->
-    <line x1="70" y1="81" x2="530" y2="81" stroke="#C4B8A0" stroke-width="1" stroke-dasharray="4,3"/>
-    <text x="528" y="76" text-anchor="end" font-family="'Jost', sans-serif" font-size="8" fill="#C4B8A0" font-style="italic">Balanced market threshold</text>
-    <!-- X-axis labels -->
-    <text x="70" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2023</text>
-    <text x="201" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2024</text>
-    <text x="333" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2025</text>
-    <text x="464" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2026</text>
-    <!-- Points: Jan23(70,102) Apr23(103,130) Jul23(136,143) Oct23(169,73) Jan24(201,89) Apr24(234,138) Jul24(267,122) Oct24(300,81) Jan25(333,102) Apr25(366,143) Jul25(399,85) Oct25(431,89) Jan26(464,122) Mar26(486,143) May26(508,151) Jul26(530,159) -->
-    <polygon points="70,102 103,130 136,143 169,73 201,89 234,138 267,122 300,81 333,102 366,143 399,85 431,89 464,122 486,143 508,151 530,159 530,245 70,245" fill="#9C4014" opacity="0.12"/>
-    <polyline points="70,102 103,130 136,143 169,73 201,89 234,138 267,122 300,81 333,102 366,143 399,85 431,89 464,122 486,143 508,151 530,159" fill="none" stroke="#9C4014" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Endpoint label -->
-    <circle cx="530" cy="159" r="3.5" fill="#9C4014"/>
-    <text x="530" y="146" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="13" fill="#4C2C20" font-weight="600">2.1</text>
-    <!-- Jul'25 reference -->
-    <circle cx="399" cy="85" r="2.5" fill="#9C4014" opacity="0.5"/>
-    <text x="399" y="78" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">3.9</text>
-  </svg>
-  <p class="chart-takeaway"><strong>What it means:</strong> 2.1 months for condos citywide — dramatically below last July's 3.9 months. But <strong>District 9 (Mission, SoMa, South Beach) runs closer to 3 months, giving buyers more room there.</strong></p>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/8356dd75-6bc9-1c2c-10b9-edab28f7c6c9.png" alt="Chart" width="590" height="280" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
+  <p class="chart-takeaway"><strong>What it means:</strong> 2.1 months for condos citywide â dramatically below last July's 3.9 months. But <strong>District 9 (Mission, SoMa, South Beach) runs closer to 3 months, giving buyers more room there.</strong></p>
 </div>
 
     <p class="source">Sources: InfoSparks (SFMLS), Redfin, Federal Reserve Bank of St. Louis</p>
-  </div>
 
-  <!-- ============================================ -->
-  <!-- 4. NATIONAL BACKDROP (dark band)             -->
-  <!-- ============================================ -->
-  <div class="section-dark">
-    <p class="section-label-light">National Backdrop</p>
-    <h2 class="light">What's Happening Beyond San Francisco</h2>
+    <hr class="divider-accent">
+    </div><div style="background: #584848; margin: 0 -40px; padding: 40px; padding-top: 32px;">
+    <p class="section-label" style="color: #ECCCB0;">National Backdrop</p>
+    <h2 style="color: #ECE8DC;">What's Happening Beyond San Francisco</h2>
 
     <div class="data-point-dark">
-      <h3 class="light">Mortgage Rates: Still Waiting</h3>
-      <p class="light"><strong>The 30-year fixed sits at 6.67% as of August 13</strong> — slightly higher than a year ago. The 15-year is at 5.96%. Rates bottomed out in late February and have been climbing since.</p>
+      <h3>Mortgage Rates: Still Waiting</h3>
+      <p><strong>The 30-year fixed sits at 6.67% as of August 13</strong> â slightly higher than a year ago. The 15-year is at 5.96%. Rates bottomed out in late February and have been climbing since.</p>
     </div>
 
     <!-- Mortgage Rates Chart -->
-    <!-- CHART 8: Mortgage Rates — 30-Year Fixed -->
+    <!-- CHART 8: Mortgage Rates â 30-Year Fixed -->
 <div class="chart-block">
-  <svg viewBox="0 0 590 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <!-- No background rect — transparent on #584848 -->
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#ECE8DC" letter-spacing="2" font-weight="600">MORTGAGE RATES — 30-YEAR &amp; 15-YEAR FIXED</text>
-    <!-- Chart area: x=[70,530] y=[40,245]. Y: 5.0% to 7.0% (range 2.0). Time: Aug'25 to Aug'26 = 12 months -->
-    <!-- y = 245 - ((val-5.0)/2.0)*205. x = 70 + (month/12)*460 -->
-    <!-- Gridlines -->
-    <line x1="70" y1="245" x2="530" y2="245" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="219" x2="530" y2="219" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="194" x2="530" y2="194" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="168" x2="530" y2="168" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="143" x2="530" y2="143" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="117" x2="530" y2="117" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="91" x2="530" y2="91" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="66" x2="530" y2="66" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="40" x2="530" y2="40" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="65" y="248" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">5.0%</text>
-    <text x="65" y="197" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">5.5%</text>
-    <text x="65" y="145" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">6.0%</text>
-    <text x="65" y="94" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">6.5%</text>
-    <text x="65" y="43" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">7.0%</text>
-    <!-- X-axis labels (every other month) -->
-    <text x="70" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Aug</text>
-    <text x="147" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Oct</text>
-    <text x="223" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Dec</text>
-    <text x="300" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Feb</text>
-    <text x="377" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Apr</text>
-    <text x="453" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Jun</text>
-    <text x="530" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Aug</text>
-    <text x="300" y="275" text-anchor="middle" font-family="'Jost', sans-serif" font-size="8" fill="#C4B8A0">2025                                          2026</text>
-    <!-- 30Y FRM line (solid apricot): Aug25(70,83) Sep25(108,96) Oct25(147,112) Nov25(185,122) Dec25(223,127) Jan26(262,132) Feb26(300,148) Mar26(338,102) Apr26(377,122) May26(415,96) Jun26(453,91) Jul26(492,89) Aug26(530,74) -->
-    <polyline points="70,83 108,96 147,112 185,122 223,127 262,132 300,148 338,102 377,122 415,96 453,91 492,89 530,74" fill="none" stroke="#ECCCB0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="530" cy="74" r="3.5" fill="#ECCCB0"/>
-    <text x="522" y="65" text-anchor="end" font-family="'Fraunces', Georgia, serif" font-size="12" fill="#ECE8DC" font-weight="600">6.67%</text>
-    <!-- 15Y FRM line (dashed taupe): Aug25(70,171) Sep25(108,186) Oct25(147,194) Nov25(185,196) Dec25(223,199) Jan26(262,206) Feb26(300,214) Mar26(338,168) Apr26(377,184) May26(415,165) Jun26(453,161) Jul26(492,158) Aug26(530,147) -->
-    <polyline points="70,171 108,186 147,194 185,196 223,199 262,206 300,214 338,168 377,184 415,165 453,161 492,158 530,147" fill="none" stroke="#C4B8A0" stroke-width="1.5" stroke-dasharray="6,3" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="530" cy="147" r="3" fill="#C4B8A0"/>
-    <text x="548" y="155" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#C4B8A0">5.96%</text>
-    <!-- Legend -->
-    <line x1="170" y1="275" x2="195" y2="275" stroke="#ECCCB0" stroke-width="2"/>
-    <text x="200" y="278" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">30Y FRM</text>
-    <line x1="280" y1="275" x2="305" y2="275" stroke="#C4B8A0" stroke-width="1.5" stroke-dasharray="6,3"/>
-    <text x="310" y="278" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">15Y FRM</text>
-  </svg>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/177f2e23-96a0-c69a-2918-b63e4bab29c5.png" alt="Chart" width="590" height="280" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
   <p class="chart-takeaway" style="background: rgba(255,255,255,0.08); color: #E4E0E4; border-left-color: #ECCCB0;"><strong>What it means:</strong> If you've been waiting for a dramatic drop, you're still waiting. <strong>Forecasters project low-to-mid 6% through mid-2027.</strong></p>
 </div>
 
     <div class="data-point-dark">
-      <h3 class="light">Inflation: Depends Which Number You're Looking At</h3>
-      <p class="light">CPI showed prices rising just 0.1% in July with core inflation easing to 2.5% year over year. But the PCE index — the Fed's preferred measure — is moving the opposite direction and remains above the 2% target. <strong>Stubborn inflation makes it harder for mortgage rates to come down.</strong></p>
+      <h3>Inflation: Depends Which Number You're Looking At</h3>
+      <p>CPI showed prices rising just 0.1% in July with core inflation easing to 2.5% year over year. But the PCE index â the Fed's preferred measure â is moving the opposite direction and remains above the 2% target. <strong>Stubborn inflation makes it harder for mortgage rates to come down.</strong></p>
     </div>
 
     <!-- CPI Chart -->
-    <!-- CHART 9: CPI Inflation — Major Categories -->
+    <!-- CHART 9: CPI Inflation â Major Categories -->
 <div class="chart-block">
-  <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <!-- No background rect — transparent on #584848 -->
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#ECE8DC" letter-spacing="2" font-weight="600">CPI INFLATION — MAJOR CATEGORIES (JUL 2026)</text>
-    <!-- 4 horizontal bars. Labels left x=10-180, bars x=190-520 -->
-    <!-- Scale: value/14.5 * 330 -->
-    <!-- Bar 1: All Items 3.0% -->
-    <text x="185" y="62" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#C4B8A0">All Items</text>
-    <rect x="190" y="48" width="68" height="22" fill="#ECCCB0" rx="2"/>
-    <text x="264" y="63" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#ECE8DC" font-weight="600">3.0%</text>
-    <!-- Bar 2: Food 2.8% -->
-    <text x="185" y="102" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#C4B8A0">Food</text>
-    <rect x="190" y="88" width="64" height="22" fill="#ECCCB0" rx="2"/>
-    <text x="260" y="103" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#ECE8DC" font-weight="600">2.8%</text>
-    <!-- Bar 3: Energy 14.5% -->
-    <text x="185" y="142" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#C4B8A0">Energy</text>
-    <rect x="190" y="128" width="330" height="22" fill="#ECCCB0" rx="2"/>
-    <text x="526" y="143" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#ECE8DC" font-weight="600">14.5%</text>
-    <!-- Bar 4: Core 2.3% -->
-    <text x="185" y="182" text-anchor="end" font-family="'Jost', sans-serif" font-size="11" fill="#C4B8A0">Core (excl. food &amp; energy)</text>
-    <rect x="190" y="168" width="52" height="22" fill="#ECCCB0" rx="2"/>
-    <text x="248" y="183" text-anchor="start" font-family="'Jost', sans-serif" font-size="10" fill="#ECE8DC" font-weight="600">2.3%</text>
-  </svg>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/2d18224c-b293-f1c4-1cda-e0613bfdfed2.png" alt="Chart" width="560" height="220" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
 </div>
 
     <!-- PCE Chart -->
     <!-- CHART 10: PCE / Fed Target Rate -->
 <div class="chart-block">
-  <svg viewBox="0 0 590 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <!-- No background rect — transparent on #584848 -->
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#ECE8DC" letter-spacing="2" font-weight="600">PCE INFLATION vs FED 2% TARGET</text>
-    <!-- Chart area: x=[70,530] y=[40,245]. Y: 0% to 7%. Time: Jan'20 to May'26 = 76 months -->
-    <!-- y = 245 - (val/7)*205. x = 70 + (month/76)*460 -->
-    <!-- Gridlines -->
-    <line x1="70" y1="245" x2="530" y2="245" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="216" x2="530" y2="216" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="186" x2="530" y2="186" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="157" x2="530" y2="157" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="128" x2="530" y2="128" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="98" x2="530" y2="98" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="69" x2="530" y2="69" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="40" x2="530" y2="40" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="65" y="248" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">0%</text>
-    <text x="65" y="219" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">1%</text>
-    <text x="65" y="189" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2%</text>
-    <text x="65" y="160" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">3%</text>
-    <text x="65" y="131" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">4%</text>
-    <text x="65" y="101" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">5%</text>
-    <text x="65" y="72" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">6%</text>
-    <text x="65" y="43" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">7%</text>
-    <!-- X-axis labels -->
-    <text x="70" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2020</text>
-    <text x="143" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2021</text>
-    <text x="215" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2022</text>
-    <text x="288" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2023</text>
-    <text x="361" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2024</text>
-    <text x="433" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2025</text>
-    <text x="506" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">2026</text>
-    <!-- Fed 2% target line: y = 245 - (2/7)*205 = 186 -->
-    <line x1="70" y1="186" x2="530" y2="186" stroke="#9C4014" stroke-width="1.5" stroke-dasharray="6,3"/>
-    <text x="530" y="182" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#9C4014" font-weight="600">2% Target</text>
-    <!-- PCE area fill -->
-    <!-- Points: Jan20(70,192) Jul20(106,216) Jan21(143,201) Jul21(179,128) Jan22(215,84) Jul22(252,61) Jan23(288,84) Jul23(324,134) Jan24(361,163) Jul24(397,169) Jan25(433,172) Jul25(470,163) Jan26(506,151) May26(530,143) -->
-    <polygon points="70,192 106,216 143,201 179,128 215,84 252,61 288,84 324,134 361,163 397,169 433,172 470,163 506,151 530,143 530,245 70,245" fill="#ECCCB0" opacity="0.25"/>
-    <polyline points="70,192 106,216 143,201 179,128 215,84 252,61 288,84 324,134 361,163 397,169 433,172 470,163 506,151 530,143" fill="none" stroke="#ECCCB0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Endpoint -->
-    <circle cx="530" cy="143" r="3.5" fill="#ECCCB0"/>
-    <text x="520" y="136" text-anchor="end" font-family="'Fraunces', Georgia, serif" font-size="12" fill="#ECE8DC" font-weight="600">3.5%</text>
-    <!-- Peak label -->
-    <circle cx="252" cy="61" r="2.5" fill="#ECCCB0" opacity="0.6"/>
-    <text x="252" y="52" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">6.3%</text>
-  </svg>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/4b28b20a-ef64-3648-37c7-4eb91922a3ad.png" alt="Chart" width="590" height="280" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
 </div>
 
     <!-- Rate Forecasts -->
-    <!-- CHART 11: Rate Forecasts — Actual vs Projections -->
+    <!-- CHART 11: Rate Forecasts â Actual vs Projections -->
 <div class="chart-block">
-  <svg viewBox="0 0 590 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <!-- No background rect — transparent on #584848 -->
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#ECE8DC" letter-spacing="2" font-weight="600">RATE FORECASTS — ACTUAL vs PROJECTIONS</text>
-    <!-- Chart area: x=[70,530] y=[40,245]. Y: 5.5% to 7.5% (range 2.0). Time: Jan'25 to Apr'27 = 27 months -->
-    <!-- y = 245 - ((val-5.5)/2.0)*205. x = 70 + (month/27)*460 = 70 + month*17.04 -->
-    <!-- Gridlines -->
-    <line x1="70" y1="245" x2="530" y2="245" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="219" x2="530" y2="219" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="194" x2="530" y2="194" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="168" x2="530" y2="168" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="143" x2="530" y2="143" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="117" x2="530" y2="117" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="91" x2="530" y2="91" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="66" x2="530" y2="66" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="70" y1="40" x2="530" y2="40" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="65" y="248" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">5.5%</text>
-    <text x="65" y="197" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">6.0%</text>
-    <text x="65" y="145" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">6.5%</text>
-    <text x="65" y="94" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">7.0%</text>
-    <text x="65" y="43" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">7.5%</text>
-    <!-- X-axis labels -->
-    <text x="70" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Jan '25</text>
-    <text x="172" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Jul '25</text>
-    <text x="275" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Jan '26</text>
-    <text x="377" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Jul '26</text>
-    <text x="479" y="260" text-anchor="middle" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">Jan '27</text>
-    <!-- Forecast/actual divide line -->
-    <line x1="394" y1="38" x2="394" y2="250" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="3,4"/>
-    <text x="388" y="38" text-anchor="end" font-family="'Jost', sans-serif" font-size="8" fill="#C4B8A0" opacity="0.7">ACTUAL</text>
-    <text x="400" y="38" text-anchor="start" font-family="'Jost', sans-serif" font-size="8" fill="#C4B8A0" opacity="0.7">FORECAST</text>
-    <!-- Actual 30Y (solid apricot): Jan25(70,96) Apr25(121,127) Jul25(172,122) Oct25(224,163) Jan26(275,184) Apr26(326,173) Jun26(360,143) Aug26(394,125) -->
-    <polyline points="70,96 121,127 172,122 224,163 275,184 326,173 360,143 394,125" fill="none" stroke="#ECCCB0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="394" cy="125" r="3.5" fill="#ECCCB0"/>
-    <!-- Fannie Mae forecast (dashed #C4B8A0): Aug26(394,125) Q4'26(428,143) Q1'27(479,153) Q2'27(530,163) -->
-    <polyline points="394,125 428,143 479,153 530,163" fill="none" stroke="#C4B8A0" stroke-width="1.5" stroke-dasharray="6,3" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="535" y="160" text-anchor="start" font-family="'Jost', sans-serif" font-size="8" fill="#C4B8A0">Fannie</text>
-    <text x="535" y="169" text-anchor="start" font-family="'Jost', sans-serif" font-size="8" fill="#C4B8A0">Mae</text>
-    <!-- MBA forecast (dashed #E4E0E4): Aug26(394,125) Q4'26(428,153) Q1'27(479,163) Q2'27(530,173) -->
-    <polyline points="394,125 428,153 479,163 530,173" fill="none" stroke="#E4E0E4" stroke-width="1.5" stroke-dasharray="6,3" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="535" y="178" text-anchor="start" font-family="'Jost', sans-serif" font-size="8" fill="#E4E0E4">MBA</text>
-    <!-- Wells Fargo forecast (dashed #9C4014): Aug26(394,125) Q4'26(428,163) Q1'27(479,173) Q2'27(530,184) -->
-    <polyline points="394,125 428,163 479,173 530,184" fill="none" stroke="#9C4014" stroke-width="1.5" stroke-dasharray="6,3" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="535" y="189" text-anchor="start" font-family="'Jost', sans-serif" font-size="8" fill="#9C4014">Wells</text>
-    <text x="535" y="198" text-anchor="start" font-family="'Jost', sans-serif" font-size="8" fill="#9C4014">Fargo</text>
-    <!-- Current value label -->
-    <text x="388" y="117" text-anchor="end" font-family="'Fraunces', Georgia, serif" font-size="12" fill="#ECE8DC" font-weight="600">6.67%</text>
-  </svg>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/d6238312-2bb5-81be-80a0-bae4ea35498a.png" alt="Chart" width="590" height="280" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
   <p class="chart-takeaway" style="background: rgba(255,255,255,0.08); color: #E4E0E4; border-left-color: #ECCCB0;"><strong>What it means:</strong> Fannie Mae, MBA, and Wells Fargo all project the 30-year fixed in the low-to-mid 6% range through mid-2027. Stability might be the better story here.</p>
 </div>
 
     <div class="data-point-dark">
-      <h3 class="light">New Listings: Up Nationally, Down in the West</h3>
-      <p class="light">New listings rose 2.4% nationally, led by a 12.6% jump in the Northeast. <strong>The West? Down 0.8%.</strong> Our part of the country continues to be its own animal — and <strong>tight inventory here is a big part of why the overbidding numbers are what they are.</strong></p>
+      <h3>New Listings: Up Nationally, Down in the West</h3>
+      <p>New listings rose 2.4% nationally, led by a 12.6% jump in the Northeast. <strong>The West? Down 0.8%.</strong> Our part of the country continues to be its own animal â and <strong>tight inventory here is a big part of why the overbidding numbers are what they are.</strong></p>
     </div>
 
     <!-- New Listings Chart -->
-    <!-- CHART 12: New Listings by Region — Year-over-Year Change -->
+    <!-- CHART 12: New Listings by Region â Year-over-Year Change -->
 <div class="chart-block">
-  <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-    <!-- No background rect — transparent on #584848 -->
-    <!-- Title -->
-    <text x="280" y="22" text-anchor="middle" font-family="'Jost', sans-serif" font-size="11" fill="#ECE8DC" letter-spacing="2" font-weight="600">NEW LISTINGS BY REGION — YEAR-OVER-YEAR CHANGE</text>
-    <!-- Vertical bar chart. 5 bars. Y range: -2% to 14% (16 range) -->
-    <!-- Chart area: x=[80,520] y=[40,230] -->
-    <!-- Zero line: y = 230 - ((0+2)/16)*190 = 230 - 23.75 = 206 -->
-    <!-- Gridlines at -2, 0, 2, 4, 6, 8, 10, 12, 14 -->
-    <line x1="80" y1="230" x2="520" y2="230" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="80" y1="206" x2="520" y2="206" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
-    <line x1="80" y1="182" x2="520" y2="182" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="80" y1="158" x2="520" y2="158" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="80" y1="135" x2="520" y2="135" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="80" y1="111" x2="520" y2="111" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="80" y1="87" x2="520" y2="87" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="80" y1="63" x2="520" y2="63" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <line x1="80" y1="40" x2="520" y2="40" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
-    <!-- Y-axis labels -->
-    <text x="75" y="233" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">-2%</text>
-    <text x="75" y="209" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">0%</text>
-    <text x="75" y="161" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">+4%</text>
-    <text x="75" y="114" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">+8%</text>
-    <text x="75" y="66" text-anchor="end" font-family="'Jost', sans-serif" font-size="9" fill="#C4B8A0">+12%</text>
-    <!-- y = 206 - (val/16)*190. Positive bars go UP from 206, negative go DOWN -->
-    <!-- 5 bars: centers at x=140, 220, 300, 380, 460. Width=55 -->
-    <!-- U.S.: +2.4% → height = (2.4/16)*190 = 28.5 → top = 206-28.5 = 177.5 -->
-    <rect x="113" y="178" width="55" height="28" fill="#C4B8A0" rx="2"/>
-    <text x="140" y="170" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#ECE8DC" font-weight="600">+2.4%</text>
-    <text x="140" y="248" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#C4B8A0">U.S.</text>
-    <!-- Northeast: +12.6% → height = (12.6/16)*190 = 149.6 → top = 206-149.6 = 56.4 -->
-    <rect x="193" y="56" width="55" height="150" fill="#ECCCB0" rx="2"/>
-    <text x="220" y="49" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#ECE8DC" font-weight="600">+12.6%</text>
-    <text x="220" y="248" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#C4B8A0">NE</text>
-    <!-- Midwest: +1.0% → height = (1.0/16)*190 = 11.9 → top = 206-11.9 = 194.1 -->
-    <rect x="273" y="194" width="55" height="12" fill="#C4B8A0" rx="2"/>
-    <text x="300" y="188" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#ECE8DC" font-weight="600">+1.0%</text>
-    <text x="300" y="248" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#C4B8A0">MW</text>
-    <!-- South: +0.4% → height = (0.4/16)*190 = 4.75 → top = 206-4.75 = 201.25 -->
-    <rect x="353" y="201" width="55" height="5" fill="#C4B8A0" rx="1"/>
-    <text x="380" y="196" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#ECE8DC" font-weight="600">+0.4%</text>
-    <text x="380" y="248" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#C4B8A0">South</text>
-    <!-- West: -0.8% → height = (0.8/16)*190 = 9.5 → top = 206 (starts at zero, goes down) -->
-    <rect x="433" y="206" width="55" height="10" fill="#9C4014" rx="1"/>
-    <text x="460" y="228" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#ECE8DC" font-weight="600">-0.8%</text>
-    <text x="460" y="248" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#C4B8A0">West</text>
-  </svg>
+  <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/f393dd4e-9fc2-098d-25be-233d7a02e03b.png" alt="Chart" width="560" height="260" style="display:block;max-width:100%;height:auto;border-radius:12px;" />
 </div>
 
     <p style="font-size: 12px; color: #C4B8A0; margin-top: 16px; font-style: italic;">Sources: Freddie Mac, BLS, Investing.com, Fannie Mae, MBA, Wells Fargo, Realtor.com</p>
-  </div>
-
-  <!-- ============================================ -->
-  <!-- 5. THE MONEY LESSON                          -->
-  <!-- ============================================ -->
-  <div class="section">
+    </div><div style="background: #ECE8DC; margin: 0 -40px; padding: 40px; padding-top: 32px;">
+    <hr class="divider-accent">
     <p class="section-label">The Money Lesson</p>
     <h2>List Price Is a Strategy, Not a Valuation</h2>
 
@@ -879,51 +409,38 @@
     <p>That distinction has never mattered more. Buyers need to understand what a home is likely to actually sell for before deciding whether to compete. Sellers need a pricing strategy built for their specific property, neighborhood, and buyer pool. And both need an agent who can tell the difference between an intentionally low list price and a genuine opportunity.</p>
 
     <p><strong>If you're on the sidelines, fall could be an interesting window:</strong> slightly more inventory now, and <strong>any meaningful rate decline would bring more competition, not less.</strong></p>
-  </div>
+    </div><div style="background: #FFFDF9; margin: 0 -40px; padding: 40px; padding-top: 40px;">
 
-  <!-- ============================================ -->
-  <!-- 6. INSIDER SPOT (placeholder)                -->
-  <!-- ============================================ -->
-  <div class="section-alt">
-    <p class="section-label">Insider Spot</p>
-    <img src="data:image/jpeg;base64,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" alt="Vermicelli bowl and Vietnamese coffee at Golden Lotus" style="width: 100%; height: auto; display: block; border-radius: 4px; margin-bottom: 20px;">
+    <p class="section-label" style="margin-top: 0;">Insider Spot</p>
+    <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/e0bc0c9c-a21e-7249-a6b1-dcd4dc01d227.jpg" alt="Vermicelli bowl and Vietnamese coffee at Golden Lotus" style="width: 100%; height: auto; display: block; border-radius: 4px; margin-bottom: 20px;">
 
     <h2><a href="https://www.google.com/maps/place/golden+lotus+sf/data=!4m2!3m1!1s0x80858090ce24b25d:0xcc15ca0ac80a7d81?sa=X&ved=1t:242&ictx=111" style="color: #4C2C20; text-decoration: none;">Golden Lotus</a></h2>
     <p style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #C4B8A0; margin: -16px 0 20px;">Vietnamese &middot; 631 Larkin St, Tenderloin</p>
 
-    <p>I've been here twice now and the waiter recognized me and my partner — "it's been a while since you've been here!" with a warm smile. That kind of hospitality makes the place feel special, even though it's a casual neighborhood spot for the local Vietnamese community and workers in the area. Shoutout to my friend Diego for the recommendation.</p>
+    <p>I've been here twice now and the waiter recognized me and my partner â "it's been a while since you've been here!" with a warm smile. That kind of hospitality makes the place feel special, even though it's a casual neighborhood spot for the local Vietnamese community and workers in the area. Shoutout to my friend Diego for the recommendation.</p>
 
-    <p>The rare beef salad has a more complete flavor profile than Pho 2000 — peanuty, well-marinated raw onions, limey. Very fresh, refreshing on a hot day, and genuinely high-quality beef. The vermicelli bowl had a better balance of veg to noodle than most places (I usually end up with way more noodle than I want). And the pork chop on the rice plate is insanely good — I don't know how they do it. The meat is incredibly tender, rich in flavor, the kind of bite you want to slow down and savor. I gnaw on the bone. The fish cake on the combo plate is phenomenal too.</p>
+    <p>The rare beef salad has a more complete flavor profile than Pho 2000 â peanuty, well-marinated raw onions, limey. Very fresh, refreshing on a hot day, and genuinely high-quality beef. The vermicelli bowl had a better balance of veg to noodle than most places (I usually end up with way more noodle than I want). And the pork chop on the rice plate is insanely good â I don't know how they do it. The meat is incredibly tender, rich in flavor, the kind of bite you want to slow down and savor. I gnaw on the bone. The fish cake on the combo plate is phenomenal too.</p>
 
     <div style="margin-top: 24px; padding: 20px 24px; background: #ECE8DC; border-radius: 4px;">
       <p style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #9C4014; margin: 0 0 12px; font-weight: 600;">Menu Highlights</p>
-      <p style="margin: 0 0 8px; font-size: 15px;"><a href="https://www.yelp.com/menu/golden-lotus-san-francisco/item/3-banh-cuon-thit-nuong" style="color: #9C4014; text-decoration: none;"><strong>Banh Cuon Thit Nuong</strong></a> — steamed rice crepes with grilled pork, crispy shallots, and herbs</p>
-      <p style="margin: 0 0 8px; font-size: 15px;"><a href="https://www.yelp.com/menu/golden-lotus-san-francisco/item/11-bo-tai-chanh" style="color: #9C4014; text-decoration: none;"><strong>Bo Tai Chanh</strong></a> — the rare beef salad</p>
-      <p style="margin: 0 0 8px; font-size: 15px;"><a href="https://www.yelp.com/menu/golden-lotus-san-francisco/item/44-bun-ga-nuong-cha-gio" style="color: #9C4014; text-decoration: none;"><strong>Bun Ga Nuong Cha Gio</strong></a> — grilled chicken vermicelli with egg rolls</p>
-      <p style="margin: 0 0 0; font-size: 15px;"><a href="https://www.yelp.com/menu/golden-lotus-san-francisco/item/52-com-tam-dac-biet" style="color: #9C4014; text-decoration: none;"><strong>Com Tam Dac Biet</strong></a> — I prefer it with their broken rice over garlic noodle</p>
+      <p style="margin: 0 0 8px; font-size: 15px;"><a href="https://www.yelp.com/menu/golden-lotus-san-francisco/item/3-banh-cuon-thit-nuong" style="color: #9C4014; text-decoration: none;"><strong>Banh Cuon Thit Nuong</strong></a> â steamed rice crepes with grilled pork, crispy shallots, and herbs</p>
+      <p style="margin: 0 0 8px; font-size: 15px;"><a href="https://www.yelp.com/menu/golden-lotus-san-francisco/item/11-bo-tai-chanh" style="color: #9C4014; text-decoration: none;"><strong>Bo Tai Chanh</strong></a> â the rare beef salad</p>
+      <p style="margin: 0 0 8px; font-size: 15px;"><a href="https://www.yelp.com/menu/golden-lotus-san-francisco/item/44-bun-ga-nuong-cha-gio" style="color: #9C4014; text-decoration: none;"><strong>Bun Ga Nuong Cha Gio</strong></a> â grilled chicken vermicelli with egg rolls</p>
+      <p style="margin: 0 0 0; font-size: 15px;"><a href="https://www.yelp.com/menu/golden-lotus-san-francisco/item/52-com-tam-dac-biet" style="color: #9C4014; text-decoration: none;"><strong>Com Tam Dac Biet</strong></a> â I prefer it with their broken rice over garlic noodle</p>
     </div>
-  </div>
 
-  <!-- ============================================ -->
-  <!-- COMING SOON — 331 SWALLOWTAIL                -->
-  <!-- ============================================ -->
-  <div class="section">
     <div class="coming-soon-box">
       <p class="section-label" style="color: #ECCCB0;">Coming Soon &middot; My Very First Listing</p>
       <h3 style="color: #ECE8DC; margin: 0 0 12px;">331 Swallowtail Court, Brisbane</h3>
-      <p style="color: #E4E0E4; font-size: 15px;">And speaking of pricing strategy — I get to put all of this into practice. My first listing is coming to market in the fall, and I'd be lying if I said I wasn't a little nervous and a LOT excited. It's a beautifully positioned upper-floor condo in Altamar at the Ridge — mountain views, in-unit laundry, and genuinely lovely light. I'm co-listing with my colleague Brandea Bunnag, and everything I just wrote about pricing being a strategy, not just a number? That's exactly the work we're doing right now. More soon!</p>
+      <p style="color: #E4E0E4; font-size: 15px;">And speaking of pricing strategy â I get to put all of this into practice. My first listing is coming to market in the fall, and I'd be lying if I said I wasn't a little nervous and a LOT excited. It's a beautifully positioned upper-floor condo in Altamar at the Ridge â mountain views, in-unit laundry, and genuinely lovely light. I'm co-listing with my colleague Brandea Bunnag, and everything I just wrote about pricing being a strategy, not just a number? That's exactly the work we're doing right now. More soon!</p>
       <p class="specs">2 Bed &middot; 2 Bath &middot; 1,076 SF &middot; 2 Car Parking &middot; Mountain Views &middot; Upper Floor</p>
     </div>
-  </div>
 
-  <!-- ============================================ -->
-  <!-- 7. LISTINGS / JUST CLOSED                    -->
-  <!-- ============================================ -->
-  <div class="section-heading-bar">
-    <h4>Active Vantage Listings</h4>
-  </div>
+    <div style="background: #4C2C20; padding: 14px 0; text-align: center; margin: 32px -40px 24px;">
+      <h4 style="font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: #ECCCB0; margin: 0; font-weight: 600;">Active Vantage Listings</h4>
+    </div>
 
-  <div class="section">
+    <div class="listing-scroll-wrap">
     <div class="listing-grid">
 
       <a href="https://zenlist.com/app/listing/sfar:426139171?as=claudia.lee" style="text-decoration: none; color: inherit;" target="_blank"><div class="listing-card">
@@ -1026,37 +543,39 @@
       </div></a>
 
     </div>
+    <p class="listing-scroll-hint">Scroll for more listings &rarr;</p>
+    </div>
     <p style="text-align: center; font-family: 'Jost', sans-serif; font-size: 15px; color: #584848; margin: 24px 0 0; line-height: 1.6;">message me about any you're interested in. you'll get the insider info :)</p>
-  </div>
 
-  <!-- CLAUDIA'S RECENT CLOSINGS (include only when she has closings to show) -->
+    <hr class="divider-accent">
 
-  <!-- ============================================ -->
-  <!-- 8. CLOSE                                     -->
-  <!-- ============================================ -->
-  <div class="section-alt" style="text-align: center;">
-    <p class="section-label">Until Next Month</p>
-    <p style="max-width: 440px; margin: 0 auto 20px; font-size: 16px;">That's my August. If any of these numbers made you curious about what they mean for your situation specifically, I'm always happy to talk it through — no pitch, just answers.</p>
-    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0dVC2blHRim5njnVHtQzd0EI-V0kXd5nT3AADOKFS44zRbygROQEu4OAt_2St4y99Zee8TWS_-" class="cta-button">Grab 20 Minutes With Me &mdash; Free</a>
+    <div style="text-align: center;">
+    <p class="section-label" style="color: #9C4014;">Until Next Month</p>
+    <p style="max-width: 440px; margin: 0 auto 20px; font-size: 16px; color: #584848;">That's my August. If any of these numbers made you curious about what they mean for your situation specifically, I'm always happy to talk it through â no pitch, just answers.</p>
+    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0dVC2blHRim5njnVHtQzd0EI-V0kXd5nT3AADOKFS44zRbygROQEu4OAt_2St4y99Zee8TWS_-" class="cta-button" style="color: #ECE8DC; background: #9C4014; text-decoration: none;">Grab 20 Minutes With Me &mdash; Free</a>
+    </div>
+    </div>
+
   </div>
 
   <!-- ============================================ -->
   <!-- 9. SIGNATURE BLOCK                           -->
   <!-- ============================================ -->
   <div class="signature">
-    <img src="data:image/jpeg;base64,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ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg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" alt="Claudia Lee headshot" class="sig-headshot">
+    <img src="https://mcusercontent.com/893e9b3d2626decab68a10d94/images/4fd56749-531e-8618-5dab-176600d139e3.jpg" alt="Claudia Lee headshot" class="sig-headshot">
     <p class="sig-name">Claudia Lee</p>
     <p class="sig-title">Realtor&reg; &middot; Vantage Realty</p>
     <hr style="border: none; border-top: 1px solid #E4E0E4; margin: 14px auto; width: 60px;">
     <p class="sig-contact"><a href="mailto:claudia@vantagesanfrancisco.com">claudia@vantagesanfrancisco.com</a></p>
     <p class="sig-contact">510.459.0172</p>
     <p class="sig-contact">DRE #02380540</p>
-    <p class="sig-contact" style="margin-top: 6px;">@claudiainsider</p>
-    <div class="sig-social">
-      <a href="https://www.instagram.com/claudiainsider/" style="display: inline-block; margin: 0 8px; vertical-align: middle;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="4" fill="#584848"/><rect x="7" y="7" width="14" height="14" rx="4" stroke="#ECE8DC" stroke-width="1.5" fill="none"/><circle cx="14" cy="14" r="3.5" stroke="#ECE8DC" stroke-width="1.5" fill="none"/><circle cx="18.5" cy="9.5" r="1" fill="#ECE8DC"/></svg></a>
-      <a href="https://www.linkedin.com/in/claudiastephanie/" style="display: inline-block; margin: 0 8px; vertical-align: middle;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="4" fill="#584848"/><path d="M9 12v8h2.5v-8H9zm1.25-1.5a1.35 1.35 0 100-2.7 1.35 1.35 0 000 2.7zM13 12v8h2.4v-4c0-1.05.2-2.07 1.5-2.07S18.3 15 18.3 16.1V20H20.7v-4.5c0-2.17-.47-3.84-3-3.84-1.22 0-2.04.67-2.37 1.3h-.03V12H13z" fill="#ECE8DC"/></svg></a>
-      <a href="https://www.youtube.com/@Claudiainsider" style="display: inline-block; margin: 0 8px; vertical-align: middle;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="4" fill="#584848"/><path d="M21.6 10.4a2 2 0 00-1.4-1.4C18.9 8.6 14 8.6 14 8.6s-4.9 0-6.2.4a2 2 0 00-1.4 1.4c-.4 1.3-.4 4-.4 4s0 2.7.4 4a2 2 0 001.4 1.4c1.3.4 6.2.4 6.2.4s4.9 0 6.2-.4a2 2 0 001.4-1.4c.4-1.3.4-4 .4-4s0-2.7-.4-4z" fill="#ECE8DC"/><path d="M12.4 16.8l4.1-2.4-4.1-2.4v4.8z" fill="#584848"/></svg></a>
-      <a href="https://www.tiktok.com/@claudiainsider" style="display: inline-block; margin: 0 8px; vertical-align: middle;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="4" fill="#584848"/><path d="M18.5 7.5C17.8 6.7 17.4 5.6 17.4 4.5h-2.8v12.8c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1v-2.9c-.3 0-.5-.1-.8-.1-3.1 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5v-6.6c1.1.8 2.4 1.2 3.8 1.2v-2.8c-.7 0-1.5-.2-2.2-.5z" fill="#ECE8DC"/></svg></a>
+    <hr style="border: none; border-top: 1px solid #E4E0E4; margin: 18px auto 14px; width: 60px;">
+    <p style="font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #9C4014; margin: 0 0 12px; font-weight: 600;">Connect With Me</p>
+    <div class="sig-social" style="margin: 14px 0 0;">
+      <a href="https://www.instagram.com/claudiainsider/" style="display: inline-block; margin: 0 6px; padding: 8px 14px; background: #584848; color: #ECE8DC; text-decoration: none; font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; border-radius: 4px;">Instagram</a>
+      <a href="https://www.linkedin.com/in/claudiastephanie/" style="display: inline-block; margin: 0 6px; padding: 8px 14px; background: #584848; color: #ECE8DC; text-decoration: none; font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; border-radius: 4px;">LinkedIn</a>
+      <a href="https://www.youtube.com/@Claudiainsider" style="display: inline-block; margin: 0 6px; padding: 8px 14px; background: #584848; color: #ECE8DC; text-decoration: none; font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; border-radius: 4px;">YouTube</a>
+      <a href="https://www.tiktok.com/@claudiainsider" style="display: inline-block; margin: 0 6px; padding: 8px 14px; background: #584848; color: #ECE8DC; text-decoration: none; font-family: 'Jost', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; border-radius: 4px;">TikTok</a>
     </div>
   </div>
 
@@ -1070,7 +589,7 @@
     <p style="margin-top: 12px;">
       <span style="display:inline-block;height:24px;vertical-align:middle;"><svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" fill="none" stroke="#C4B8A0" stroke-width="1.5"/><polygon points="12,4 3,11 21,11" fill="none" stroke="#C4B8A0" stroke-width="1.2"/><line x1="6" y1="13" x2="18" y2="13" stroke="#C4B8A0" stroke-width="1.2"/><line x1="6" y1="16" x2="18" y2="16" stroke="#C4B8A0" stroke-width="1.2"/><line x1="6" y1="19" x2="18" y2="19" stroke="#C4B8A0" stroke-width="1.2"/></svg></span>
     </p>
-    <p style="margin-top: 12px;"><a href="#">Unsubscribe</a> &middot; <a href="#">View in browser</a></p>
+    <p style="margin-top: 12px;"><a href="*|UNSUB|*">Unsubscribe</a> &middot; <a href="https://claudiainsider.com/newsletter/august-2026/">View in browser</a></p>
   </div>
 
 </div>
