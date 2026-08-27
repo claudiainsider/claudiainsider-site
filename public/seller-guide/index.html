@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+<title>Free Seller Guide · Claudia Lee</title>
+<meta name="description" content="Thinking of selling in San Francisco — to upsize, downsize, or relocate? A clear guide to protecting your equity and timing it right.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#3D2A20;--accent:#9C4014;--accent-deep:#7A3410;--cream:#ECE8DC;
+    --taupe:#C4B8A0;--sand:#ECCCB0;--mocha:#8A6A52;--plum:#6E5D63;--mist:#E4E0E4;
+    --sage:#8A6A52;--rule:#D8CDBC;--white:#FCFAF7;
+    --shadow:0 8px 30px rgba(61,42,32,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink);background:var(--cream);line-height:1.6;min-height:100vh;
+    display:flex;justify-content:center}
+  .wrap{width:100%;max-width:560px;background:var(--white);min-height:100vh;box-shadow:var(--shadow)}
+  .hero{background:var(--ink);color:var(--cream);padding:38px 26px 30px;text-align:center;
+    position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;
+    background:linear-gradient(90deg,var(--accent),var(--sand))}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--sand);font-weight:600;margin-bottom:14px}
+  .badge{display:inline-block;background:var(--accent);color:var(--white);font-size:11px;
+    letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:6px 14px;
+    border-radius:100px;margin-bottom:16px}
+  h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:30px;line-height:1.18;
+    letter-spacing:-.01em;margin-bottom:10px}
+  .hero p{font-size:15px;color:#E9DECF;max-width:38ch;margin:0 auto}
+  .body{padding:30px 26px 40px}
+  .lead{font-size:16px;margin-bottom:22px}
+  .whats-in{background:var(--cream);border:1px solid var(--rule);border-radius:16px;
+    padding:22px 22px 18px;margin-bottom:28px}
+  .whats-in h2{font-family:'Fraunces',serif;font-weight:600;font-size:17px;margin-bottom:14px;color:var(--ink)}
+  .whats-in ul{list-style:none}
+  .whats-in li{position:relative;padding-left:30px;margin-bottom:11px;font-size:14.5px}
+  .whats-in li:last-child{margin-bottom:0}
+  .whats-in li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;
+    background:var(--accent);
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/></svg>") center/12px no-repeat;
+    mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/></svg>") center/12px no-repeat}
+  form{display:flex;flex-direction:column;gap:16px}
+  .field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+  .field input,.field select{width:100%;font-family:inherit;font-size:16px;color:var(--ink);
+    background:var(--white);border:1.5px solid var(--rule);border-radius:12px;padding:13px 14px;
+    transition:border-color .15s,box-shadow .15s}
+  .field input::placeholder{color:#A99B8C}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(156,64,20,.15)}
+  .btn{appearance:none;border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:16px;
+    font-weight:600;color:var(--white);background:var(--accent);padding:16px;border-radius:12px;
+    transition:background .15s,transform .05s;box-shadow:0 6px 16px rgba(156,64,20,.28);margin-top:4px}
+  .btn:hover{background:var(--accent-deep)}
+  .btn:active{transform:translateY(1px)}
+  .fine{font-size:12px;color:#8A7E72;text-align:center;margin-top:2px;line-height:1.5}
+  .consult{margin-top:30px;padding-top:26px;border-top:1px solid var(--rule);text-align:center}
+  .consult p{font-size:14.5px;margin-bottom:14px;color:var(--ink)}
+  .consult a{display:inline-block;font-size:15px;font-weight:600;color:var(--accent);text-decoration:none;
+    border:1.5px solid var(--accent);border-radius:12px;padding:13px 22px;transition:background .15s,color .15s}
+  .consult a:hover{background:var(--accent);color:var(--white)}
+  .sign{margin-top:30px;text-align:center}
+  .sign .name{font-family:'Fraunces',serif;font-size:16px;color:var(--ink)}
+  .sign .role{font-size:12.5px;color:#8A7E72;letter-spacing:.04em}
+  .success{display:none;text-align:center;padding:24px 6px}
+  .success.show{display:block;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .success .check{width:62px;height:62px;border-radius:50%;background:var(--sage);margin:0 auto 18px;
+    display:flex;align-items:center;justify-content:center}
+  .success .check svg{width:30px;height:30px}
+  .success h2{font-family:'Fraunces',serif;font-weight:600;font-size:22px;margin-bottom:10px}
+  .success p{font-size:15px;color:var(--ink);max-width:34ch;margin:0 auto}
+  .hidden{display:none!important}
+  @media(max-width:380px){h1{font-size:26px}.body{padding:26px 20px 36px}.hero{padding:32px 20px 26px}}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="eyebrow">SF Real Estate · @claudiainsider</div>
+      <span class="badge">Free Guide</span>
+      <h1>Thinking of Selling? Start Here.</h1>
+      <p>Upsizing, downsizing, or relocating — a clear guide to protecting your equity and timing it right.</p>
+    </header>
+
+    <section class="body">
+      <div id="form-view">
+        <p class="lead">Selling your home is a big financial move, and the equity you've built is worth protecting. This walks you through the strategy — plainly — so you can decide what's right for your situation. Tell me where to send it.</p>
+
+        <div class="whats-in">
+          <h2>What's inside</h2>
+          <ul>
+            <li>How your home gets in front of the right buyers</li>
+            <li>The prep, staging, and photography that make buyers show up</li>
+            <li>What the Vantage team + Side's network add to your sale</li>
+            <li>The plain-English walk-through from prep to close</li>
+            <li>How I work — so you know before we ever talk</li>
+          </ul>
+        </div>
+
+        <form id="lead-form" action="https://claudia-intake.claudia-6e4.workers.dev" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New Seller Guide request">
+          <input type="hidden" name="form_source" value="Seller Guide">
+          <div class="field">
+            <label for="name">First name</label>
+            <input id="name" name="name" type="text" autocomplete="given-name" placeholder="Your first name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required>
+          </div>
+          <div class="field">
+            <label for="reason">What's prompting the move? <span style="font-weight:400;color:#8A7E72">(optional)</span></label>
+            <select id="reason" name="reason">
+              <option value="">Pick what fits — no wrong answer</option>
+              <option>Upsizing</option>
+              <option>Downsizing</option>
+              <option>Relocating</option>
+              <option>Just exploring my options</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Send me the guide</button>
+          <p class="fine">One email with your guide, plus the occasional note worth reading. Unsubscribe anytime. I never share your info.</p>
+        </form>
+
+        <div class="consult">
+          <p>Want to map it out for your home specifically? Book a free 20-minute consult and we'll talk it through.</p>
+          <a href="https://calendar.app.google/Ryt1GKxmpuoTW5yf9" target="_blank" rel="noopener">Book a free consult</a>
+        </div>
+
+        <div class="sign">
+          <div class="name">Claudia Lee</div>
+          <div class="role">Licensed SF Realtor · Associate Agent</div>
+        </div>
+      </div>
+
+      <div class="success" id="success-view">
+        <div class="check">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#FCFAF7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h2>It's on the way</h2>
+        <p>Check your inbox in a minute or two for your guide. If it's hiding, peek in spam or promotions. Glad you're here.</p>
+      </div>
+    </section>
+  </main>
+
+<script>
+  const form = document.getElementById('lead-form');
+  const formView = document.getElementById('form-view');
+  const successView = document.getElementById('success-view');
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const btn = form.querySelector('.btn');
+    const original = btn.textContent;
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try{
+      const res = await fetch(form.action, {method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+      if(res.ok){
+        formView.classList.add('hidden');
+        successView.classList.add('show');
+        window.scrollTo({top:0,behavior:'smooth'});
+      }else{throw new Error('Submission failed');}
+    }catch(err){
+      btn.textContent = original;btn.disabled = false;
+      alert('Something went wrong sending that. Please try again, or email me directly.');
+    }
+  });
+</script>
+</body>
+</html>
