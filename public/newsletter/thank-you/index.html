@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're In — The San Francisco Insider · Claudia Lee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blush: #F7ECE7;
+  --cream: #F3EDE3;
+  --mist: #E7E4E0;
+  --taupe: #C7BAA6;
+  --sand: #E6C9A6;
+  --terracotta: #B24E24;
+  --cocoa: #7A5C4A;
+  --espresso: #3B2A22;
+  --display: 'Cormorant Garamond', 'Garamond', 'Didot', Georgia, serif;
+  --sans: 'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body {
+  margin: 0;
+  background: var(--blush);
+  color: var(--espresso);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+.site-nav {
+  padding: 20px clamp(24px, 5vw, 56px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(180,160,148,.35);
+}
+.site-nav__brand {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .06em;
+  color: var(--espresso);
+  text-decoration: none;
+}
+.site-nav__brand span {
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  display: block;
+  margin-top: 2px;
+}
+.site-nav__link {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  text-decoration: none;
+  transition: color .18s;
+}
+.site-nav__link:hover { color: var(--terracotta); }
+.thank-you {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(48px, 8vw, 96px) clamp(24px, 5vw, 56px);
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.thank-you__check {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+}
+.thank-you__check svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: var(--blush);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.thank-you h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--espresso);
+  margin: 0 0 16px;
+}
+.thank-you h1 em {
+  font-style: italic;
+  font-weight: 300;
+}
+.rule {
+  width: 44px;
+  height: 2px;
+  background: var(--terracotta);
+  border: 0;
+  margin: 0 auto 24px;
+}
+.thank-you .message {
+  font-family: var(--display);
+  font-size: clamp(17px, 2.2vw, 21px);
+  font-weight: 300;
+  line-height: 1.6;
+  color: #4A3F3A;
+  max-width: 48ch;
+  margin: 0 auto 40px;
+}
+.btn-primary {
+  display: inline-block;
+  background: var(--cocoa);
+  color: var(--blush);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  padding: 18px 40px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .18s;
+}
+.btn-primary:hover { background: var(--espresso); }
+.consult-band {
+  background: var(--terracotta);
+  padding: clamp(28px, 3.5vw, 44px) clamp(24px, 5vw, 56px);
+  text-align: center;
+}
+.consult-band p {
+  font-family: var(--display);
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--blush);
+  margin: 0 0 20px;
+  max-width: 42ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-ghost {
+  display: inline-block;
+  background: transparent;
+  color: var(--blush);
+  border: 1px solid var(--blush);
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  padding: 15px 34px;
+  text-decoration: none;
+  transition: all .18s;
+}
+.btn-ghost:hover {
+  background: var(--blush);
+  color: var(--terracotta);
+}
+.foot {
+  margin-top: auto;
+  background: var(--cream);
+  padding: clamp(28px, 3vw, 40px) clamp(24px, 5vw, 56px) 24px;
+}
+.foot__inner {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.foot__brand {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--espresso);
+  text-decoration: none;
+}
+.foot__brand small {
+  display: block;
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-top: 4px;
+}
+.foot__links {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.foot__links a {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--cocoa);
+  transition: color .18s;
+}
+.foot__links a:hover { color: var(--terracotta); }
+.foot__bar {
+  width: 100%;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(180,160,148,.45);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+@media (max-width: 600px) {
+  .foot__inner { flex-direction: column; }
+  .foot__bar { flex-direction: column; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="site-nav__brand">
+    claudia lee
+    <span>SF Real Estate Insider</span>
+  </a>
+  <a href="https://calendar.app.google/Ryt1GKxmpuoTW5yf9" class="site-nav__link" target="_blank">Book a Consult</a>
+</nav>
+
+<section class="thank-you">
+  <div class="thank-you__check">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <h1>You're an <em>Insider</em> now.</h1>
+  <hr class="rule">
+  <p class="message">
+    Welcome to The San Francisco Insider. You'll get plain-english money and SF real estate insights once a month — no spam, no drip campaigns, just the good stuff.
+  </p>
+  <a href="/newsletter/august-2026/" class="btn-primary">Read the Latest Issue</a>
+</section>
+
+<section class="consult-band">
+  <p>Have a specific question? I'm happy to talk it through.</p>
+  <a href="https://calendar.app.google/Ryt1GKxmpuoTW5yf9" class="btn-ghost" target="_blank">Book a Free 20-Minute Consult</a>
+</section>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <a href="/" class="foot__brand">
+      claudia lee
+      <small>SF Real Estate Insider</small>
+    </a>
+    <nav class="foot__links">
+      <a href="https://instagram.com/claudiainsider" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@claudiainsider" target="_blank">YouTube</a>
+      <a href="https://tiktok.com/@claudiainsider" target="_blank">TikTok</a>
+      <a href="https://linkedin.com/in/claudiainsider" target="_blank">LinkedIn</a>
+      <a href="mailto:claudia@vantagesanfrancisco.com">Email</a>
+    </nav>
+    <div class="foot__bar">
+      <span>Claudia Lee · REALTOR® · DRE #02380540</span>
+      <span>Vantage San Francisco</span>
+      <span>Equal Housing Opportunity</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
