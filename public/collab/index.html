@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Work with Claudia — SF Insider Collabs</title>
+  <meta name="description" content="Collaborate with Claudia Lee — SF real estate agent and local insider.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blush:#F7EDE8;--cream:#ECE8DC;--card:#FFFDFB;--taupe:#C4B8A0;
+      --apricot:#ECCCB0;--rust:#9C4014;--espresso:#4C2C20;--charcoal:#584848;
+      --line:#E3D8CC;
+      --serif:'Lora','Iowan Old Style',Georgia,'Times New Roman',serif;
+      --sans:'Jost','Avenir Next','Helvetica Neue',Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--blush);color:var(--charcoal);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:640px;margin:0 auto;padding:52px 22px 80px}
+    .kicker{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--rust);margin:0 0 16px}
+    h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.12;letter-spacing:-.005em;color:var(--espresso);margin:0 0 20px}
+    .intro{color:var(--charcoal);font-size:16.5px;margin:0 0 10px;max-width:52ch}
+    .intro+.intro{margin-top:14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:30px 26px;margin-top:32px}
+    label{display:block;font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.02em;color:var(--espresso);margin:20px 0 7px}
+    label:first-of-type{margin-top:0}
+    .req{color:var(--rust)}
+    .hint{font-weight:300;color:var(--taupe);font-size:12.5px;text-transform:none;letter-spacing:0}
+    input,select,textarea{width:100%;padding:12px 14px;font-size:15px;font-family:var(--sans);font-weight:300;color:var(--espresso);background:#fff;border:1px solid var(--line);border-radius:2px;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--rust);box-shadow:0 0 0 3px rgba(156,64,20,.12)}
+    textarea{min-height:120px;resize:vertical}
+    .row{display:flex;gap:14px}
+    .row>div{flex:1}
+    button{margin-top:28px;width:100%;padding:16px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--blush);background:var(--rust);border:none;border-radius:2px;cursor:pointer;transition:background .18s}
+    button:hover{background:var(--espresso)}
+    .foot{margin-top:22px;color:var(--charcoal);font-size:13.5px;text-align:center;font-style:italic;font-family:var(--serif)}
+    .hp{position:absolute;left:-5000px}
+    .signoff{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+    .signoff__photo{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #fff;box-shadow:0 2px 10px rgba(76,44,32,.18)}
+    .signoff__text{margin:0;color:var(--charcoal);font-size:15px;line-height:1.55;font-family:var(--serif);font-style:italic;max-width:44ch}
+    .signoff__text span{display:block;font-style:normal;font-family:var(--sans);font-weight:500;letter-spacing:.05em;color:var(--espresso);margin-top:6px}
+    #thanks{text-align:center;padding:40px 10px;display:none}
+    #thanks h2{font-family:var(--serif);font-weight:600;color:var(--espresso);font-size:30px;margin:0 0 14px}
+    #thanks p{color:var(--charcoal);max-width:42ch;margin:0 auto}
+    #thanks img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid #fff;box-shadow:0 2px 10px rgba(76,44,32,.18);margin-bottom:20px}
+    @media(max-width:480px){.row{flex-direction:column;gap:0}h1{font-size:32px}}
+  </style>
+</head>
+<body>
+<div class="wrap" id="form-wrap">
+  <p class="kicker">SF Insider Collabs</p>
+  <h1>Let’s see if we click.</h1>
+  <p class="intro">Hi — I’m Claudia. I’m a San Francisco real estate agent, but honestly I’m just someone who’s a little obsessed with this city: the corner bakeries, the pop-ups, the spots that make a block feel like home.</p>
+  <p class="intro">If you’re a local small business or doing something new in SF, I’d love to hear about it. I only take on collabs I’d genuinely tell a friend about — so think of this less as a pitch form and more as a <em>let’s-see-if-we-click</em> one. Tell me what you’re up to. :)</p>
+  <form class="card" action="https://docs.google.com/forms/d/e/1FAIpQLSc2PzdTDiKEr0G-KDBcrHOyuOBxE--VgUl4bRtKZg6Xlb8MBw/formResponse" method="POST" onsubmit="return handleSubmit(event)">
+    <label>Your name <span class="req">*</span></label>
+    <input type="text" name="entry.1569865107" required>
+    <label>Business / brand <span class="req">*</span></label>
+    <input type="text" name="entry.1378658862" required>
+    <label>Email <span class="req">*</span></label>
+    <input type="email" name="entry.1969161557" required>
+    <div class="row">
+      <div>
+        <label>Instagram <span class="hint">(handle or link)</span></label>
+        <input type="text" name="entry.1866186548" placeholder="@yourbusiness">
+      </div>
+      <div>
+        <label>Neighborhood <span class="hint">(where in SF?)</span></label>
+        <input type="text" name="entry.75144300" placeholder="e.g. Hayes Valley">
+      </div>
+    </div>
+    <label>What are you? <span class="req">*</span></label>
+    <select name="entry.2147399653" required>
+      <option value="" disabled selected>Choose one…</option>
+      <option>Local small business (storefront)</option>
+      <option>Pop-up</option>
+      <option>Restaurant / cafe / bar</option>
+      <option>Event or grand opening</option>
+      <option>Maker / artist / studio</option>
+      <option>Something else</option>
+    </select>
+    <label>What do you have in mind? <span class="req">*</span></label>
+    <select name="entry.211446917" required>
+      <option value="" disabled selected>Choose one…</option>
+      <option>Paid content / video</option>
+      <option>Gifted collab (in exchange for a post)</option>
+      <option>Event coverage / drop-in</option>
+      <option>Not sure yet - open to ideas</option>
+    </select>
+    <label>Rough timing <span class="hint">(optional)</span></label>
+    <input type="text" name="entry.40755791" placeholder="e.g. opening in September, or flexible">
+    <label>Tell me about it <span class="req">*</span></label>
+    <textarea name="entry.986413804" required placeholder="What’s the story? What would make this a fit for you? No need to be polished — just tell me like you’d tell a friend."></textarea>
+    <label>Budget or trade <span class="req">*</span></label>
+    <input type="text" name="entry.1734956865" required placeholder="A $ amount is great — or trade works too (product, meals, a gift card)">
+    <div class="hp" aria-hidden="true"><input type="text" name="hp_field" tabindex="-1" autocomplete="off"></div>
+    <button type="submit">Send it my way</button>
+    <div class="signoff">
+      <img class="signoff__photo" src="/images/claudia-headshot.jpg" alt="Claudia Lee">
+      <p class="signoff__text">I read every one of these myself. If it feels like a fit, you’ll hear back from me personally.<span>— Claudia</span></p>
+    </div>
+  </form>
+</div>
+<div class="wrap" id="thanks">
+  <img src="/images/claudia-headshot.jpg" alt="Claudia Lee">
+  <h2>Got it — thank you.</h2>
+  <p>I read every one of these myself, so if it feels like a fit you’ll hear from me personally. Talk soon!</p>
+</div>
+<script>
+function handleSubmit(e){e.preventDefault();var f=e.target;var d=new FormData(f);d.delete('hp_field');fetch(f.action,{method:'POST',body:d,mode:'no-cors'}).then(function(){document.getElementById('form-wrap').style.display='none';document.getElementById('thanks').style.display='block';window.scrollTo({top:0,behavior:'smooth'})}).catch(function(){document.getElementById('form-wrap').style.display='none';document.getElementById('thanks').style.display='block';window.scrollTo({top:0,behavior:'smooth'})});return false}
+</script>
+</body>
+</html>
