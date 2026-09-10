@@ -3,30 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>You're In — The San Francisco Insider · Claudia Lee</title>
+<title>You're In — Claudia Lee · Newsletter</title>
+<meta name="description" content="Welcome to The San Francisco Insider — you're on the list.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --blush: #F7ECE7;
-  --cream: #F3EDE3;
-  --mist: #E7E4E0;
-  --taupe: #C7BAA6;
-  --sand: #E6C9A6;
-  --terracotta: #B24E24;
-  --cocoa: #7A5C4A;
-  --espresso: #3B2A22;
-  --display: 'Cormorant Garamond', 'Garamond', 'Didot', Georgia, serif;
-  --sans: 'Jost', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --linen: #E8E4D7;
+  --dune: #C7B8A3;
+  --toffee: #8D624B;
+  --terracotta: #A14528;
+  --espresso: #502E22;
+  --taupe-grey: #5C4C4C;
+  --font-serif: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 body {
   margin: 0;
-  background: var(--blush);
+  background: var(--linen);
   color: var(--espresso);
-  font-family: var(--sans);
+  font-family: var(--font-sans);
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
@@ -36,260 +35,347 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
+
+/* ── NAV ── */
 .site-nav {
   padding: 20px clamp(24px, 5vw, 56px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(180,160,148,.35);
+  border-bottom: 1px solid rgba(199,184,163,.35);
 }
 .site-nav__brand {
-  font-family: var(--display);
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: .06em;
-  color: var(--espresso);
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
-.site-nav__brand span {
-  font-family: var(--sans);
-  font-size: 9px;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--taupe);
-  display: block;
-  margin-top: 2px;
+.site-nav__logo {
+  height: 28px;
+  width: auto;
 }
 .site-nav__link {
-  font-family: var(--sans);
+  font-family: var(--font-sans);
   font-size: 10px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: var(--taupe);
+  color: var(--taupe-grey);
   text-decoration: none;
   transition: color .18s;
 }
 .site-nav__link:hover { color: var(--terracotta); }
-.thank-you {
+
+/* ── CONFIRMATION ── */
+.confirm {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: clamp(48px, 8vw, 96px) clamp(24px, 5vw, 56px);
-  text-align: center;
-  max-width: 680px;
+  justify-content: center;
+  padding: clamp(48px, 6vw, 80px) clamp(24px, 5vw, 56px) clamp(36px, 4vw, 52px);
+  max-width: 600px;
   margin: 0 auto;
+  text-align: center;
 }
-.thank-you__check {
-  width: 64px;
-  height: 64px;
+
+.confirm__photo {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  background: var(--terracotta);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 32px;
+  overflow: hidden;
+  border: 2.5px solid var(--dune);
+  box-shadow: 0 4px 20px rgba(80,46,34,.08);
+  margin-bottom: 32px;
 }
-.thank-you__check svg {
-  width: 28px;
-  height: 28px;
-  fill: none;
-  stroke: var(--blush);
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.confirm__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.thank-you h1 {
-  font-family: var(--display);
+
+.confirm__eyebrow {
+  font-family: var(--font-sans);
   font-weight: 400;
-  font-size: clamp(32px, 5vw, 48px);
-  line-height: 1.12;
-  letter-spacing: -0.01em;
-  color: var(--espresso);
+  font-size: 10px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--toffee);
   margin: 0 0 16px;
 }
-.thank-you h1 em {
-  font-style: italic;
-  font-weight: 300;
+
+.confirm h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(28px, 4.5vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--espresso);
+  margin: 0 0 12px;
 }
+
 .rule {
   width: 44px;
   height: 2px;
   background: var(--terracotta);
   border: 0;
-  margin: 0 auto 24px;
+  margin: 20px auto 24px;
 }
-.thank-you .message {
-  font-family: var(--display);
-  font-size: clamp(17px, 2.2vw, 21px);
-  font-weight: 300;
-  line-height: 1.6;
-  color: #4A3F3A;
-  max-width: 48ch;
-  margin: 0 auto 40px;
-}
-.btn-primary {
-  display: inline-block;
-  background: var(--cocoa);
-  color: var(--blush);
-  font-family: var(--sans);
-  font-size: 11px;
+
+.confirm__body {
+  font-family: var(--font-serif);
+  font-size: clamp(15px, 1.8vw, 18px);
   font-weight: 400;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  padding: 18px 40px;
-  border: 0;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background .18s;
+  line-height: 1.65;
+  color: var(--espresso);
+  max-width: 42ch;
+  margin: 0 auto 28px;
 }
-.btn-primary:hover { background: var(--espresso); }
+
+.confirm__note {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--taupe-grey);
+  line-height: 1.6;
+  max-width: 38ch;
+  margin: 0 auto 36px;
+}
+
+/* ── NEXT STEPS ── */
+.next-steps {
+  background: var(--dune);
+  padding: clamp(28px, 3.5vw, 44px) clamp(24px, 5vw, 56px);
+  text-align: center;
+}
+.next-steps h3 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--toffee);
+  margin: 0 0 20px;
+}
+.next-steps__grid {
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 28px;
+}
+.step-card {
+  text-align: left;
+  padding: 16px;
+}
+.step-card .num {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--terracotta);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.step-card p {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--espresso);
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .next-steps__grid { grid-template-columns: 1fr; }
+}
+
+/* ── CONSULT BAND ── */
 .consult-band {
-  background: var(--terracotta);
+  background: var(--espresso);
   padding: clamp(28px, 3.5vw, 44px) clamp(24px, 5vw, 56px);
   text-align: center;
 }
 .consult-band p {
-  font-family: var(--display);
-  font-size: clamp(20px, 2.5vw, 26px);
-  font-weight: 300;
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 400;
   font-style: italic;
-  line-height: 1.35;
-  color: var(--blush);
+  line-height: 1.4;
+  color: var(--linen);
   margin: 0 0 20px;
-  max-width: 42ch;
+  max-width: 38ch;
   margin-left: auto;
   margin-right: auto;
 }
 .btn-ghost {
   display: inline-block;
   background: transparent;
-  color: var(--blush);
-  border: 1px solid var(--blush);
-  font-family: var(--sans);
+  color: var(--linen);
+  border: 1px solid var(--linen);
+  font-family: var(--font-sans);
   font-size: 10px;
   font-weight: 400;
   letter-spacing: .22em;
   text-transform: uppercase;
-  padding: 15px 34px;
+  padding: 14px 32px;
   text-decoration: none;
   transition: all .18s;
 }
 .btn-ghost:hover {
-  background: var(--blush);
-  color: var(--terracotta);
-}
-.foot {
-  margin-top: auto;
-  background: var(--cream);
-  padding: clamp(28px, 3vw, 40px) clamp(24px, 5vw, 56px) 24px;
-}
-.foot__inner {
-  max-width: 780px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.foot__brand {
-  font-family: var(--display);
-  font-size: 20px;
-  font-weight: 400;
+  background: var(--linen);
   color: var(--espresso);
-  text-decoration: none;
 }
-.foot__brand small {
-  display: block;
-  font-family: var(--sans);
-  font-size: 9px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--taupe);
-  margin-top: 4px;
+
+/* ── SOCIAL ROW ── */
+.connect {
+  padding: clamp(28px, 3.5vw, 40px) clamp(24px, 5vw, 56px);
+  text-align: center;
+  border-top: 1px solid rgba(199,184,163,.35);
 }
-.foot__links {
+.connect__links {
   display: flex;
-  gap: 28px;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(18px, 3.5vw, 36px);
   flex-wrap: wrap;
 }
-.foot__links a {
-  font-size: 10px;
+.connect__links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 400;
   letter-spacing: .18em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--cocoa);
+  color: var(--toffee);
   transition: color .18s;
 }
-.foot__links a:hover { color: var(--terracotta); }
-.foot__bar {
-  width: 100%;
-  margin-top: 24px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(180,160,148,.45);
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
+.connect__links a:hover { color: var(--terracotta); }
+.connect__links a svg { width: 20px; height: 20px; fill: currentColor; }
+
+/* ── FOOTER ── */
+.foot {
+  margin-top: auto;
+  padding: 24px clamp(24px, 5vw, 56px);
+  text-align: center;
   font-size: 10px;
-  letter-spacing: .14em;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--taupe);
-}
-@media (max-width: 600px) {
-  .foot__inner { flex-direction: column; }
-  .foot__bar { flex-direction: column; gap: 8px; }
+  color: var(--taupe-grey);
+  line-height: 1.7;
+  border-top: 1px solid rgba(199,184,163,.3);
 }
 </style>
 </head>
 <body>
 
 <nav class="site-nav">
-  <a href="/" class="site-nav__brand">
-    claudia lee
-    <span>SF Real Estate Insider</span>
+  <a href="https://claudiainsider.com/" class="site-nav__brand" aria-label="Claudia Lee — Home">
+    <svg class="site-nav__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.46 67.09" aria-hidden="true">
+      <path fill="#502E22" d="M226.54,42.62V10.59l-5.07,1.56v.22c1.56,0,2.05.53,2.05,2.09v28.16c0,2.01-.62,3.07-2.27,3.25v.22h7.57v-.22c-1.65-.18-2.27-1.25-2.27-3.25Z"/>
+      <path fill="#502E22" d="M243.91,45.7c-2.76,0-6.55-1.27-7.13-4.77-1.59-9.64,13.81-5.57,14.99-12.08.56-3.11-3.66-5.58-8.08-5.47-6.28.15-11,5.34-11,11.58,0,6.99,4.72,11.58,11,11.58,4.23,0,7.8-2.09,9.67-5.57l-.4-.22c-2.14,3.43-5.61,4.95-9.04,4.95ZM235.66,35.06c.05-6.72,3.72-11.25,8.04-11.24,3.72,0,5.64,2.36,4.88,5.09-.66,2.35-2.77,3.06-6.22,4.27-4.27,1.5-6.31,3.5-6.08,6.11-.36-1.29-.63-2.53-.62-4.23Z"/>
+      <path fill="#502E22" d="M277.26,40.75c-2.14,3.43-5.61,4.95-9.04,4.95-2.76,0-6.55-1.27-7.13-4.77-1.59-9.64,13.81-5.57,14.99-12.08.56-3.11-3.66-5.58-8.08-5.47-6.28.15-11,5.34-11,11.58,0,6.99,4.72,11.58,11,11.58,4.23,0,7.8-2.09,9.67-5.57l-.4-.22ZM259.95,35.06c.05-6.72,3.72-11.25,8.04-11.24,3.72,0,5.64,2.36,4.88,5.09-.66,2.35-2.77,3.06-6.22,4.27-4.27,1.5-6.31,3.5-6.08,6.11-.36-1.29-.63-2.53-.62-4.23Z"/>
+      <path fill="#502E22" d="M41.27,41.21c-6.25-2.17-17.29,12.91-22.27,7.23-4.38-4.99,17.32-23.86,6.2-30.1-2.57-1.44-8.44-1.98-15.04,4.48-3.22,3.14-6.03,7.98-6.03,14.55,0,11.34,9.22,20.56,20.56,20.56,6.51,0,11.64-3.01,14.74-6.24,6.01-6.28,4.65-9.51,1.84-10.48ZM38.82,51.23h0c-3.75,3.82-8.77,5.93-14.12,5.93-10.91,0-19.78-8.87-19.78-19.78,0-5.36,2.11-10.38,5.94-14.14,3.45-3.49,8.99-6.5,13.16-4.07,7.47,4.36-14.94,24.43-8.01,30.55,7.82,6.9,21.79-12.83,26.41-6.75,1.18,1.56-.51,5.18-3.58,8.26Z"/>
+      <path fill="#502E22" d="M28.1,17.16c-.21-.04-.43.11-.47.34-.04.22.11.43.34.47,9.38,1.57,16.3,9.62,16.44,19.15.02,1.03-.05,2.07-.19,3.07-.03.22.12.43.35.46.02,0,.04,0,.06,0,.2,0,.37-.15.4-.35.15-1.04.21-2.12.2-3.19-.15-9.92-7.36-18.31-17.13-19.94Z"/>
+      <path fill="#502E22" d="M24,10.86c.22-.43.55-.93,1-1.49.45-.56.98-1.04,1.59-1.42.6-.39,1.23-.54,1.88-.45.82-.52,1.23-1.16,1.23-1.94,0-.56-.24-1.06-.71-1.49-.48-.43-1.08-.65-1.81-.65h-.49c-.15,0-.33.04-.55.13-.95.3-1.82.98-2.62,2.04-.8,1.06-1.2,2.08-1.2,3.07,0,1.08.56,1.81,1.68,2.2Z"/>
+      <path fill="#502E22" d="M66.46,56.51c-.3-.22-.62-.42-.95-.61-.33-.19-.65-.38-.95-.58-.3-.2-.54-.42-.73-.66-.19-.24-.28-.51-.28-.83,0-.21.04-.4.13-.58.09-.18.25-.32.47-.43.46,0,.91.06,1.36.19.45.13.89.29,1.35.49l.12-.8c-.27-.09-.6-.17-.97-.25-.37-.08-.72-.12-1.04-.12-.59,0-1.06.1-1.42.3-.36.2-.62.45-.79.76-.16.3-.25.6-.25.91,0,.37.09.69.27.95.18.27.41.5.7.7.29.2.59.38.91.55.32.17.62.34.91.52.29.18.52.38.7.6.18.22.27.48.27.79,0,.49-.16.87-.47,1.14-.32.27-.73.4-1.25.4-.26,0-.52-.04-.8-.11-.27-.07-.52-.15-.75-.25-.23-.1-.41-.18-.54-.24v.55c.23.09.55.18.95.29.41.11.85.16,1.31.16.62,0,1.13-.1,1.54-.29.41-.19.71-.45.91-.78.2-.33.3-.7.3-1.11,0-.37-.09-.69-.28-.96-.19-.27-.43-.52-.73-.74Z"/>
+      <path fill="#502E22" d="M69.93,60.25h1.14v-3.84h2.48v-.45h-2.48v-2.85c.23-.06.44-.11.63-.15.2-.03.41-.05.64-.05l2.17.36v-.79h-4.58v7.76Z"/>
+      <path fill="#502E22" d="M84.49,55.79c.42-.32.63-.76.63-1.32,0-.43-.12-.79-.36-1.08-.24-.29-.56-.52-.97-.67-.41-.15-.86-.23-1.37-.23h-2.53v7.76h1.15v-3.7h.9l2.72,3.87,1.36-.16-3.14-3.8c.65-.12,1.18-.34,1.61-.66ZM81.79,56.19h-.75v-3.07c.2-.05.46-.1.77-.14.31-.04.58-.06.8-.06.31.09.56.21.73.37.18.16.3.33.38.5.08.18.13.33.15.47.02.14.03.22.03.26,0,.27-.06.54-.18.79-.12.25-.33.46-.63.63-.3.16-.74.25-1.31.25Z"/>
+      <path fill="#502E22" d="M89.21,56.4h2.6v-.45h-2.6v-2.85c.23-.06.44-.11.63-.15.2-.03.41-.05.63-.05l2.18.36.12-.79h-4.7v7.76h4.65l.12-.79-3.63.36v-3.42Z"/>
+      <path fill="#502E22" d="M97.9,52.3l-3.48,7.94h.63l.87-2.11h3.48l.88,2.11h1.28l-3.48-7.94h-.18ZM96.1,57.69l1.57-3.8,1.55,3.8h-3.12Z"/>
+      <path fill="#502E22" d="M105.2,59.76c-.21-.04-.41-.09-.62-.15v-7.12h-1.15v7.76h4.28l.14-.79-2.12.36c-.15,0-.33-.02-.53-.06Z"/>
+      <path fill="#502E22" d="M114.61,56.4h2.6v-.45h-2.6v-2.85c.23-.06.44-.11.63-.15.2-.03.41-.05.63-.05l2.18.36.12-.79h-4.7v7.76h4.65l.12-.79-3.63.36v-3.42Z"/>
+      <path fill="#502E22" d="M124.52,56.51c-.3-.22-.62-.42-.95-.61-.33-.19-.65-.38-.95-.58-.3-.2-.54-.42-.73-.66-.19-.24-.28-.51-.28-.83,0-.21.04-.4.13-.58.09-.18.25-.32.47-.43.46,0,.91.06,1.36.19.45.13.89.29,1.35.49l.12-.8c-.27-.09-.6-.17-.97-.25-.37-.08-.72-.12-1.04-.12-.59,0-1.06.1-1.42.3-.36.2-.62.45-.79.76-.16.3-.25.6-.25.91,0,.37.09.69.27.95.18.27.41.5.7.7.29.2.59.38.91.55.32.17.62.34.91.52.29.18.52.38.7.6.18.22.27.48.27.79,0,.49-.16.87-.47,1.14-.32.27-.73.4-1.25.4-.26,0-.52-.04-.8-.11-.27-.07-.52-.15-.75-.25-.23-.1-.41-.18-.54-.24v.55c.23.09.55.18.95.29.41.11.85.16,1.31.16.62,0,1.13-.1,1.54-.29.41-.19.71-.45.91-.78.2-.33.3-.7.3-1.11,0-.37-.09-.69-.28-.96-.19-.27-.43-.52-.73-.74Z"/>
+      <path fill="#502E22" d="M127.12,53.32l1.58-.36c.16,0,.3,0,.42.02.12.02.25.04.37.07v7.19h1.14v-7.19c.12-.03.25-.06.37-.07.12-.02.27-.02.42-.02l1.59.36.06-.83h-6.03l.07.83Z"/>
+      <path fill="#502E22" d="M137.5,52.3l-3.48,7.94h.63l.87-2.11h3.48l.88,2.11h1.28l-3.48-7.94h-.18ZM135.69,57.69l1.57-3.8,1.55,3.8h-3.12Z"/>
+      <path fill="#502E22" d="M142.16,53.32l1.58-.36c.16,0,.3,0,.42.02.12.02.25.04.37.07v7.19h1.14v-7.19c.12-.03.25-.06.37-.07.12-.02.27-.02.42-.02l1.59.36.06-.83h-6.03l.07.83Z"/>
+      <path fill="#502E22" d="M151.13,56.4h2.6v-.45h-2.6v-2.85c.23-.06.44-.11.63-.15.2-.03.41-.05.63-.05l2.18.36.12-.79h-4.7v7.76h4.65l.12-.79-3.63.36v-3.42Z"/>
+      <rect fill="#502E22" x="160.92" y="52.49" width="1.08" height="7.76"/>
+      <polygon fill="#502E22" points="170.19 58.13 170.14 58.13 165.67 52.49 164.81 52.49 164.81 60.25 165.32 60.25 165.32 53.96 165.37 53.96 170.5 60.38 170.7 60.38 170.7 52.49 170.19 52.49 170.19 58.13"/>
+      <path fill="#502E22" d="M177.27,56.51c-.3-.22-.62-.42-.95-.61-.33-.19-.65-.38-.95-.58-.3-.2-.54-.42-.73-.66-.19-.24-.28-.51-.28-.83,0-.21.04-.4.13-.58.09-.18.25-.32.47-.43.46,0,.91.06,1.36.19.45.13.89.29,1.35.49l.12-.8c-.27-.09-.6-.17-.97-.25-.37-.08-.72-.12-1.04-.12-.59,0-1.06.1-1.42.3-.36.2-.62.45-.79.76-.16.3-.25.6-.25.91,0,.37.09.69.27.95.18.27.41.5.7.7.29.2.59.38.91.55.32.17.62.34.91.52.29.18.52.38.7.6.18.22.27.48.27.79,0,.49-.16.87-.47,1.14-.32.27-.73.4-1.25.4-.26,0-.52-.04-.8-.11-.27-.07-.52-.15-.75-.25-.23-.1-.41-.18-.54-.24v.55c.23.09.55.18.95.29.41.11.85.16,1.31.16.62,0,1.13-.1,1.54-.29.41-.19.71-.45.91-.78.2-.33.3-.7.3-1.11,0-.37-.09-.69-.28-.96-.19-.27-.43-.52-.73-.74Z"/>
+      <rect fill="#502E22" x="180.73" y="52.49" width="1.08" height="7.76"/>
+      <path fill="#502E22" d="M189.88,53.41c-.45-.32-.93-.56-1.46-.7-.53-.14-1.06-.22-1.58-.22h-2.21v7.76h2.44c.56,0,1.1-.07,1.62-.21.52-.14.97-.36,1.38-.65.4-.29.72-.67.95-1.14.23-.46.35-1.02.35-1.67,0-.75-.13-1.38-.4-1.9-.27-.52-.63-.94-1.07-1.27ZM189.69,58.33c-.29.51-.68.89-1.17,1.14-.5.25-1.06.37-1.69.37-.19,0-.38,0-.59-.03-.2-.02-.36-.04-.47-.08v-6.59c.22-.07.5-.13.85-.18.35-.05.66-.07.93-.07.49.12.93.35,1.32.67.39.32.69.72.91,1.2.22.48.33,1.02.33,1.62,0,.78-.14,1.43-.43,1.94Z"/>
+      <path fill="#502E22" d="M194.76,56.4h2.6v-.45h-2.6v-2.85c.23-.06.44-.11.63-.15.2-.03.41-.05.63-.05l2.18.36.12-.79h-4.7v7.76h4.65l.12-.79-3.63.36v-3.42Z"/>
+      <path fill="#502E22" d="M205.5,55.79c.42-.32.63-.76.63-1.32,0-.43-.12-.79-.36-1.08-.24-.29-.56-.52-.97-.67-.41-.15-.86-.23-1.37-.23h-2.53v7.76h1.15v-3.7h.9l2.72,3.87,1.36-.16-3.14-3.8c.65-.12,1.18-.34,1.61-.66ZM202.8,56.19h-.75v-3.07c.2-.05.46-.1.77-.14.31-.04.58-.06.8-.06.31.09.56.21.73.37.18.16.3.33.38.5.08.18.13.33.15.47.02.14.03.22.03.26,0,.27-.06.54-.18.79-.12.25-.33.46-.63.63-.3.16-.74.25-1.31.25Z"/>
+      <path fill="#502E22" d="M181.13,17.62c.95,0,1.66-.71,1.66-1.65,0-.91-.74-1.65-1.65-1.65-.94,0-1.65.71-1.65,1.65,0,.91.74,1.65,1.65,1.65Z"/>
+      <path fill="#502E22" d="M70.77,45.6c-4.15,0-7.74-3.22-7.74-10.76,0-6.74,2.83-11.17,7.52-11.17,2.21,0,4.29.75,5.64,2.1.55.54.6,1.49.01,1.99-.39.33-.64.78-.61,1.3.05.75.69,1.37,1.44,1.41.88.04,1.59-.64,1.59-1.52,0-2.68-2.77-5.72-7.91-5.72-6.25,0-10.91,4.6-10.91,11.61s4.44,11.61,10.73,11.61c3.8,0,6.97-2.1,8.71-5.58l-.4-.22c-2.01,3.44-4.96,4.96-8.08,4.96Z"/>
+      <path fill="#502E22" d="M90.17,45.77c-1.66-.18-2.29-1.25-2.29-3.27V10.29l-5.1,1.57v.22c1.57,0,2.06.54,2.06,2.11v28.31c0,2.02-.63,3.09-2.28,3.27v.22h7.61v-.22Z"/>
+      <path fill="#502E22" d="M140.12,45.5c-.67,0-1.25-.27-1.25-1.84v-20.29l-5.05,1.57v.22c1.57,0,2.06.54,2.06,2.11v10.35c0,3.81-2.57,8.24-7.14,8.24-2.78,0-4.88-1.43-4.88-5.78v-16.71l-5.04,1.57v.22c1.57,0,2.06.54,2.06,2.11v12.72c0,3.14,2.08,6.45,7.68,6.45,4.12,0,6.24-3.14,7.32-6.18v3.14c0,2.69,2.18,3.05,3.3,3.05.99,0,1.79-.58,2.29-1.21l-.13-.13c-.27.22-.72.4-1.21.4Z"/>
+      <path fill="#502E22" d="M115.39,45.43l-.13-.14c-.28.24-.72.41-1.21.41-.68,0-1.26-.27-1.26-1.82v-13.63c0-3.27-2.94-7.1-8.96-7.1-4.01,0-7.29,2.26-7.45,5.06-.06.91.61,1.73,1.51,1.73.85,0,1.52-.68,1.52-1.51,0-.48-.17-.85-.44-1.1-.58-.54-.7-1.45-.11-1.98,1.2-1.07,3.02-1.75,4.97-1.75,2.23,0,5.99,1.19,5.99,5.63,0,5.22-14.99,4.38-15.23,12.16-.08,2.44,1.76,4.51,4.16,4.9,6.49,1.1,9.3-4.26,11.06-9.71v6.76c0,2.67,1.6,3.3,2.72,3.3.97,0,2.36-.58,2.84-1.21ZM109.83,35.12c-1.57,5.22-4.6,11.27-8.83,10.51-2.42-.42-3.33-1.96-3.38-4.16-.16-6.92,8.94-6.35,12.21-10.64v4.29Z"/>
+      <path fill="#502E22" d="M203.5,46.64c.97,0,2.36-.58,2.84-1.21l-.13-.14c-.27.24-.72.41-1.21.41-.68,0-1.24-.27-1.24-1.82v-13.63c0-3.27-2.94-7.1-8.97-7.1-4.01,0-7.29,2.26-7.45,5.06-.06.9.61,1.73,1.52,1.73.83,0,1.51-.68,1.51-1.51,0-.48-.17-.84-.44-1.09-.58-.54-.7-1.45-.11-1.97,1.2-1.07,3.01-1.76,4.96-1.76,2.23,0,5.99,1.19,5.99,5.63s-10.61,4.51-14.11,9.07c-.25-.24-.63-.41-1.12-.46-3.8-.36-8.75,8.66-11.46,6.71-1.37-.99,1.59-6.26,3.21-9.21,4.42-8.04,4.15-10.75,1.46-12.07-2.14-1.05-5.84.37-13.17,4.63V10.29l-5.06,1.57v.22c1.57,0,2.06.53,2.06,2.11v11.93c-.76-.83-1.77-1.43-3.08-1.73-2.99-.69-6.29.99-5.71,4.15.39,2.12,2.94,3.95,7.29,2.31,4.68-1.76,13.88-8.76,16.46-6.75,2.42,1.88-.29,5.53-2.46,10.2-2.94,6.34-5.91,10.34-2.61,11.93,4.16,1.98,9.23-7.89,12.37-7.67.44.02.94.41,1.16.8,0,.03-.03.08-.05.13-.28.63-.42,1.33-.42,2.13,0,2.37,1.89,4.32,4.23,4.7,6.44,1.04,9.24-4.29,11-9.73v6.76c0,2.67,1.6,3.3,2.72,3.3ZM162.59,29.51c-4.18,2.58-7.07.97-7.42-1.16-.42-2.55,1.98-3.94,4.24-3.47,1.46.3,2.75,1.35,3.17,1.9v2.73ZM191.95,45.64c-2.42-.42-3.32-1.96-3.38-4.16-.16-6.92,8.96-6.35,12.21-10.64v4.29c-1.57,5.22-4.6,11.27-8.83,10.51Z"/>
+      <path fill="#502E22" d="M168.18,45.24l-.13-.14c-.27.22-.72.41-1.21.41-.68,0-1.26-.27-1.26-1.84v-13.63l-3,1.6v3.42c-1.79,6.15-4.84,10.84-8.91,10.84-3.44,0-5.5-4.48-5.5-10.75,0-8.61,3.8-10.64,6.15-11.19,0,0,.02.02.02,0,.68-.33,1.43-.55,2.23-.63-3.22-.35-11.61.5-11.61,12.04,0,5.83,2.58,11.06,8.6,11.06,4.34,0,7.25-4.29,9.04-9.81v6.77c0,2.67,1.68,3.03,2.8,3.03.99,0,2.31-.58,2.8-1.19Z"/>
+    </svg>
   </a>
-  <a href="https://calendar.app.google/Ryt1GKxmpuoTW5yf9" class="site-nav__link" target="_blank">Book a Consult</a>
+  <a href="https://calendar.app.google/Ryt1GKxmpuoTW5yf9" class="site-nav__link" target="_blank" rel="noopener">Book a Consult</a>
 </nav>
 
-<section class="thank-you">
-  <div class="thank-you__check">
-    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+<section class="confirm">
+  <div class="confirm__photo">
+    <img src="data:image/jpeg;base64,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" alt="Claudia Lee" width="200" height="200">
   </div>
-  <h1>You're an <em>Insider</em> now.</h1>
+
+  <p class="confirm__eyebrow">You're in</p>
+  <h1>Welcome to the <em>Insider.</em></h1>
   <hr class="rule">
-  <p class="message">
-    Welcome to The San Francisco Insider. You'll get plain-english money and SF real estate insights once a month — no spam, no drip campaigns, just the good stuff.
-  </p>
-  <a href="/newsletter/august-2026/" class="btn-primary">Read the Latest Issue</a>
+  <p class="confirm__body">Your first issue is on its way. I write this one myself, once a month — market context, neighborhood intel, and the financial stuff that actually matters.</p>
+  <p class="confirm__note">Check your inbox (and your spam or promotions tab, just in case). If it's not there in a few minutes, drop me a note and I'll make sure you're on the list.</p>
+</section>
+
+<section class="next-steps">
+  <h3>While you're here</h3>
+  <div class="next-steps__grid">
+    <div class="step-card">
+      <div class="num">1</div>
+      <p>Grab the free <a href="/buyer-guide/" style="color:var(--terracotta);text-decoration:underline">SF Buyer's Guide</a> — 11 chapters of the stuff nobody explains.</p>
+    </div>
+    <div class="step-card">
+      <div class="num">2</div>
+      <p>Check out the <a href="/seller-guide/" style="color:var(--terracotta);text-decoration:underline">Seller's Guide</a> if you're thinking about selling.</p>
+    </div>
+    <div class="step-card">
+      <div class="num">3</div>
+      <p>Follow along on <a href="https://instagram.com/claudiainsider" target="_blank" rel="noopener" style="color:var(--terracotta);text-decoration:underline">Instagram</a> for listings, tips, and city gems.</p>
+    </div>
+    <div class="step-card">
+      <div class="num">4</div>
+      <p>Have a specific question? <a href="https://calendar.app.google/Ryt1GKxmpuoTW5yf9" target="_blank" rel="noopener" style="color:var(--terracotta);text-decoration:underline">Book a free 20-minute consult.</a></p>
+    </div>
+  </div>
 </section>
 
 <section class="consult-band">
-  <p>Have a specific question? I'm happy to talk it through.</p>
-  <a href="https://calendar.app.google/Ryt1GKxmpuoTW5yf9" class="btn-ghost" target="_blank">Book a Free 20-Minute Consult</a>
+  <p>Real questions deserve real answers — not a chatbot.</p>
+  <a href="https://calendar.app.google/Ryt1GKxmpuoTW5yf9" class="btn-ghost" target="_blank" rel="noopener">Book a Free 20-Minute Consult</a>
+</section>
+
+<section class="connect">
+  <nav class="connect__links">
+    <a href="https://instagram.com/claudiainsider" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6"/></svg>
+      Instagram
+    </a>
+    <a href="https://youtube.com/@claudiainsider" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      YouTube
+    </a>
+    <a href="https://tiktok.com/@claudiainsider" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.18 8.18 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.18z"/></svg>
+      TikTok
+    </a>
+    <a href="https://linkedin.com/in/claudiainsider" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77"/></svg>
+      LinkedIn
+    </a>
+    <a href="mailto:claudia@vantagesanfrancisco.com">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4-8 5-8-5V6l8 5 8-5v2"/></svg>
+      Email
+    </a>
+  </nav>
 </section>
 
 <footer class="foot">
-  <div class="foot__inner">
-    <a href="/" class="foot__brand">
-      claudia lee
-      <small>SF Real Estate Insider</small>
-    </a>
-    <nav class="foot__links">
-      <a href="https://instagram.com/claudiainsider" target="_blank">Instagram</a>
-      <a href="https://youtube.com/@claudiainsider" target="_blank">YouTube</a>
-      <a href="https://tiktok.com/@claudiainsider" target="_blank">TikTok</a>
-      <a href="https://linkedin.com/in/claudiainsider" target="_blank">LinkedIn</a>
-      <a href="mailto:claudia@vantagesanfrancisco.com">Email</a>
-    </nav>
-    <div class="foot__bar">
-      <span>Claudia Lee · REALTOR® · DRE #02380540</span>
-      <span>Vantage San Francisco</span>
-      <span>Equal Housing Opportunity</span>
-    </div>
-  </div>
+  Claudia Lee · REALTOR® · DRE #02380540 · Vantage San Francisco · Equal Housing Opportunity
 </footer>
 
 </body>
