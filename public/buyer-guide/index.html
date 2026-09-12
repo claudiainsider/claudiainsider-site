@@ -666,7 +666,7 @@ strong { color: var(--terracotta); font-weight: 700; }
   </form>
 </div>
 
-<div id="gated-content">
+<div id="gated-content" style="display:none">
 
 <!-- ═══════ PAGE 3: CH 01 — A QUICK HELLO ═══════ -->
 <div class="page">
@@ -1129,7 +1129,7 @@ strong { color: var(--terracotta); font-weight: 700; }
 <script>
 (function(){
   var K='ci_buyer',g=document.getElementById('gated-content'),o=document.getElementById('email-gate'),f=document.getElementById('gate-form');
-  function u(){if(g){g.style.display='';}if(o)o.style.display='none';}
+  function u(){if(g){g.style.display='block';}if(o)o.style.display='none';}
   try{if(localStorage.getItem(K)==='1'){u();return;}}catch(e){}
   if(f)f.addEventListener('submit',function(e){
     e.preventDefault();
