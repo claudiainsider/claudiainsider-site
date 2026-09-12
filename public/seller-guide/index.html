@@ -535,7 +535,7 @@ a { color: inherit; }
 </div>
 
 
-<div id="gated-content">
+<div id="gated-content" style="display:none">
 <section class="whats-inside">
   <h3>What's inside</h3>
   <div class="inside-grid">
@@ -608,7 +608,7 @@ a { color: inherit; }
 <script>
 (function(){
   var K='ci_seller',g=document.getElementById('gated-content'),o=document.getElementById('email-gate'),f=document.getElementById('gate-form');
-  function u(){if(g){g.style.display='';}if(o)o.style.display='none';}
+  function u(){if(g){g.style.display='block';}if(o)o.style.display='none';}
   try{if(localStorage.getItem(K)==='1'){u();return;}}catch(e){}
   if(f)f.addEventListener('submit',function(e){
     e.preventDefault();
