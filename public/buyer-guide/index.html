@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/favicon.png">
 <title>SF First-Time Buyer Guide — Claudia Insider</title>
 <style>
 /* Embedded fonts — no external dependency */
@@ -496,6 +495,104 @@ strong { color: var(--terracotta); font-weight: 700; }
   body { background: white; }
   .page { box-shadow: none; margin: 0; }
 }
+
+/* ── EMAIL GATE ── */
+.gate-overlay {
+  position: relative;
+  background: var(--dune);
+  padding: clamp(48px, 6vw, 72px) clamp(24px, 5vw, 56px);
+  text-align: center;
+}
+.gate-overlay::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(232,228,215,0), #C7B8A3);
+  pointer-events: none;
+  z-index: 2;
+}
+.gate-overlay h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(24px, 3.5vw, 34px);
+  line-height: 1.15;
+  color: var(--espresso);
+  margin: 0 0 12px;
+}
+.gate-overlay .gate-sub {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--taupe-grey);
+  max-width: 44ch;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+.gate-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.gate-form .field { margin-bottom: 14px; text-align: left; }
+.gate-form .field label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--toffee);
+  margin-bottom: 6px;
+}
+.gate-form .field input {
+  width: 100%;
+  border: 1px solid rgba(232,228,215,.7);
+  background: var(--linen);
+  padding: 12px 14px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--espresso);
+  border-radius: 0;
+  outline: none;
+  transition: border-color .18s;
+  -webkit-appearance: none;
+}
+.gate-form .field input::placeholder { color: var(--taupe-grey); }
+.gate-form .field input:focus { border-color: var(--terracotta); }
+.gate-form .gate-btn {
+  display: inline-block;
+  width: 100%;
+  background: var(--terracotta);
+  color: var(--linen);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  border: none;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: background .18s;
+  margin-top: 4px;
+}
+.gate-form .gate-btn:hover { background: var(--espresso); }
+.gate-form .gate-note {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--taupe-grey);
+  margin: 16px 0 0;
+}
+.gate-lock-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
 </style>
 </head>
 <body>
@@ -546,6 +643,30 @@ strong { color: var(--terracotta); font-weight: 700; }
   </div>
   <div class="page-footer"><span>CLAUDIA LEE &middot; CLAUDIA INSIDER &middot; VANTAGE REALTY</span><span>02</span></div>
 </div>
+
+
+<!-- ═══════ EMAIL GATE ═══════ -->
+<div id="email-gate" class="gate-overlay">
+  <svg class="gate-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+  <h2>Keep reading — just one step</h2>
+  <p class="gate-sub">Enter your email to unlock all 11 chapters. You'll also get a PDF copy sent straight to your inbox.</p>
+  <form id="gate-form" class="gate-form" name="buyer-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+    <input type="hidden" name="form-name" value="buyer-guide">
+    <div class="field">
+      <label for="bg-name">First Name</label>
+      <input type="text" id="bg-name" name="name" placeholder="Your first name">
+    </div>
+    <div class="field">
+      <label for="bg-email">Email</label>
+      <input type="email" id="bg-email" name="email" placeholder="you@example.com" required>
+    </div>
+    <button type="submit" class="gate-btn">Unlock the Guide</button>
+    <p class="gate-note">One email with your guide. No spam, no drip campaigns.</p>
+  </form>
+</div>
+
+<div id="gated-content">
 
 <!-- ═══════ PAGE 3: CH 01 — A QUICK HELLO ═══════ -->
 <div class="page">
@@ -1003,5 +1124,22 @@ strong { color: var(--terracotta); font-weight: 700; }
   </div>
 </div>
 
+
+</div><!-- /gated-content -->
+<script>
+(function(){
+  var K='ci_buyer',g=document.getElementById('gated-content'),o=document.getElementById('email-gate'),f=document.getElementById('gate-form');
+  function u(){if(g){g.style.display='';}if(o)o.style.display='none';}
+  try{if(localStorage.getItem(K)==='1'){u();return;}}catch(e){}
+  if(f)f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=f.querySelector('.gate-btn');b.textContent='SENDING\u2026';b.disabled=true;
+    var d=new FormData(f);
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d).toString()})
+    .then(function(){try{localStorage.setItem(K,'1');}catch(e){}u();if(g)g.scrollIntoView({behavior:'smooth',block:'start'});})
+    .catch(function(){try{localStorage.setItem(K,'1');}catch(e){}u();});
+  });
+})();
+</script>
 </body>
 </html>
