@@ -108,7 +108,7 @@ a { color: inherit; }
 .image-band { width: 100%; overflow: hidden; line-height: 0; }
 .image-band img {
   width: 100%;
-  height: clamp(240px, 40vw, 520px);
+  height: clamp(240px, 42vw, 540px);
   object-fit: cover;
   object-position: center 30%;
 }
@@ -347,7 +347,7 @@ a { color: inherit; }
   margin: 0 auto 26px;
   max-width: 44ch;
 }
-.unlock .note { font-family: var(--font-sans); font-size: 13px; color: var(--taupe-grey); margin: 18px 0 0; }
+.unlock .note { font-family: var(--font-sans); font-size: 13px; color: var(--taupe-grey); margin: 18px auto 0; max-width: 40ch; }
 .btn-solid {
   display: inline-block;
   background: var(--terracotta);
@@ -506,7 +506,7 @@ body.unlocked .unlock { display: block; }
     <p class="sub">Everything I'd tell a friend who asked me how selling in SF works.</p>
     <form id="gate-form" name="seller-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
-      <input type="hidden" name="form-name" value="seller-guide">
+      <input type="hidden" name="form-name" value="seller-guide"><input type="hidden" name="form_source" value="Seller Guide"><input type="hidden" name="_subject" value="New Seller Guide request">
       <div class="field"><label for="name">First Name</label><input type="text" id="name" name="name" placeholder="Your first name"></div><div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@example.com" required></div><div class="field"><label for="motivation">What's prompting the move?</label><select id="motivation" name="motivation"><option value="" disabled selected>Choose one (optional)</option><option value="upsizing">Upsizing</option><option value="downsizing">Downsizing</option><option value="relocating">Relocating</option><option value="exploring">Just exploring my options</option></select></div>
       <button type="submit" class="btn-primary">Send Me the Guide</button>
     </form>
@@ -557,17 +557,17 @@ body.unlocked .unlock { display: block; }
 
 <script>
 (function(){
-  var K='ci_seller', f=document.getElementById('gate-form');
+  var K='ci_seller', W='https://claudia-intake.claudia-6e4.workers.dev', f=document.getElementById('gate-form');
   function unlock(){ document.body.classList.add('unlocked'); var u=document.getElementById('unlock'); if(u) u.scrollIntoView({behavior:'smooth',block:'center'}); }
   try{ if(localStorage.getItem(K)==='1'){ document.body.classList.add('unlocked'); } }catch(e){}
   if(!f) return;
   f.addEventListener('submit', function(e){
     e.preventDefault();
     var b=f.querySelector('button[type="submit"]'); if(b){ b.textContent='Sending\u2026'; b.disabled=true; }
-    var d=new URLSearchParams(new FormData(f)).toString();
-    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:d})
-      .then(function(){ try{localStorage.setItem(K,'1');}catch(e){} unlock(); })
-      .catch(function(){ try{localStorage.setItem(K,'1');}catch(e){} unlock(); });
+    var fd=new FormData(f);
+    var jobs=[fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}).catch(function(){})];
+    if(W){ jobs.push(fetch(W,{method:'POST',body:fd,headers:{'Accept':'application/json'}}).catch(function(){})); }
+    Promise.all(jobs).then(function(){ try{localStorage.setItem(K,'1');}catch(e){} unlock(); });
   });
 })();
 </script>
