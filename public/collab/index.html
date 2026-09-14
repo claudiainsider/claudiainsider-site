@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Work with Claudia — SF Insider Collabs</title>
 <meta name="description" content="Collaborate with Claudia Lee, SF real estate agent and local insider. For SF small businesses, pop-ups, and openings.">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -549,17 +551,17 @@ body.unlocked .unlock { display: block; }
 
 <script>
 (function(){
-  var K='ci_collab', f=document.getElementById('gate-form');
+  var K='ci_collab', W='', f=document.getElementById('gate-form');
   function unlock(){ document.body.classList.add('unlocked'); var u=document.getElementById('unlock'); if(u) u.scrollIntoView({behavior:'smooth',block:'center'}); }
   try{ if(localStorage.getItem(K)==='1'){ document.body.classList.add('unlocked'); } }catch(e){}
   if(!f) return;
   f.addEventListener('submit', function(e){
     e.preventDefault();
     var b=f.querySelector('button[type="submit"]'); if(b){ b.textContent='Sending\u2026'; b.disabled=true; }
-    var d=new URLSearchParams(new FormData(f)).toString();
-    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:d})
-      .then(function(){ try{localStorage.setItem(K,'1');}catch(e){} unlock(); })
-      .catch(function(){ try{localStorage.setItem(K,'1');}catch(e){} unlock(); });
+    var fd=new FormData(f);
+    var jobs=[fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}).catch(function(){})];
+    if(W){ jobs.push(fetch(W,{method:'POST',body:fd,headers:{'Accept':'application/json'}}).catch(function(){})); }
+    Promise.all(jobs).then(function(){ try{localStorage.setItem(K,'1');}catch(e){} unlock(); });
   });
 })();
 </script>
