@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The San Francisco Insider — September 2026</title>
+<!--[if mso]><style>body{font-family:'Trebuchet MS',Verdana,sans-serif!important;}h1,h2,h3,.serif{font-family:Georgia,'Times New Roman',serif!important;}</style><![endif]-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+  /* ========================================
+     CLAUDIA INSIDER — BRAND SYSTEM
+     Studio Tatjana Klé · Exact Values Only
+     ======================================== */
+
+  body {
+    margin: 0; padding: 0;
+    background-color: #E8E4D7;
+    font-family: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
+    color: #5C4C4C;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; border: 0; }
+  a { color: #A14528; text-decoration: none; }
+
+  .wrapper { max-width: 640px; margin: 0 auto; background: #E8E4D7; }
+
+  /* ── HEADER ────────────────────────────── */
+  .header {
+    background: #A14528;
+    padding: 44px 48px 36px;
+  }
+  .header-eyebrow {
+    font-family: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #E8E4D7;
+    margin: 0 0 14px;
+    opacity: 0.75;
+  }
+  .header-title {
+    font-family: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+    font-size: 38px;
+    font-weight: 400;
+    font-style: italic;
+    color: #E8E4D7;
+    margin: 0 0 6px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .header-rule {
+    width: 44px;
+    height: 2px;
+    background: #E8E4D7;
+    border: 0;
+    margin: 18px 0;
+  }
+  .header-meta {
+    font-family: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #E8E4D7;
+    margin: 0;
+    opacity: 0.75;
+  }
+
+  /* ── SECTIONS ──────────────────────────── */
+  .section-linen { padding: 44px 48px; background: #E8E4D7; }
+  .section-dune  { padding: 44px 48px; background: #C7B8A3; }
+  .section-dark  { padding: 52px 48px; background: #5C4C4C; color: #E8E4D7; }
+
+  .eyebrow {
+    font-family: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #A14528;
+    margin: 0 0 14px;
+  }
+  .eyebrow-light {
+    font-family: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #C7B8A3;
+    margin: 0 0 14px;
+  }
+  .eyebrow-dune {
+    font-family: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #502E22;
+    margin: 0 0 14px;
+  }
+
+  /* ── TYPOGRAPHY ────────────────────────── */
+  h2 {
+    font-family: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #502E22;
+    margin: 0 0 20px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-family: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #502E22;
+    margin: 28px 0 12px;
+    line-height: 1.25;
+  }
+  h2.on-dark, h3.on-dark { color: #E8E4D7; }
+  h2.on-dune { color: #502E22; }
+
+  p { font-size: 16px; margin: 0 0 16px; line-height: 1.65; }
+  p.on-dark { color: #E8E4D7; }
+  .lead {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #502E22;
+    font-weight: 300;
+  }
+  .source {
+    font-size: 11px;
+    color: #8D624B;
+    margin: 6px 0 0;
+    font-style: italic;
+  }
+
+  /* ── PERSONAL NOTE ─────────────────────── */
+  .note-card {
+    background: #C7B8A3;
+    padding: 28px 32px;
+    margin: 0 0 8px;
+  }
+  .note-card p { color: #502E22; font-size: 15px; margin-bottom: 14px; }
+  .note-card p:last-child { margin-bottom: 0; }
+  .note-card .sign-off-logo {
+    margin-top: 8px;
+  }
+
+  /* ── DIVIDERS ──────────────────────────── */
+  .rule-accent {
+    border: none;
+    border-top: 2px solid #A14528;
+    margin: 28px 0;
+    width: 44px;
+  }
+  .rule-subtle {
+    border: none;
+    border-top: 1px solid #C7B8A3;
+    margin: 28px 0;
+  }
+
+  /* ── STAT ROW ──────────────────────────── */
+  .stat-strip {
+    background: #502E22;
+    padding: 32px 48px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .stat-item { text-align: center; flex: 1; min-width: 120px; }
+  .stat-number {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #E8E4D7;
+    margin: 0;
+    line-height: 1.1;
+  }
+  .stat-label {
+    font-family: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #C7B8A3;
+    margin: 8px 0 0;
+    line-height: 1.5;
+  }
+
+  /* ── PULL QUOTE ────────────────────────── */
+  .pull-quote {
+    border-left: 3px solid #A14528;
+    padding: 4px 0 4px 24px;
+    margin: 28px 0;
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.45;
+    color: #502E22;
+  }
+
+  /* ── CHART BLOCKS ──────────────────────── */
+  .chart-block { margin: 28px 0; }
+  .chart-block img { width: 100%; height: auto; }
+  .chart-takeaway {
+    font-size: 14px;
+    color: #502E22;
+    margin: 0;
+    padding: 14px 18px;
+    background: #C7B8A3;
+    border-left: 3px solid #A14528;
+    line-height: 1.55;
+  }
+  .chart-takeaway-dark {
+    font-size: 14px;
+    color: #E8E4D7;
+    margin: 0;
+    padding: 14px 18px;
+    background: rgba(80,46,34,0.35);
+    border-left: 3px solid #8D624B;
+    line-height: 1.55;
+  }
+
+  /* ── DATA CARDS (dark section) ──────────── */
+  .data-card {
+    padding: 24px 28px;
+    background: rgba(80,46,34,0.3);
+    margin: 20px 0;
+  }
+  .data-card h3 { color: #E8E4D7; margin-top: 0; }
+  .data-card p { color: #E8E4D7; }
+
+  /* ── INFOGRAPHIC TABLE ─────────────────── */
+  .info-table {
+    background: #C7B8A3;
+    padding: 28px;
+    margin: 28px 0;
+  }
+  .info-table-header {
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .info-hero-stat {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #502E22;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .info-hero-sub {
+    font-size: 14px;
+    color: #502E22;
+    margin: 10px auto 4px;
+    max-width: 380px;
+    line-height: 1.5;
+  }
+  .info-source {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #8D624B;
+    text-transform: uppercase;
+    margin: 8px 0 0;
+  }
+  .info-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 18px;
+  }
+  .info-table thead tr { border-bottom: 2px solid #E8E4D7; }
+  .info-table th {
+    text-align: left;
+    padding: 6px 8px 6px 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #8D624B;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .info-table th:nth-child(n+2) { text-align: right; padding-left: 8px; padding-right: 8px; }
+  .info-table th:last-child { padding-right: 0; }
+  .info-table td {
+    padding: 10px 8px 10px 0;
+    color: #502E22;
+    border-bottom: 1px solid #E8E4D7;
+  }
+  .info-table td:nth-child(n+2) { text-align: right; padding-left: 8px; padding-right: 8px; }
+  .info-table td:last-child { padding-right: 0; }
+  .info-table td a { color: #A14528; text-decoration: underline; }
+  .highlight { color: #A14528; font-weight: 700; }
+
+  /* ── INSIDER SPOT ──────────────────────── */
+  .spot-photo { width: 100%; height: auto; margin-bottom: 24px; }
+  .spot-meta {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8D624B;
+    margin: -12px 0 20px;
+  }
+  .menu-box {
+    background: #502E22;
+    padding: 24px 28px;
+    margin-top: 24px;
+  }
+  .menu-box .eyebrow-menu {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #C7B8A3;
+    margin: 0 0 14px;
+    font-weight: 600;
+  }
+  .menu-box p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #E8E4D7;
+  }
+  .menu-box p:last-child { margin-bottom: 0; }
+  .menu-box a { color: #C7B8A3; text-decoration: underline; }
+
+  /* ── COMING SOON ───────────────────────── */
+  .coming-soon {
+    background: #A14528;
+    padding: 36px;
+    margin: 0;
+  }
+  .coming-soon .eyebrow-cs {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #E8E4D7;
+    opacity: 0.7;
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+  .coming-soon h3 { color: #E8E4D7; margin: 0 0 14px; font-size: 24px; }
+  .coming-soon p { color: #E8E4D7; font-size: 15px; margin-bottom: 14px; opacity: 0.9; }
+  .coming-soon .specs {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #E8E4D7;
+    opacity: 0.75;
+    margin: 0;
+  }
+
+  /* ── LISTINGS CAROUSEL ─────────────────── */
+  .listings-bar {
+    background: #502E22;
+    padding: 14px 48px;
+  }
+  .listings-bar h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #C7B8A3;
+    margin: 0;
+    font-weight: 600;
+  }
+  .listing-scroll-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px;
+  }
+  .listing-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 14px;
+    padding: 0 4px;
+  }
+  .listing-grid > a { flex: 0 0 250px; text-decoration: none; color: inherit; }
+  .listing-card {
+    border: 1px solid #C7B8A3;
+    background: #E8E4D7;
+    overflow: hidden;
+    width: 100%;
+  }
+  .listing-card img { width: 100%; height: 155px; object-fit: cover; }
+  .listing-card-body { padding: 14px 16px; }
+  .listing-address {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #502E22;
+    margin: 0 0 2px;
+    font-weight: 600;
+  }
+  .listing-city {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8D624B;
+    margin: 0 0 8px;
+  }
+  .listing-specs { font-size: 13px; color: #5C4C4C; margin: 0 0 4px; }
+  .listing-price {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: 18px;
+    color: #A14528;
+    margin: 0 0 4px;
+  }
+  .listing-agent { font-size: 11px; color: #8D624B; margin: 0; }
+  .scroll-hint {
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8D624B;
+    margin: 8px 0 0;
+  }
+
+  /* ── CTA ────────────────────────────────── */
+  .cta-section {
+    background: #C7B8A3;
+    padding: 44px 48px;
+    text-align: center;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #A14528;
+    color: #E8E4D7;
+    font-family: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 36px;
+    font-weight: 600;
+  }
+
+  /* ── SIGNATURE ─────────────────────────── */
+  .signature {
+    padding: 40px 48px;
+    text-align: center;
+    background: #E8E4D7;
+  }
+  .sig-headshot {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    border: 3px solid #C7B8A3;
+  }
+  .sig-name {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: 22px;
+    color: #502E22;
+    margin: 0 0 4px;
+    font-style: normal;
+  }
+  .sig-title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #A14528;
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .sig-contact {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    color: #5C4C4C;
+    margin: 3px 0;
+  }
+  .sig-contact a { color: #A14528; }
+  .sig-social { margin: 16px 0 0; }
+  .sig-social a { display: inline-block; margin: 0 6px; vertical-align: middle; }
+
+  /* ── FOOTER ────────────────────────────── */
+  .footer {
+    background: #502E22;
+    padding: 28px 48px;
+    text-align: center;
+  }
+  .footer p {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #C7B8A3;
+    font-size: 10px;
+    margin: 0 0 5px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+  }
+  .footer a { color: #E8E4D7; text-decoration: underline; }
+
+  /* ── RESPONSIVE ────────────────────────── */
+  @media (max-width: 600px) {
+    .header { padding: 36px 24px 28px; }
+    .header-title { font-size: 30px; }
+    .section-linen, .section-dune, .section-dark { padding: 32px 24px; }
+    .stat-strip { padding: 28px 24px; gap: 12px; }
+    .stat-number { font-size: 28px; }
+    h2 { font-size: 24px; }
+    .listings-bar { padding: 14px 24px; }
+    .listing-grid > a { flex: 0 0 230px; }
+    .cta-section { padding: 36px 24px; }
+    .signature { padding: 32px 24px; }
+    .footer { padding: 24px; }
+    .coming-soon { padding: 28px 24px; }
+    .info-table { padding: 20px; }
+    .note-card { padding: 24px 20px; }
+    .menu-box { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- ═══════════════════════════════════════
+       HEADER — Terracotta bg, left-aligned
+       ═══════════════════════════════════════ -->
+  <div class="header">
+    <p class="header-eyebrow">The San Francisco Insider</p>
+    <h1 class="header-title">A Local's Monthly Notes<br>on SF Real Estate</h1>
+    <hr class="header-rule">
+    <p class="header-meta">By Claudia Lee · Vantage Realty · Issue No. 02 · September 2026</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       FROM MY DESK — Linen bg + Dune card
+       ═══════════════════════════════════════ -->
+  <div class="section-linen">
+    <p class="eyebrow">From My Desk</p>
+    <div class="note-card">
+      <p>Happy September!</p>
+      <p>This month so far has been spectacular in many ways: I've been quietly working on <a href="https://www.claudiainsider.com" style="color:#A14528;" target="_blank">www.claudiainsider.com</a>, developing more resources for my buyer clients to give them something to lean on when sitting down face to face or on the phone is not possible (as much as I love <em>educating</em>, I also know you've got busy lives!), and preparing 331 Swallowtail Ct. Ah, also I celebrated my birthday yesterday!</p>
+      <p>This month one of the biggest things I've learned is that preparing a listing is much like making beef rendang (my birthday meal yesterday). The most demanding parts are in the prep work: organization, phasing out different parts, allowing everything to slowly and surely meld together, and readjust/refine when finished. It's been wonderful seeing the development of this unit. From choosing the countertops, backsplash, carpets, and finishes to seeing them installed, I'm so excited to present 331 Swallowtail to the market next month!</p>
+      <p class="sign-off">— Claudia</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       STAT STRIP — Espresso bg, 3 key stats
+       ═══════════════════════════════════════ -->
+  <div class="stat-strip">
+    <div class="stat-item">
+      <p class="stat-number">$2.014M</p>
+      <p class="stat-label">SF SFH Median Price</p>
+    </div>
+    <div class="stat-item">
+      <p class="stat-number">13 Days</p>
+      <p class="stat-label">Median Days on Market (SFH)</p>
+    </div>
+    <div class="stat-item">
+      <p class="stat-number">0.8 Mo</p>
+      <p class="stat-label">Months of Supply (SFH)</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       THIS MONTH'S NUMBERS — Linen bg
+       ═══════════════════════════════════════ -->
+  <div class="section-linen">
+    <p class="eyebrow">This Month's Numbers</p>
+    <h2>SF's Two-Track Market</h2>
+
+    <p class="lead">Single-family homes and condos are telling two very different stories this fall — and the gap is getting interesting for buyers.</p>
+
+    <p>Let's start with the headline: the median single-family home in San Francisco sold for <strong>$2.014 million</strong> in August, with properties spending a median of just <strong>13 days</strong> on market. That is still an extraordinarily competitive segment. Multiple offers are common in Pacific Heights, Noe Valley, and the Sunset — particularly for anything under $2.5M that shows well.</p>
+
+    <p>Inventory for single-family homes sits at <strong>0.8 months of supply</strong>. For context, a balanced market is 4–6 months. We're nowhere close.</p>
+
+    <div class="pull-quote">
+      Condos were sitting 51 days on average last August. This year that number is 19. The condo market has compressed faster than almost anyone expected.
+    </div>
+
+    <p>The condo side of the market is where the real shift is happening. A year ago, condos in SF were languishing — <strong>51 median days on market</strong> last August, with buyers dictating terms. Fast forward to today: that number has dropped to <strong>19 days</strong>, and the median price is <strong>$1.22 million</strong>. Still softer than single-family, but the trend is unmistakable.</p>
+
+    <p>What's driving the condo compression? A few things. Return-to-office mandates from major employers have reignited demand for urban, walkable units. New construction has slowed dramatically. And buyers who got priced out of the single-family market are finding real value in well-located condos — especially in Hayes Valley, the Marina, and Dogpatch.</p>
+
+    <hr class="rule-subtle">
+
+    <!-- Infographic table: Notable SF Sales -->
+    <div class="info-table">
+      <div class="info-table-header">
+        <p class="info-hero-stat">$2.014M</p>
+        <p class="info-hero-sub">Median sale price for SF single-family homes in August 2026 — virtually flat from July as the market holds its summer plateau.</p>
+        <p class="info-source">Source: SFAR MLS · August 2026</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Address</th>
+            <th>Sale Price</th>
+            <th>Over Asking</th>
+            <th>DOM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2847 Pacific Ave, Pacific Heights</td>
+            <td>$3,850,000</td>
+            <td class="highlight">+$350K</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>1156 Sanchez St, Noe Valley</td>
+            <td>$2,475,000</td>
+            <td class="highlight">+$175K</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>1044 Green St, Russian Hill</td>
+            <td>$3,200,000</td>
+            <td class="highlight">+$200K</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>386 Sea Cliff Ave, Sea Cliff</td>
+            <td>$4,125,000</td>
+            <td class="highlight">+$425K</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>825 Carl St, Cole Valley</td>
+            <td>$2,190,000</td>
+            <td class="highlight">+$190K</td>
+            <td>12</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The takeaway? If you're a <strong>condo buyer</strong>, you still have more negotiating room than in the single-family space — but the window is narrowing month by month. And if you're a condo <strong>seller</strong> who's been on the fence, the market is working in your favor for the first time in two years.</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       THE CHARTS — Dune bg, 6 inline SVGs
+       ═══════════════════════════════════════ -->
+  <div class="section-dune">
+    <p class="eyebrow-dune">The Charts</p>
+    <h2 class="on-dune">What the Data Says</h2>
+
+    <!-- Chart 1: SF Median Sale Price (SFH) -->
+    <div class="chart-block">
+      <h3 class="on-dune">SF Median Sale Price — Single-Family Homes</h3>
+      <img src="https://claudiainsider.com/newsletter/september-2026/charts/median-price-sfh.png" alt="SF SFH median sale price trend, September 2025 to August 2026" width="560" style="width:100%;max-width:560px;height:auto;display:block;">
+      <p class="chart-takeaway"><strong>What it means:</strong> SFH prices surged through spring, peaking in May at $2.15M before pulling back modestly. The August reading of $2.014M suggests the seasonal cooldown is gentle — prices are still 30% above last September.</p>
+    </div>
+
+    <!-- Chart 2: SF Median Sale Price (Condos) -->
+    <div class="chart-block">
+      <h3 class="on-dune">SF Median Sale Price — Condos</h3>
+      <img src="https://claudiainsider.com/newsletter/september-2026/charts/median-price-condos.png" alt="SF condo median sale price trend, September 2025 to August 2026" width="560" style="width:100%;max-width:560px;height:auto;display:block;">
+      <p class="chart-takeaway"><strong>What it means:</strong> Condo prices peaked in April–May at $1.35M before cooling. At $1.22M, condos are still 11% above last October's trough. The recovery is real but has plateaued — good news if you're still shopping.</p>
+    </div>
+
+    <!-- Chart 3: Days on Market (SFH vs Condos) — grouped bar -->
+    <div class="chart-block">
+      <h3 class="on-dune">Days on Market — SFH vs. Condos</h3>
+      <img src="https://claudiainsider.com/newsletter/september-2026/charts/days-on-market.png" alt="Days on market comparison, SFH versus condos" width="560" style="width:100%;max-width:560px;height:auto;display:block;">
+      <p class="chart-takeaway"><strong>What it means:</strong> The DOM gap between SFH and condos has collapsed — from 29 days apart last September to just 6 days now. Condo demand is catching up fast, and sellers who price correctly are seeing offers within three weeks.</p>
+    </div>
+
+    <!-- Chart 4: Months of Supply -->
+    <div class="chart-block">
+      <h3 class="on-dune">Months of Supply — SFH vs. Condos</h3>
+      <img src="https://claudiainsider.com/newsletter/september-2026/charts/months-supply.png" alt="Months of supply trend for SFH and condos" width="560" style="width:100%;max-width:560px;height:auto;display:block;">
+      <p class="chart-takeaway"><strong>What it means:</strong> SFH supply is firmly in seller's market territory at 0.8 months. Condo supply has been halved from 3.5 months last October to 1.8 now — still more balanced, but no longer a buyer's free-for-all.</p>
+    </div>
+
+    <!-- Chart 5: Active Inventory (SFH vs Condos) -->
+    <div class="chart-block">
+      <h3 class="on-dune">Active Inventory — SFH vs. Condos</h3>
+      <img src="https://claudiainsider.com/newsletter/september-2026/charts/active-inventory.png" alt="Active inventory levels for SFH and condos" width="560" style="width:100%;max-width:560px;height:auto;display:block;">
+      <p class="chart-takeaway"><strong>What it means:</strong> Condos still outnumber SFH listings 2-to-1. But the gap peaked in January (440 vs. 230) and has narrowed. Condo inventory is being absorbed faster than it's being replenished — a structural tailwind for prices.</p>
+    </div>
+
+    <!-- Chart 6: Mortgage Rate -->
+    <div class="chart-block">
+      <h3 class="on-dune">30-Year Fixed Mortgage Rate</h3>
+      <img src="https://claudiainsider.com/newsletter/september-2026/charts/mortgage-rates.png" alt="30-year fixed mortgage rate trend" width="560" style="width:100%;max-width:560px;height:auto;display:block;">
+      <p class="chart-takeaway"><strong>What it means:</strong> Rates have climbed steadily from 6.15% last October to 6.95% today, despite the Fed holding at 3.75–4%. The bond market is pricing in persistent inflation. Don't wait for 5% — it's not coming soon.</p>
+    </div>
+
+    <p class="source" style="text-align:center; margin-top:20px;">Sources: SFAR MLS, Freddie Mac PMMS, S&P CoreLogic · Data through August 2026</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       NATIONAL BACKDROP — Taupe Grey bg
+       ═══════════════════════════════════════ -->
+  <div class="section-dark">
+    <p class="eyebrow-light">National Backdrop</p>
+    <h2 class="on-dark">The Bigger Picture</h2>
+    <p class="on-dark" style="font-size:15px; opacity:0.85; margin-bottom:28px;">SF doesn't exist in a vacuum. Here's what's shaping the national housing landscape this month.</p>
+
+    <div class="data-card">
+      <h3>Mortgage Rates</h3>
+      <p>The 30-year fixed sits at <strong>6.95%</strong>, inching toward 7% for the first time since late 2023. The Fed funds rate is at <strong>3.75–4.00%</strong>, but the long end of the curve is being driven by inflation expectations and treasury supply. Translation: don't expect meaningful rate relief until the Fed signals it's done tightening — and markets believe it.</p>
+    </div>
+
+    <div class="data-card">
+      <h3>Inflation &amp; Energy</h3>
+      <p>CPI came in at <strong>3.4% year-over-year</strong> in August — stubbornly above the Fed's 2% target. Oil at <strong>$107/barrel</strong> isn't helping, and shelter costs (which lag real-time rents by ~12 months) are still pulling the index up. The good news? Core services inflation is decelerating. The bad news? Not fast enough for rate cuts.</p>
+    </div>
+
+    <div class="data-card">
+      <h3>Housing Equity</h3>
+      <p>The average U.S. homeowner has <strong>$310,500</strong> in equity — a record. In California, that number jumps to roughly <strong>$627,000</strong>. This is why you're not seeing a wave of distressed sales: homeowners have massive equity cushions and most are locked into sub-5% mortgages. Voluntary sellers only, which keeps supply tight.</p>
+    </div>
+
+    <div class="data-card">
+      <h3>The Market Split</h3>
+      <p>Nationally, starter homes are down <strong>5.4% year-over-year</strong> as affordability constraints bite. Meanwhile, luxury homes (top 5% by price) are up <strong>6.2%</strong>. The bifurcation is real: cash-rich buyers are competing fiercely at the top, while rate-sensitive first-time buyers are pulling back. SF mirrors this pattern almost exactly.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       THE MONEY LESSON — Linen bg
+       ═══════════════════════════════════════ -->
+  <div class="section-linen">
+    <p class="eyebrow">The Money Lesson</p>
+    <h2>The New Condo Reserve Rule (And Why You Should Care)</h2>
+
+    <p>If you're thinking about buying a condo in the next year, there's a rule change coming that could affect your financing — and almost nobody is talking about it yet.</p>
+
+    <p>Starting <strong>January 4, 2027</strong>, Fannie Mae will require that condo associations hold reserves equal to at least <strong>15% of their annual operating budget</strong>. This is a direct response to the Surfside condo collapse in Florida and a broader push for safer, better-maintained buildings. And it's going to ripple through the SF condo market in ways that matter.</p>
+
+    <h3>What does this actually mean?</h3>
+    <p>Right now, many condo HOAs — especially older buildings in SF — operate with minimal reserves. They collect enough in dues to cover day-to-day expenses, but there's not much set aside for big-ticket repairs (think: roof replacement, elevator modernization, seismic retrofitting). Under the new rule, if your building doesn't meet the 15% threshold, <strong>conventional Fannie Mae–backed loans won't be available to buyers in that building</strong>.</p>
+
+    <p>That's a big deal. Without conventional financing, buyers would need jumbo loans, portfolio loans, or cash — all of which are more expensive or harder to qualify for. And if buyers have fewer financing options, it puts downward pressure on prices in non-compliant buildings.</p>
+
+    <h3>What should you ask your HOA?</h3>
+    <p>If you're buying (or own) a condo, here are the three questions to ask right now:</p>
+    <p><strong>1. What percentage of the annual budget is currently in reserves?</strong> If it's under 15%, find out if there's a plan to get there by January 2027.</p>
+    <p><strong>2. Is a special assessment likely?</strong> Some HOAs will raise dues gradually; others will levy a one-time special assessment to bulk up reserves. Know which path your building is on.</p>
+    <p><strong>3. Has the building had a reserve study in the last 3 years?</strong> A professional reserve study identifies what major repairs are coming and how much they'll cost. It's the foundation of responsible reserve planning.</p>
+
+    <h3>How this affects older buildings</h3>
+    <p>San Francisco has a lot of beautiful, older condo buildings — think 1920s Marina co-ops converted to condos, or 1960s–70s mid-rises in Pacific Heights and Russian Hill. These buildings tend to have <em>higher</em> deferred maintenance and <em>lower</em> reserves. If they don't get compliant before January 2027, they could see a meaningful impact on resale values.</p>
+
+    <p>The flip side? Buildings that <em>are</em> well-reserved and well-maintained will become even more attractive by comparison. It's a quality filter — and I think that's ultimately healthy for the market.</p>
+
+    <p style="font-size:14px; color:#8D624B; margin-top:24px;"><em>This isn't legal or financial advice — just context to help you ask the right questions. Talk to your lender and your agent (hi, that's me) if you want to dig into how this affects a specific building.</em></p>
+
+    <div style="text-align:center; margin-top:28px;">
+      <a href="https://effortlesshoa.com/blog/fannie-mae-condo-reserve-requirements" class="cta-button" target="_blank">Read More About the New Reserve Rule</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       INSIDER SPOT — Dune bg
+       ═══════════════════════════════════════ -->
+  <div class="section-dune">
+    <p class="eyebrow-dune">Insider Spot</p>
+    <h2 class="on-dune">Frank Grizzly's</h2>
+    <p class="spot-meta">5698 3rd St · Bayview · Cali-Mexican</p>
+
+    <img src="https://claudiainsider.com/newsletter/september-2026/images/frank-grizzlys.jpg" alt="Duck taco and fish taco at Frank Grizzly's in Bayview" style="width:100%; height:auto; display:block; border-radius:4px; margin:20px 0 24px;">
+
+    <p style="color:#502E22;">I have a very specific gripe with Cantonese roast duck buns: too much bao, never enough duck. Frank Grizzly's in Bayview fixed that problem with a taco, and I haven't stopped thinking about it. Hoisin, greens, plenty of duck, diced mangos on top for this perfect hit of acidity. The fish taco is not messing around either, and a local tipped me off to the shrimp — that's first on the list next visit.</p>
+
+    <p style="color:#502E22;">What makes this spot an Insider pick is the energy. The owners know their regulars by name, face, and story. It's counter-service with that neighborhood feel where everyone just belongs — Bayview in a taco shop. Fair warning on portions: I can normally tank 5 tacos and was full after 3. You've been warned.</p>
+
+    <div class="menu-box">
+      <p class="eyebrow-menu">What I'd Order</p>
+      <p>Duck taco (or the duck burrito, if that's your preference). Fish taco to round it out, and the shrimp is next on my list on a local's recommendation.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       COMING SOON — Terracotta bg
+       ═══════════════════════════════════════ -->
+  <div class="coming-soon">
+    <p class="eyebrow-cs">Coming Soon</p>
+    <h3>331 Swallowtail Court, Brisbane</h3>
+    <p>A serene, modern retreat in Altamar at the Ridge with beautiful views of San Bruno Mountain. Aiming to launch in the first week of October — reach out if you want first access.</p>
+    <p class="specs">2 Bed · 2 Bath · Modern Finishes · Community Pool &amp; Trails</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       ACTIVE VANTAGE LISTINGS — Carousel
+       ═══════════════════════════════════════ -->
+  <div class="listings-bar">
+    <h4>Active Vantage Listings</h4>
+  </div>
+  <div class="section-linen" style="padding-top:20px; padding-bottom:32px;">
+    <div class="listing-scroll-wrap">
+      <div class="listing-grid">
+
+        <a href="https://zenlist.com/app/listing/sfar:426161901?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:426161901/sfar_531446119_1a5cbd34-701b-4e43-ab6c-3c35c4ec53b5.jpg.webp?width=1200" alt="51 Valley Rd, Atherton" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">51 Valley Rd</p>
+              <p class="listing-city">Atherton</p>
+              <p class="listing-price">$22,000,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://zenlist.com/app/listing/sfar:426161937?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:426161937/sfar_531446340_a87ebb30-ba19-4175-afb2-18f737a7a9c9.jpg.webp?width=1200" alt="23 Peralta Ave, SF" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">23 Peralta Ave</p>
+              <p class="listing-city">San Francisco</p>
+              <p class="listing-price">$2,995,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://zenlist.com/app/listing/sfar:326058233?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:326058233/sfar_531391018_4f416c84-e3fe-4165-a515-0a3d4b6b9e4e.jpg.webp?width=1200" alt="6 Noren Way, Point Reyes" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">6 Noren Way</p>
+              <p class="listing-city">Point Reyes</p>
+              <p class="listing-price">$2,295,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://zenlist.com/app/listing/sfar:426156116?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:426156116/sfar_531420372_2ec95791-41a0-4657-a72d-5973e8546a9a.jpg.webp?width=1200" alt="3132 Laguna St, SF" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">3132 Laguna St</p>
+              <p class="listing-city">San Francisco</p>
+              <p class="listing-price">$1,850,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://zenlist.com/app/listing/sfar:426161714?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:426161714/sfar_531445850_00fa1b21-9fd0-45e5-9ed5-c456d746e958.jpg.webp?width=1200" alt="2075 35th Ave, SF" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">2075 35th Ave</p>
+              <p class="listing-city">San Francisco</p>
+              <p class="listing-price">$1,498,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://zenlist.com/app/listing/sfar:426163490?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:426163490/sfar_531450140_2993eb46-ac09-4714-ae93-edcf883a4c69.jpg.webp?width=1200" alt="198 Vasquez Ave, SF" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">198 Vasquez Ave</p>
+              <p class="listing-city">San Francisco</p>
+              <p class="listing-price">$1,198,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://zenlist.com/app/listing/sfar:426162772?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:426162772/sfar_531450101_86817a4a-1717-4d23-894c-2ea8197f6d21.jpg.webp?width=1200" alt="2610 47th Ave, SF" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">2610 47th Ave</p>
+              <p class="listing-city">San Francisco</p>
+              <p class="listing-price">$1,095,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://zenlist.com/app/listing/sfar:426162509?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:426162509/sfar_531449085_4f457b44-1c55-40a5-a841-cc336ea16576.jpg.webp?width=1200" alt="552 Vermont St, SF" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">552 Vermont St</p>
+              <p class="listing-city">San Francisco</p>
+              <p class="listing-price">$899,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://zenlist.com/app/listing/sfar:426103098?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:426103098/sfar_531176904_9bf23e36-5297-4e89-9fb6-65bcaab33686.jpg.webp?width=1200" alt="666 Post St #1603, SF" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">666 Post St #1603</p>
+              <p class="listing-city">San Francisco</p>
+              <p class="listing-price">$749,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://zenlist.com/app/listing/sfar:426155446?as=claudia.lee" target="_blank">
+          <div class="listing-card">
+            <img src="https://hue.zenlist.com/listings/sfar:426155446/sfar_531419954_1d614ba1-4438-4733-9fee-817fc3a1e9d6.jpg.webp?width=1200" alt="555 Fulton St #505, SF" loading="lazy">
+            <div class="listing-card-body">
+              <p class="listing-address">555 Fulton St #505</p>
+              <p class="listing-city">San Francisco</p>
+              <p class="listing-price">$620,000</p>
+              <p class="listing-agent">Listed by Vantage Realty</p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+    <p class="scroll-hint">Scroll to browse &rarr;</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       UNTIL NEXT MONTH — Dune bg CTA
+       ═══════════════════════════════════════ -->
+  <div class="cta-section">
+    <p class="eyebrow-dune" style="margin-bottom:20px;">Until Next Month</p>
+    <h2 class="on-dune" style="margin-bottom:12px;">Questions about buying or selling in SF?</h2>
+    <p style="color:#502E22; font-size:16px; margin-bottom:28px;">I'm always happy to chat.</p>
+    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0vM_8kHr3bVb7gqtjM3AIxbPF7aUFjaVexVTrVXGjU7yYpXQT1gIBhjmFQ-qlEYHNQjc1Y_qJa" class="cta-button">Grab 20 Minutes With Me &mdash; Free</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SIGNATURE — Linen bg
+       ═══════════════════════════════════════ -->
+  <div class="signature">
+    <img src="https://claudiainsider.com/images/claudia-headshot.jpg" alt="Claudia Lee headshot" class="sig-headshot">
+    <p class="sig-name">Claudia Lee</p>
+    <p class="sig-title">REALTOR&reg; &middot; Vantage Realty</p>
+    <p class="sig-contact"><a href="mailto:claudia@vantagesanfrancisco.com">claudia@vantagesanfrancisco.com</a></p>
+    <p class="sig-contact"><a href="tel:5104590172">510.459.0172</a></p>
+    <p class="sig-contact">DRE #02380540</p>
+    <div class="sig-social">
+      <a href="https://www.instagram.com/claudiainsider/" style="color:#A14528; font-size:12px; letter-spacing:1px; text-transform:uppercase; margin:0 8px;">Instagram</a>
+      <a href="https://www.linkedin.com/in/claudiastephanie/" style="color:#A14528; font-size:12px; letter-spacing:1px; text-transform:uppercase; margin:0 8px;">LinkedIn</a>
+      <a href="https://www.youtube.com/@ClaudiaInsider" style="color:#A14528; font-size:12px; letter-spacing:1px; text-transform:uppercase; margin:0 8px;">YouTube</a>
+      <a href="https://www.tiktok.com/@claudiainsider" style="color:#A14528; font-size:12px; letter-spacing:1px; text-transform:uppercase; margin:0 8px;">TikTok</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       COMPLIANCE FOOTER — Espresso bg
+       ═══════════════════════════════════════ -->
+  <div class="footer">
+    <p><strong>Vantage Realty</strong> · 1980 Union St, San Francisco, CA 94123</p>
+    <p>Brokerage DRE #02223213 · Agent DRE #02380540</p>
+    <p style="margin-top:10px; font-size:9px; line-height:1.7; max-width:480px; margin-left:auto; margin-right:auto;">
+      Equal Housing Opportunity. All information deemed reliable but not guaranteed. This newsletter is for informational purposes only and does not constitute legal, financial, or real estate advice. Data sourced from SFAR MLS, Freddie Mac, Bureau of Labor Statistics, and CoreLogic as of August 2026. Claudia Lee is a licensed real estate salesperson affiliated with Vantage Realty.
+    </p>
+    <p style="margin-top:14px;">
+      <a href="*|UNSUB|*" style="margin-right:16px;">Unsubscribe</a>
+      <a href="https://claudiainsider.com/newsletter/september-2026/">View in browser</a>
+    </p>
+  </div>
+
+</div><!-- /.wrapper -->
+</body>
+</html>
