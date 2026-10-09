@@ -1,32 +1,471 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+// Homepage — modern art deco edition (Oct 2026).
+// Brand: Studio Tatjana Klé palette + type only. Assets live in /public/home/.
+const BOOK_20 = 'https://calendar.app.google/Ryt1GKxmpuoTW5yf9';
+const BOOK_45 = 'https://calendar.app.google/wY9ABxb8kRuZGZhC7';
+
+const hoods = [
+  ['Cole Valley', 'Small-town main street, Tank Hill sunsets, and the fog rolls in right on schedule.'],
+  ['Noe Valley', 'Stroller central, 24th Street, and some of the sunniest blocks in the city.'],
+  ['Hayes Valley', 'Walk-everywhere living, the best patio density in SF, mostly condos.'],
+  ['NoPa', 'Divisadero corridor, big Victorians, Alamo Square around the corner.'],
+  ['Inner Richmond', 'Clement Street food, Golden Gate Park as your backyard, real fog.'],
+  ['Inner Sunset', '9th and Irving, the N Judah, and surprisingly good weather for the west side.'],
+  ['Duboce Triangle', 'Tiny, central, Victorian, and about as walkable as SF gets.'],
+  ['Bernal Heights', 'Hilltop views, Cortland Avenue, and a neighborhood that actually knows its neighbors.'],
+  ['Glen Park', 'A village with a BART stop and a canyon.'],
+  ['Mission Dolores', 'Dolores Park weekends, Valencia Street, and the sun.'],
+];
 ---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claudia Lee | San Francisco Real Estate Insider</title>
+  <meta name="description" content="Claudia Lee, SF real estate insider. Free buyer and seller guides, neighborhood intel, and a real person to talk to when you're ready." />
+  <meta property="og:title" content="Claudia Lee | San Francisco Real Estate Insider" />
+  <meta property="og:description" content="Helping you understand San Francisco and find a place that feels right." />
+  <meta property="og:image" content="https://claudiainsider.com/home/coit.jpg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" />
+</head>
+<body>
 
-<BaseLayout title="Home">
-  <section class="hero">
-      <h1>Claudia Insider</h1>
-          <p class="tagline">Your guide to buying, selling, and living in San Francisco.</p>
-              <p class="coming-soon">Site launching soon -- stay tuned.</p>
-                </section>
-                </BaseLayout>
+<!-- Reusable deco ornaments -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fan" viewBox="0 0 120 60">
+      <path d="M60 58 L60 4 M60 58 L33 11 M60 58 L87 11 M60 58 L13 31 M60 58 L107 31 M60 58 L4 58 M60 58 L116 58" fill="none" stroke="currentColor" stroke-width="1"/>
+      <path d="M22 58 A38 38 0 0 1 98 58" fill="none" stroke="currentColor" stroke-width="1"/>
+      <path d="M44 58 A16 16 0 0 1 76 58" fill="none" stroke="currentColor" stroke-width="1"/>
+    </symbol>
+    <symbol id="diamond" viewBox="0 0 24 24">
+      <path d="M12 1 L23 12 L12 23 L1 12 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+      <path d="M12 7 L17 12 L12 17 L7 12 Z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
 
-                <style>
-                  .hero {
-                      text-align: center;
-                          padding: 6rem 2rem;
-                            }
-                              h1 {
-                                  font-size: 2.5rem;
-                                      color: #1c1915;
-                                          margin-bottom: 0.75rem;
-                                            }
-                                              .tagline {
-                                                  font-size: 1.15rem;
-                                                      color: #5b7f6a;
-                                                          margin-bottom: 2rem;
-                                                            }
-                                                              .coming-soon {
-                                                                  color: #887e72;
-                                                                      font-style: italic;
-                                                                        }
-                                                                        </style>
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="/" aria-label="claudia lee, SF real estate insider, home">
+      <img src="/home/logo-primary1-espresso.svg" alt="claudia lee · SF real estate insider" width="220" height="52" />
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="/buyer-guide/">Buyers</a>
+      <a href="/seller-guide/">Sellers</a>
+      <a href="#hoods">Neighborhoods</a>
+      <a href="#about">About</a>
+      <a href="/newsletter/">Newsletter</a>
+    </nav>
+    <a class="btn sm nav-cta" href={BOOK_20}>Book a free chat</a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <button class="close" type="button" aria-label="Close menu">&times;</button>
+  <img class="menu-logo" src="/home/logo-primary1-linen.svg" alt="claudia lee · SF real estate insider" />
+  <svg class="orn" aria-hidden="true"><use href="#fan" /></svg>
+  <nav aria-label="Mobile">
+    <a href="/buyer-guide/">Buyers</a>
+    <a href="/seller-guide/">Sellers</a>
+    <a href="#hoods">Neighborhoods</a>
+    <a href="#about">About</a>
+    <a href="/newsletter/">Newsletter</a>
+  </nav>
+  <a class="btn linen" href={BOOK_20}>Book a free 20-min chat</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="sub terra">San Francisco Real Estate Insider</p>
+      <h1>Helping you <em>understand</em> San Francisco and find a place that feels right.</h1>
+      <div class="rule-deco" aria-hidden="true"><span></span><svg><use href="#diamond" /></svg><span></span></div>
+      <p class="body">There is always more to a place than what you see online. The right neighborhood, the character of a home, the details that make a property <b>feel right</b>. I bring local knowledge and real numbers so you can see San Francisco <b>differently</b> and decide with confidence.</p>
+      <div class="acts">
+        <a class="btn" href={BOOK_20}>Book a free 20-min chat</a>
+        <a class="btn ghost" href="/buyer-guide/">Free buyer guide</a>
+      </div>
+    </div>
+    <div class="hero-pic">
+      <svg class="sunburst" viewBox="0 0 400 400" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="1" fill="none">
+          {Array.from({ length: 19 }, (_, i) => {
+            const a = Math.PI + (i * Math.PI) / 18;
+            return <line x1="200" y1="260" x2={200 + 200 * Math.cos(a)} y2={260 + 200 * Math.sin(a)} />;
+          })}
+          <circle cx="200" cy="260" r="150" />
+          <circle cx="200" cy="260" r="175" />
+        </g>
+      </svg>
+      <div class="arch-frame">
+        <img class="arch" src="/home/portrait-colonnade.jpg" alt="Claudia Lee in the colonnade at the Legion of Honor" width="933" height="1400" />
+      </div>
+      <p class="caption">Claudia Lee · REALTOR® · DRE #02380540</p>
+    </div>
+  </div>
+</section>
+
+<!-- START HERE -->
+<section class="start band-dune">
+  <div class="wrap">
+    <div class="head-center">
+      <svg class="orn" aria-hidden="true"><use href="#fan" /></svg>
+      <p class="sub">Free resources</p>
+      <h2>Where do I <em>even</em> start?</h2>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <img class="arch" src="/home/interior.jpg" alt="Sunlit San Francisco living room with bay windows" loading="lazy" />
+        <div class="card-b">
+          <p class="sub terra">For buyers</p>
+          <h3>Buying in SF</h3>
+          <p>Pre-approval, broker tours, and what "over asking" actually means here. The free guide covers the whole timeline.</p>
+          <a class="tlink" href="/buyer-guide/">The SF First-Time Buyer Guide</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="arch" src="/home/facade.jpg" alt="Ornate Victorian facade with bay windows on Page Street" loading="lazy" />
+        <div class="card-b">
+          <p class="sub terra">For sellers</p>
+          <h3>Selling in SF</h3>
+          <p>Prep that moves the needle vs. money you'll never see again, and how pricing really works in this market.</p>
+          <a class="tlink" href="/seller-guide/">The SF Seller Guide</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="arch" src="/home/baywindow.jpg" alt="Coit Tower framed by a North Beach bay window" loading="lazy" />
+        <div class="card-b">
+          <p class="sub terra">Once a month</p>
+          <h3>The San Francisco Insider</h3>
+          <p>Market context without the panic, neighborhood intel Zillow doesn't have, and the money stuff nobody walks you through.</p>
+          <a class="tlink" href="/newsletter/">Read the newsletter</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- COIT BAND -->
+<section class="coit" aria-label="Neighborhood intro">
+  <img src="/home/coit.jpg" alt="Coit Tower above Telegraph Hill, San Francisco" loading="lazy" width="2200" height="1466" />
+  <div class="coit-ov">
+    <div class="coit-frame">
+      <p class="sub">The insider version</p>
+      <p class="coit-line">Median prices are easy to Google. What Sunday morning feels like on the block <em>isn't.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- NEIGHBORHOODS -->
+<section class="hoods" id="hoods">
+  <div class="wrap">
+    <div class="hoods-head">
+      <div>
+        <p class="sub terra">Neighborhoods</p>
+        <h2>Ten I know <em>by heart.</em></h2>
+      </div>
+      <p class="lede">Start with the ones I walk most. Each one gets the real numbers, the fog situation, and one spot I'd personally send you to.</p>
+    </div>
+    <ol class="hood-grid">
+      {hoods.map(([name, blurb], i) => (
+        <li class="hood">
+          <span class="num">{String(i + 1).padStart(2, '0')}</span>
+          <h3>{name}</h3>
+          <p>{blurb}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-pic">
+      <div class="step-frame"><img src="/home/portrait-about.jpg" alt="Claudia Lee" loading="lazy" width="933" height="1400" /></div>
+      <img class="about-mark" src="/home/mark-linen.svg" alt="" />
+    </div>
+    <div class="about-txt">
+      <p class="sub">About Claudia</p>
+      <h2>Helping you navigate <em>San Francisco</em> with knowledge, confidence, and a personal approach.</h2>
+      <div class="rule-deco light" aria-hidden="true"><span></span><svg><use href="#diamond" /></svg><span></span></div>
+      <p class="lede">I grew up helping my grandma manage her East Bay rentals, hit an 815 credit score before 24, and competed on the US national karate team three times (calm under pressure is a real skill in a multiple-offer situation). I'd rather you understand your numbers than sign anything fast.</p>
+      <div class="acts">
+        <a class="btn linen" href={BOOK_20}>Free 20-minute consult</a>
+        <a class="btn ghost-linen" href={BOOK_45}>45-minute strategy session</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="news">
+  <div class="wrap news-in">
+    <svg class="orn" aria-hidden="true"><use href="#fan" /></svg>
+    <p class="sub">The San Francisco Insider</p>
+    <h2>Once a month. <em>Actually</em> worth opening.</h2>
+    <p class="lede">Money, market, city life. No drip campaigns, no "just checking in."</p>
+    <a class="btn espresso" href="/newsletter/">Join the list</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-wm" src="/home/logo-wordmark-linen.svg" alt="claudia lee" width="180" height="37" />
+        <p class="foot-tag">SF real estate, explained by someone who lives here and reads the disclosures for fun.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/buyer-guide/">Buyer guide</a></li>
+          <li><a href="/seller-guide/">Seller guide</a></li>
+          <li><a href="#hoods">Neighborhoods</a></li>
+          <li><a href="/newsletter/">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Claudia</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="/collab/">Collaborate with me</a></li>
+          <li><a href={BOOK_20}>Book a chat</a></li>
+          <li><a href="/links/">Links</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Say hi</h4>
+        <ul>
+          <li><a href="mailto:claudia@vantagesanfrancisco.com">claudia@vantagesanfrancisco.com</a></li>
+          <li><a href="https://instagram.com/claudiainsider">Instagram</a></li>
+          <li><a href="https://tiktok.com/@claudiainsider">TikTok</a></li>
+          <li><a href="https://youtube.com/@claudiainsider">YouTube</a></li>
+          <li><a href="https://linkedin.com/in/claudiainsider">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Claudia Lee · REALTOR® · DRE #02380540 · Vantage San Francisco · Equal Housing Opportunity</span>
+      <span>© {new Date().getFullYear()} claudiainsider.com</span>
+    </div>
+  </div>
+</footer>
+
+<script is:inline>
+(function () {
+  var nav = document.getElementById('nav');
+  var menu = document.getElementById('menu');
+  var burger = nav.querySelector('.burger');
+  function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  function setMenu(open) {
+    menu.hidden = !open; document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  }
+  burger.addEventListener('click', function () { setMenu(true); });
+  menu.querySelector('.close').addEventListener('click', function () { setMenu(false); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+})();
+</script>
+
+<style is:global>
+:root {
+  /* Studio Tatjana Klé palette: exact values only */
+  --linen: #E8E4D7;
+  --linen-light: #F8F6F2;
+  --dune: #C7B8A3;
+  --toffee: #8D624B;
+  --terracotta: #A14528;
+  --espresso: #502E22;
+  --taupe: #5C4C4C;
+  --serif: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+  --sans: 'Nunito Sans', 'Trebuchet MS', Verdana, sans-serif;
+  --gut: clamp(16px, 5vw, 72px);
+  --maxw: 1240px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--linen); color: var(--espresso); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body.menu-open { overflow: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; margin: 0; line-height: 1.14; }
+h1 { font-size: clamp(34px, 4.4vw, 58px); }
+h2 { font-size: clamp(28px, 3.4vw, 44px); }
+h3 { font-size: 22px; }
+em { font-style: italic; }
+p { margin: 0 0 1em; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gut); }
+.sub { font-family: var(--sans); font-weight: 400; text-transform: uppercase; letter-spacing: 0.2em; font-size: 12px; margin: 0 0 18px; color: var(--taupe); }
+.sub.terra { color: var(--terracotta); }
+.lede { font-size: 18px; font-weight: 300; max-width: 56ch; }
+.orn { display: block; width: 96px; height: 48px; color: var(--toffee); margin: 0 auto 18px; }
+
+/* Buttons: uppercase, tracking 200 */
+.btn { display: inline-block; font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.2em; font-size: 12px; line-height: 1.3; padding: 16px 28px; text-decoration: none; text-align: center; border: 1px solid var(--terracotta); background: var(--terracotta); color: var(--linen); position: relative; transition: background .2s, color .2s, border-color .2s; }
+.btn::after { content: ""; position: absolute; inset: 4px; border: 1px solid currentColor; opacity: .5; pointer-events: none; }
+.btn:hover { background: var(--espresso); border-color: var(--espresso); }
+.btn.sm { padding: 12px 20px; font-size: 11px; }
+.btn.ghost { background: transparent; color: var(--espresso); border-color: var(--espresso); }
+.btn.ghost:hover { background: var(--espresso); color: var(--linen); }
+.btn.linen { background: var(--linen); color: var(--espresso); border-color: var(--linen); }
+.btn.linen:hover { background: var(--linen-light); border-color: var(--linen-light); }
+.btn.ghost-linen { background: transparent; color: var(--linen); border-color: var(--linen); }
+.btn.ghost-linen:hover { background: var(--linen); color: var(--espresso); }
+.btn.espresso { background: var(--espresso); border-color: var(--espresso); color: var(--linen); }
+.btn.espresso:hover { background: var(--linen); border-color: var(--linen); color: var(--espresso); }
+.tlink { display: inline-block; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--terracotta); padding-bottom: 4px; }
+.tlink:hover { color: var(--terracotta); }
+.acts { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+
+/* Deco rule: line · diamond · line */
+.rule-deco { display: flex; align-items: center; gap: 12px; margin: 26px 0 28px; max-width: 260px; color: var(--terracotta); }
+.rule-deco span { flex: 1; height: 0; border-top: 1px solid var(--espresso); box-shadow: 0 3px 0 -2px var(--espresso); padding-bottom: 3px; border-bottom: 1px solid var(--espresso); }
+.rule-deco svg { width: 18px; height: 18px; flex: none; }
+.rule-deco.light { color: var(--linen); }
+.rule-deco.light span { border-color: var(--linen); box-shadow: none; }
+
+/* NAV */
+.nav { position: sticky; top: 0; z-index: 50; background: var(--linen); border-bottom: 1px solid transparent; transition: border-color .2s; }
+.nav.scrolled { border-bottom-color: var(--dune); }
+.nav-in { display: flex; align-items: center; gap: 32px; height: 80px; }
+.logo img { width: clamp(170px, 18vw, 220px); }
+.links { display: flex; gap: 28px; margin-left: auto; }
+.links a { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent; }
+.links a:hover { border-bottom-color: var(--terracotta); }
+.burger { display: none; margin-left: auto; width: 44px; height: 44px; background: none; border: 0; cursor: pointer; padding: 10px; }
+.burger span { display: block; height: 1px; background: var(--espresso); margin: 6px 0; }
+.menu { position: fixed; inset: 0; z-index: 100; background: var(--espresso); color: var(--linen); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; padding: 32px 16px; text-align: center; }
+.menu[hidden] { display: none; }
+.menu .close { position: absolute; top: 18px; right: 18px; background: none; border: 0; color: var(--linen); font-size: 34px; cursor: pointer; width: 44px; height: 44px; }
+.menu-logo { width: 200px; }
+.menu .orn { color: var(--linen); margin: 0; }
+.menu nav { display: flex; flex-direction: column; gap: 14px; }
+.menu nav a { font-family: var(--serif); font-size: 28px; text-decoration: none; }
+
+/* HERO */
+.hero { position: relative; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(32px, 6vw, 96px); align-items: center; padding-block: clamp(48px, 7vw, 104px); }
+.hero h1 { max-width: 16ch; }
+.hero .body { font-weight: 300; font-size: 17px; max-width: 52ch; }
+.hero .body b { font-weight: 700; }
+.hero-pic { position: relative; justify-self: center; width: min(100%, 420px); }
+.sunburst { position: absolute; left: 50%; top: -6%; width: 170%; transform: translateX(-50%); color: var(--dune); z-index: 0; pointer-events: none; }
+.arch-frame { position: relative; z-index: 1; padding: 12px; border: 1px solid var(--espresso); border-radius: 999px 999px 0 0; background: var(--linen); }
+.arch-frame::before { content: ""; position: absolute; inset: -9px; border: 1px solid var(--toffee); border-radius: 999px 999px 0 0; pointer-events: none; }
+img.arch { border-radius: 999px 999px 0 0; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; object-position: 50% 30%; }
+.caption { position: relative; z-index: 1; margin: 18px 0 0; text-align: center; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--taupe); }
+
+/* START HERE: Dune band (Dune pairs with Espresso, Taupe, Linen) */
+.band-dune { background: var(--dune); }
+.start { padding-block: clamp(64px, 8vw, 112px); }
+.head-center { text-align: center; }
+.start .orn { color: var(--espresso); }
+.start .head-center .sub { color: var(--espresso); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 36px); margin-top: 48px; }
+.card { background: var(--linen-light); padding: 14px 14px 0; display: flex; flex-direction: column; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px)); }
+.card img.arch { aspect-ratio: 4 / 5; }
+.card-b { padding: 24px 14px 34px; display: flex; flex-direction: column; flex: 1; }
+.card-b p:not(.sub) { font-weight: 300; font-size: 15px; flex: 1; }
+.card h3 { font-size: 24px; margin-bottom: 12px; }
+.card .tlink { align-self: flex-start; margin-top: 8px; }
+
+/* COIT */
+.coit { position: relative; background: var(--espresso); }
+.coit img { width: 100%; height: clamp(420px, 62vw, 760px); object-fit: cover; object-position: 50% 35%; }
+.coit::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.72) 0%, rgba(0,0,0,.38) 45%, transparent 75%); pointer-events: none; }
+.coit-ov { position: absolute; inset: 0; z-index: 1; display: flex; align-items: flex-end; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gut) clamp(32px, 5vw, 72px); }
+.coit-frame { max-width: 560px; color: var(--linen); padding: 0 0 0 clamp(18px, 2.4vw, 28px); border-left: 1px solid var(--linen); box-shadow: -6px 0 0 -5px var(--linen); }
+.coit-frame .sub { color: var(--linen); }
+.coit-line { font-family: var(--serif); font-size: clamp(24px, 3vw, 38px); line-height: 1.2; letter-spacing: -0.01em; margin: 0; }
+
+/* NEIGHBORHOODS */
+.hoods { padding-block: clamp(64px, 8vw, 112px); }
+.hoods-head { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; margin-bottom: 44px; }
+.hoods-head .lede { margin: 0; }
+.hood-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--espresso); border-left: 1px solid var(--espresso); }
+.hood { padding: 26px 20px 28px; border-right: 1px solid var(--espresso); border-bottom: 1px solid var(--espresso); position: relative; transition: background .2s, color .2s; }
+.hood::before { content: ""; position: absolute; top: 10px; right: 10px; width: 14px; height: 14px; border-top: 1px solid var(--toffee); border-right: 1px solid var(--toffee); }
+.hood .num { display: block; font-size: 12px; letter-spacing: 0.2em; color: var(--terracotta); margin-bottom: 14px; }
+.hood h3 { font-size: 21px; margin-bottom: 10px; }
+.hood p { font-size: 14px; font-weight: 300; margin: 0; }
+.hood:hover { background: var(--espresso); color: var(--linen); }
+.hood:hover .num { color: var(--linen); }
+.hood:hover::before { border-color: var(--linen); }
+
+/* ABOUT: Espresso bg, Linen only */
+.about { background: var(--espresso); color: var(--linen); overflow: hidden; }
+.about h2 { color: var(--linen); }
+.about .sub { color: var(--linen); }
+.about-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(40px, 7vw, 110px); align-items: center; padding-block: clamp(72px, 9vw, 128px); }
+.about-pic { position: relative; max-width: 380px; width: 100%; justify-self: center; }
+.step-frame { position: relative; padding: 12px; border: 1px solid var(--linen); }
+.step-frame::before, .step-frame::after { content: ""; position: absolute; border: 1px solid var(--linen); pointer-events: none; }
+.step-frame::before { inset: -10px 22px; }
+.step-frame::after { inset: 22px -10px; }
+.step-frame img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; }
+.about-mark { position: absolute; width: 74px; right: -28px; bottom: -34px; }
+.about .lede { color: var(--linen); }
+
+/* NEWSLETTER: Terracotta bg with Linen + Espresso */
+.news { background: var(--terracotta); color: var(--linen); text-align: center; padding-block: clamp(64px, 8vw, 104px); background-image: repeating-linear-gradient(90deg, transparent 0 46px, var(--linen) 46px 47px); background-size: 100% 10px; background-repeat: repeat-x; background-position: 0 0; }
+.news-in { display: flex; flex-direction: column; align-items: center; }
+.news .orn { color: var(--linen); }
+.news h2 { color: var(--linen); max-width: 22ch; }
+.news .sub { color: var(--linen); }
+.news .lede { margin: 18px auto 30px; }
+
+/* FOOTER: Espresso bg, Linen only */
+.foot { background: var(--espresso); color: var(--linen); padding-top: 72px; border-top: 1px solid var(--linen); }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.3fr; gap: 40px; }
+.foot-wm { width: 180px; }
+.foot-tag { font-size: 14px; font-weight: 300; margin-top: 20px; max-width: 32ch; }
+.foot h4 { font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.2em; font-size: 12px; margin-bottom: 16px; }
+.foot ul { list-style: none; margin: 0; padding: 0; }
+.foot li { margin-bottom: 8px; font-size: 14px; font-weight: 300; overflow-wrap: anywhere; }
+.foot a { text-decoration: none; }
+.foot a:hover { text-decoration: underline; }
+.foot-base { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 56px; padding: 22px 0 28px; border-top: 1px solid var(--linen); font-size: 12px; font-weight: 300; }
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .links, .nav-cta { display: none; }
+  .burger { display: block; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-pic { width: min(78%, 360px); }
+  .cards { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
+  .card img.arch { aspect-ratio: 1 / 1; }
+  .hoods-head { grid-template-columns: 1fr; }
+  .hood-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-pic { max-width: 300px; }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .nav-in { height: 68px; }
+  .acts .btn { width: 100%; }
+  .hood-grid { grid-template-columns: 1fr; }
+  .hood { padding: 20px 18px; }
+  .about-mark { right: -12px; width: 58px; }
+  .foot-grid { grid-template-columns: 1fr; gap: 28px; }
+  .lede { font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</body>
+</html>
