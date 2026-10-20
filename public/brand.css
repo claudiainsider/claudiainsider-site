@@ -1,0 +1,83 @@
+/* Claudia Insider — brand kit tokens (Studio Tatjana Klé). Exact values, no approximations. */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+:root{
+  --linen:#E8E4D7; --dune:#C7B8A3; --toffee:#8D624B; --espresso:#502E22; --taupe:#5C4C4C; --terracotta:#A14528;
+  --serif:'Libre Caslon Text',Georgia,'Times New Roman',serif;
+  --sans:'Nunito Sans','Trebuchet MS',Verdana,sans-serif;
+  --gut:clamp(20px,4vw,64px); --maxw:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--linen);color:var(--espresso);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;margin:0;line-height:1.15;color:var(--espresso)}
+h1{font-size:clamp(34px,4.6vw,60px)}
+h2{font-size:clamp(28px,3.2vw,40px)}
+h3{font-size:22px}
+h1 em,h2 em,h3 em{font-style:italic}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+.sub{font-family:var(--sans);font-weight:400;text-transform:uppercase;letter-spacing:.2em;font-size:11px;margin:0 0 18px;color:var(--taupe)}
+.sub.terra{color:var(--terracotta)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+.sec{padding:clamp(56px,7vw,104px) 0}
+.lede{font-size:18px;font-weight:300;max-width:56ch}
+.btn{display:inline-block;font-family:var(--sans);font-weight:400;text-transform:uppercase;letter-spacing:.2em;font-size:11px;padding:16px 28px;text-decoration:none;border:1px solid var(--terracotta);background:var(--terracotta);color:var(--linen);transition:background .15s,color .15s}
+.btn:hover{background:var(--espresso);border-color:var(--espresso)}
+.btn.ghost{background:transparent;color:var(--espresso);border-color:var(--espresso)}
+.btn.ghost:hover{background:var(--espresso);color:var(--linen)}
+.btn.linen{background:var(--linen);color:var(--espresso);border-color:var(--linen)}
+.btn.linen:hover{background:var(--dune);border-color:var(--dune)}
+.tlink{font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--terracotta);padding-bottom:4px}
+.tlink:hover{color:var(--terracotta)}
+/* photos — always shown at native ratio; object-fit only ever matches the file's own ratio */
+.ph-portrait{aspect-ratio:2/3;width:100%;object-fit:cover}
+.ph-land{aspect-ratio:3/2;width:100%;object-fit:cover}
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:var(--linen);border-bottom:1px solid var(--dune)}
+.nav .in{max-width:var(--maxw);margin:0 auto;padding:16px var(--gut);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav .logo img{height:44px;width:auto}
+.nav .logo img.lt{display:none}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:26px;flex-wrap:wrap}
+.nav ul a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding-bottom:4px;border-bottom:1px solid transparent}
+.nav ul a:hover{border-bottom-color:var(--terracotta)}
+.nav .cta{font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;background:var(--terracotta);color:var(--linen);padding:12px 20px;white-space:nowrap}
+.nav .cta:hover{background:var(--espresso)}
+.burger{display:none;background:none;border:0;padding:8px;cursor:pointer;flex-direction:column;gap:5px}
+.burger span{display:block;width:24px;height:1.5px;background:var(--espresso)}
+.menu{position:fixed;inset:0;z-index:200;background:var(--espresso);color:var(--linen);padding:28px var(--gut) 40px;display:none;flex-direction:column;align-items:center;text-align:center}
+.menu .close{position:absolute;top:18px;right:18px;background:none;border:0;color:var(--linen);font-size:34px;line-height:1;cursor:pointer}
+.menu .menu-logo{width:220px;margin:14px auto 26px}
+.menu nav{display:flex;flex-direction:column;flex:1;justify-content:center;gap:0}
+.menu nav a{font-family:var(--serif);font-size:24px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--linen);padding:16px 0;border-bottom:1px solid var(--toffee)}
+.menu nav a:last-child{border-bottom:0}
+.menu nav a small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dune);margin-top:4px}
+.menu .btn{width:100%;text-align:center;margin-top:24px}
+body.menu-open .menu{display:flex}
+body.menu-open{overflow:hidden}
+@media(max-width:900px){.nav ul{display:none}.nav .cta{display:none}.burger{display:flex}.nav .logo img{height:38px}}
+/* bands */
+.band-dune{background:var(--dune)}
+.band-espresso{background:var(--espresso);color:var(--linen)}
+.band-espresso h2,.band-espresso h3,.band-espresso .sub{color:var(--linen)}
+.band-taupe{background:var(--taupe);color:var(--linen)}
+.band-taupe h2,.band-taupe .sub{color:var(--linen)}
+/* newsletter form */
+.form{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.form input{flex:1 1 260px;font-family:var(--sans);font-size:15px;padding:15px 18px;border:1px solid var(--dune);background:var(--linen);color:var(--espresso)}
+.form input::placeholder{color:var(--taupe)}
+.form input:focus{outline:none;border-color:var(--terracotta)}
+.fine{font-size:12px;color:var(--taupe);margin-top:14px}
+.band-espresso .fine{color:var(--dune)}
+/* footer */
+.foot{background:var(--espresso);color:var(--linen);padding:clamp(48px,6vw,80px) 0 40px}
+.foot .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot .wm img{width:200px;height:auto}
+.foot h4{font-family:var(--sans);font-weight:400;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--dune);margin:0 0 16px}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{margin-bottom:8px;font-size:14px;font-weight:300}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--dune)}
+.foot .base{margin-top:48px;padding-top:22px;border-top:1px solid var(--toffee);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--dune)}
+@media(max-width:800px){.foot .grid{grid-template-columns:1fr 1fr}}
