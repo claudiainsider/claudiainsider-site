@@ -1,0 +1,322 @@
+---
+// About page — Oct 2026. Source mockup: Claudia Insider/6 Business & Brand/website-brand-update/_previews/about-mockup-v1.html
+// Brand tokens in /public/brand.css; photos in /public/about; logos in /public/home/logo.
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About Claudia Lee · San Francisco REALTOR® | Claudia Insider</title>
+<meta name="description" content="Claudia Lee is an education-first REALTOR® with Vantage Realty in San Francisco (DRE #02380540), helping first-time buyers, repeat buyers, relocators and sellers understand the market before they decide.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/brand.css">
+<script is:inline type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "Claudia Lee", "jobTitle": "REALTOR®", "description": "Claudia Lee is an education-first REALTOR® with Vantage Realty in San Francisco (DRE #02380540). She helps first-time buyers, repeat buyers, relocators and sellers understand the San Francisco real estate market through financial literacy and plain-English guidance.", "identifier": {"@type": "PropertyValue", "propertyID": "California DRE", "value": "02380540"}, "knowsAbout": ["San Francisco real estate", "First-time home buying", "Financial literacy for home buyers", "Condos and TICs", "Selling a home in San Francisco"], "address": {"@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA", "addressCountry": "US"}, "url": "https://claudiainsider.com/about/", "email": "claudia@claudiainsider.com", "worksFor": {"@type": "RealEstateAgent", "name": "Vantage Realty"}, "areaServed": {"@type": "City", "name": "San Francisco"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "University of California, Santa Barbara"}, {"@type": "EducationalOrganization", "name": "Phillips Exeter Academy"}], "sameAs": ["https://www.instagram.com/claudiainsider/"]}</script>
+<script is:inline type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "First-time buyers, repeat buyers, relocators and sellers."}}, {"@type": "Question", "name": "Do you only work in San Francisco?", "acceptedAnswer": {"@type": "Answer", "text": "Primarily, yes. Real estate works hyper-locally, and San Francisco is the market I know best. Some agents try to cover the whole Bay Area, and I don't. I know the East Bay well and will work there for special clients and my own circle. For other parts of the Bay, the state and the country, I have referral partners I trust, so you get the best of their market too."}}, {"@type": "Question", "name": "Are you new to real estate, and does that matter for me?", "acceptedAnswer": {"@type": "Answer", "text": "I'm newer as an agent, but real estate isn't new to me: my first job was helping manage my grandmother's properties. I focus on quality of service over volume, so I bring a hunger to learn and a fresh approach to marketing, presentation and the technology that makes the process smoother."}}, {"@type": "Question", "name": "What does education-first mean?", "acceptedAnswer": {"@type": "Answer", "text": "It means I'd rather teach you how San Francisco real estate works than rush you into a decision. Before you buy or sell, we go through the numbers, the process and the trade-offs in plain English, so you understand every step and can make the call that's right for your life and your long-term finances."}}, {"@type": "Question", "name": "Why do you call yourself an insider?", "acceptedAnswer": {"@type": "Answer", "text": "Because I want you to see how San Francisco real estate really works. I explain buying and selling in plain English, share what I know about the city, and act as your advocate from inside the industry."}}, {"@type": "Question", "name": "I'm not ready to buy yet. Is it okay to reach out?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, please do. Trust builds over years, not transactions, and the best buyers are the most prepared. Time does matter in real estate, but rushing into a decision you weren't ready for often leads to regret. I'd rather help you prepare for the long term and learn before you're ready. Financial literacy matters so much, so reach out early."}}, {"@type": "Question", "name": "What's the difference between the discovery call and the consult?", "acceptedAnswer": {"@type": "Answer", "text": "The 20-minute discovery call is about connection and fit: your priorities, and whether I'm the right agent for you. There's a saying that there's a lid for every pot, and I'd rather we find yours, even if it isn't me. We're choosing each other, so think of it as a first date. The 60-minute consult is where we build trust and a game plan tailored to you."}}, {"@type": "Question", "name": "How do you help me figure out what I can afford?", "acceptedAnswer": {"@type": "Answer", "text": "We start with your numbers, using my calculator and a \"what's left to live on\" approach that shows what remains each month after housing and taxes. Then we look at your financial priorities. Maybe you'd buy below your means to keep room for spending. Maybe you're committed to a specific home and willing to adjust your lifestyle for it. My job is to align your financial goals with your real estate goals."}}, {"@type": "Question", "name": "What happens after we close?", "acceptedAnswer": {"@type": "Answer", "text": "Closing is the start of the relationship, not the end. I stay part of your life long after."}}]}</script>
+<style is:inline>
+
+
+/* ---------- nav dropdown + mobile resources (same as home) ---------- */
+.nav .has-sub{position:relative}
+.nav ul.sub{display:none;position:absolute;top:100%;left:-18px;min-width:200px;padding:14px 18px;margin:8px 0 0;list-style:none;flex-direction:column;gap:12px;background:var(--linen);border:1px solid var(--dune)}
+.nav ul.sub::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px}
+.nav .has-sub:hover ul.sub,.nav .has-sub:focus-within ul.sub{display:flex}
+.menu nav .mres{border-bottom:1px solid var(--toffee)}
+.menu nav .mres button{display:block;width:100%;background:none;border:0;cursor:pointer;font-family:var(--serif);font-size:24px;letter-spacing:.06em;text-transform:uppercase;color:var(--linen);padding:16px 0}
+.menu nav .mres button span::after{content:"+";font-family:var(--sans);margin-left:10px}
+.menu nav .mres.open button span::after{content:"\2013"}
+.menu nav .mres .mlist{display:none;flex-direction:column;padding:0 0 14px}
+.menu nav .mres.open .mlist{display:flex}
+.menu nav .mres .mlist a{font-family:var(--sans);font-size:12px;letter-spacing:.2em;color:var(--dune);padding:8px 0;border:0}
+/* ---------- about page ---------- */
+h2.sub{font-family:var(--sans);font-weight:400;text-transform:uppercase;letter-spacing:.2em;font-size:11px;line-height:1.4;margin:0 0 18px;color:var(--taupe)}
+h3.big{font-size:clamp(28px,3.2vw,40px);line-height:1.15;letter-spacing:-.01em;margin:0}
+.band-espresso h2.sub,.band-taupe h2.sub{color:var(--dune)}
+.band-espresso h3.big{color:var(--linen)}
+.close h3.big{font-size:clamp(32px,4.4vw,54px);max-width:18ch;margin:0 auto 22px}
+section[id]{scroll-margin-top:calc(var(--navh,77px) + 48px)}
+.guide{position:sticky;top:var(--navh,77px);margin-top:-1px;z-index:5;background:var(--linen);border-bottom:1px solid var(--dune)}
+.guide .wrap{display:flex;gap:28px;overflow-x:auto;scrollbar-width:none;padding-top:14px;padding-bottom:14px;position:relative;z-index:2}
+.guide .wrap::-webkit-scrollbar{display:none}
+.guide a{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);text-decoration:none;white-space:nowrap;padding-bottom:3px;border-bottom:1px solid transparent}
+.guide a:hover,.guide a.on{color:var(--espresso);border-bottom-color:var(--terracotta)}
+@media(max-width:860px){.guide .wrap{gap:22px;padding-top:11px;padding-bottom:11px}}
+.ph-portrait,.ph-land{height:auto}
+.nav ul a[aria-current]{border-bottom-color:var(--terracotta)}
+.flow{position:relative;overflow:clip}
+.flow .swoosh{position:absolute;z-index:1;pointer-events:none;left:38%;top:22%;height:120%;opacity:.14}
+.flow>section{position:relative;z-index:auto}
+.flow .wrap{position:relative;z-index:2}
+.hero{padding:clamp(36px,5vw,72px) 0 clamp(56px,7vw,104px)}
+.hero .g{display:grid;grid-template-columns:1.1fr .9fr;grid-template-areas:"head pic" "body pic";column-gap:clamp(32px,6vw,96px);row-gap:0;align-items:center}
+.hero-head{grid-area:head;align-self:end;padding-bottom:26px}
+.hero-body{grid-area:body;align-self:start}
+.hero-pic{grid-area:pic;position:relative;justify-self:end;width:min(100%,440px)}
+.hero-pic .wm{position:absolute;right:16px;bottom:16px;width:128px;height:auto}
+.hero h1{max-width:14ch}
+.hero .lede{margin-bottom:30px}
+.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:center}
+.split.rev{grid-template-columns:1.2fr .8fr}
+.pic{position:relative;width:min(100%,400px)}
+.split.rev .pic{justify-self:end}
+.pic .stamp{position:absolute;right:-56px;top:-56px;width:140px;height:auto}
+.r{width:48px;height:2px;background:var(--terracotta);margin:22px 0}
+.txt p{font-size:17px;font-weight:300;max-width:58ch}
+.txt h3.big{max-width:20ch}
+.cols{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:start}
+.cols h3.big{max-width:16ch}
+.band-espresso .txt p{color:var(--linen)}
+.box{background:var(--terracotta);color:var(--linen);padding:0 .22em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.kar{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,88px);align-items:center}
+.kar h3.big{max-width:16ch}
+.kar .txt p{color:var(--linen)}
+.kar .r{background:var(--linen)}
+.car{position:relative}
+.trk{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.trk::-webkit-scrollbar{display:none}
+.trk figure{flex:0 0 100%;scroll-snap-align:start;margin:0}
+.trk img{display:block;width:100%;height:auto}
+.trk figcaption{font-size:13px;font-weight:300;color:var(--dune);margin-top:10px;line-height:1.4}
+.ctl{display:flex;align-items:center;gap:14px;margin-top:14px}
+.ctl button{font:inherit;background:none;border:1px solid var(--dune);color:var(--linen);width:40px;height:40px;cursor:pointer;line-height:1}
+.ctl button:hover{background:var(--terracotta);border-color:var(--terracotta)}
+.ctl button:focus-visible{outline:2px solid var(--linen);outline-offset:2px}
+.dots{display:flex;gap:8px;flex:1;justify-content:center}
+.car.por{max-width:400px}
+.band-dune .car .ctl button{border-color:var(--toffee);color:var(--espresso)}
+.band-dune .car .ctl button:hover{color:var(--linen)}
+.band-dune .car .trk figcaption{color:var(--taupe)}
+.band-dune .car .dots i{background:var(--toffee)}
+.band-dune .car .dots i.on{background:var(--espresso)}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--dune);opacity:.45}
+.dots i.on{opacity:1;background:var(--linen)}
+.land{width:100%;max-width:560px}
+.glance{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 48px;margin:28px 0 0}
+.glance div{display:grid;grid-template-columns:120px 1fr;gap:16px;border-top:1px solid rgba(232,228,215,.25);padding-top:14px}
+.glance dt{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dune);padding-top:3px}
+.glance dd{margin:0;color:var(--linen);font-size:16px;font-weight:300;line-height:1.5}
+#glance{padding-bottom:0}
+#fun{padding-top:48px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,56px)}
+.facts .f .r{background:var(--linen);margin:0 0 18px}
+.facts p{font-family:var(--serif);font-size:clamp(19px,1.8vw,23px);line-height:1.45;color:var(--linen);margin:0}
+
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:start}
+.faq .head{position:sticky;top:110px}
+details{border-top:1px solid var(--dune)}
+details:last-of-type{border-bottom:1px solid var(--dune)}
+summary{list-style:none;cursor:pointer;font-family:var(--serif);font-size:clamp(18px,1.7vw,21px);line-height:1.3;padding:22px 44px 22px 0;position:relative;color:var(--espresso)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:18px;font-family:var(--sans);font-weight:300;font-size:28px;line-height:1;color:var(--terracotta);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{font-size:16px;font-weight:300;padding:0 44px 24px 0;max-width:62ch}
+.close{text-align:center}
+
+.close .lede{margin:0 auto 30px}
+.close .fine{margin-top:22px}
+.foot{position:relative}
+@media(max-width:860px){
+  .flow .swoosh{height:70%;left:auto;right:-40%;top:18%;opacity:.12}
+  .hero .g{grid-template-columns:1fr;grid-template-areas:"head" "pic" "body";}
+  .hero-head{padding-bottom:20px}
+  .hero-pic{justify-self:center;width:min(300px,76%);margin:6px 0 26px}
+  .hero-pic .wm{width:96px;right:12px;bottom:12px}
+  .hero h1{max-width:none}
+  .split,.split.rev,.cols,.faq,.kar{grid-template-columns:1fr}
+  .split .pic,.split.rev .pic{justify-self:center;width:min(280px,72%)}
+  .split .pic.land{width:100%;max-width:none}
+  .pic .stamp{right:-30px;top:-34px;width:104px}
+  .facts{grid-template-columns:1fr;gap:30px}
+  .glance{grid-template-columns:1fr;gap:14px}
+  .glance div{grid-template-columns:96px 1fr;gap:12px}
+  .car.por{max-width:none}
+  .split .pic:has(.car){width:100%;order:2;margin-top:28px}
+  .kar .car{order:2;margin-top:28px}
+  .faq .head{position:static}
+  summary{padding-right:36px}
+  details p{padding-right:8px}
+}
+</style></head><body>
+<header class="nav"><div class="in">
+  <a class="logo" href="/"><img class="dk" src="/home/logo/primary_logos_1-black.svg" alt="claudia lee — SF real estate insider"></a>
+  <ul><li><a href="/#buyers">Buyers</a></li><li><a href="/#sellers">Sellers</a></li><li class="has-sub"><a href="/tics/">Resources</a><ul class="sub"><li><a href="/calculator/">Calculator</a></li><li><a href="/tics/">Condos vs. TICs</a></li></ul></li><li><a href="/about/" aria-current="page">About</a></li><li><a href="/#newsletter">Newsletter</a></li></ul>
+  <a class="cta" href="https://calendar.app.google/Unk61s7yj1tfr7eD7">Discovery call</a>
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" onclick="document.body.classList.add('menu-open');this.setAttribute('aria-expanded','true')"><span></span><span></span><span></span></button>
+</div></header>
+<div class="menu" aria-hidden="true">
+  <button class="close" type="button" aria-label="Close menu" onclick="document.body.classList.remove('menu-open')">&times;</button>
+  <img class="menu-logo" src="/home/logo/primary_logos_1-linen.svg" alt="claudia lee — SF real estate insider">
+  <nav><a href="/#buyers">Buyers</a><a href="/#sellers">Sellers</a><div class="mres"><button type="button" aria-expanded="false" onclick="var o=this.parentNode.classList.toggle('open');this.setAttribute('aria-expanded',o)">Resources<span aria-hidden="true"></span></button><div class="mlist"><a href="/calculator/">Calculator</a><a href="/tics/">Condos vs. TICs</a></div></div><a href="/about/">About</a><a href="/#newsletter">Newsletter</a></nav>
+  <a class="btn linen" href="https://calendar.app.google/Unk61s7yj1tfr7eD7">Book a 20-min discovery call</a>
+</div>
+<main>
+<div class="guide" role="navigation" aria-label="On this page"><div class="wrap"><a href="#home">Home</a><a href="#story">My story</a><a href="#why">Why this work</a><a href="#karate">Karate</a><a href="#insider">Insider</a><a href="#expect">My approach</a><a href="#glance">At a glance</a><a href="#fun">Fun facts</a><a href="#faq">FAQs</a></div></div>
+
+<div class="flow">
+<img class="swoosh" src="/home/logo/swoosh_toffee.svg" alt="">
+
+<!-- 1 · OPENER -->
+<section class="hero z"><div class="wrap g">
+  <div class="hero-head">
+    <p class="sub">Claudia Lee · San Francisco real estate insider</p>
+    <h1>Your <em>insider</em> in San Francisco real estate.</h1>
+  </div>
+  <div class="hero-pic"><img class="ph-portrait" src="/about/DSC05623.jpg" alt="Claudia Lee, San Francisco REALTOR®" width="933" height="1400"><img class="wm" src="/about/wordmark_claudia_linen.png" alt=""></div>
+  <div class="hero-body">
+    <p class="lede">I'm Claudia Lee, a REALTOR® with Vantage Realty in San Francisco (DRE #02380540) and an education-first agent. I work with first-time buyers, repeat buyers, relocators and sellers, explain the process in plain English, tell you the truth even when it isn't what you hoped to hear, and stay in your corner long after closing.</p>
+    <a class="btn" href="https://calendar.app.google/Unk61s7yj1tfr7eD7">Book a 20-min discovery call</a>
+  </div>
+</div></section>
+
+<section id="home" class="sec band-dune z"><div class="wrap split">
+  <div class="pic"><img class="ph-portrait" src="/about/DSC05824.jpg" alt="Claudia Lee outdoors in San Francisco" loading="lazy" width="933" height="1400"><img class="stamp" src="/home/logo/stamp_name_black.png" alt="claudia lee — real estate insider, San Francisco"></div>
+  <div class="txt">
+    <h2 class="sub">Where I've called home</h2>
+    <h3 class="big">I've lived in a lot of places. <em>San Francisco</em> is where I stayed.</h3>
+    <div class="r"></div>
+    <p>I was born and raised in Oakland, and at 16 I moved across the country to New Hampshire to attend Phillips Exeter on a basketball scholarship. Living on my own that early is where my independence comes from, and, if I'm honest, where my obsession with managing money started. Santa Barbara came next, and it mostly taught me that I'm a Northern California person, although I am still a beach person deep down. Then six months of solo travel through Asia after college, where I learned I can make a home out of almost anywhere for a while.</p>
+    <p><em>Almost</em> anywhere, but not forever. San Francisco is the first place I never wanted to leave. It has the public transit, the food and easy access to nature, and it keeps me close to my family and my dogs. That's why I take the idea of home seriously, and why I'd love to help you find yours.</p>
+  </div>
+</div></section>
+</div>
+
+<section id="story" class="sec"><div class="wrap split rev">
+  <div class="txt">
+    <h2 class="sub">Background</h2>
+    <h3 class="big">From my grandma's rentals to <em>HGTV</em> to a license.</h3>
+    <div class="r"></div>
+    <p>I grew up helping my grandma manage her East Bay rental properties, which is where I first saw how much wealth and flexibility a home can create across generations. What I wanted, though, was the client side: the search and the guiding. HGTV gave me that curiosity. It was one of the three channels I watched in hotel rooms between karate tournaments, since we never had cable at home.</p>
+    <p>I was working at my parents' dental office at the time, wanting to support our family business in a way I couldn't quite do there. <em>Sorry mom and dad, dentistry just isn't for me!</em> Real estate felt like the answer. I could be the steward into Bay Area ownership for my family, and now for my friends and beloved clients too.</p>
+  </div>
+  <div class="pic"><img class="ph-portrait" src="/about/DSC05754.jpg" alt="Claudia Lee seated" loading="lazy" width="934" height="1400"></div>
+</div></section>
+
+<section id="why" class="sec band-dune"><div class="wrap split">
+  <div class="pic"><div class="car por" id="mur">
+      <div class="trk">
+        <figure><img src="/about/mural-together.jpg" alt="Together We Rise mural at 10th and Jackson, Oakland Chinatown" loading="lazy" width="1200" height="1500"><figcaption>“Together We Rise,” 10th &amp; Jackson, with Oakland Roots &amp; Soul and Illuminaries.</figcaption></figure>
+        <figure><img src="/about/mural-poinciana.jpg" alt="Mural by Poinciana Hung-Haas at 11th and Harrison" loading="lazy" width="1200" height="1500"><figcaption>Oakland Chinatown's first mural contest, 11th &amp; Harrison. Mural by Poinciana Hung-Haas.</figcaption></figure>
+        <figure><img src="/about/mural-tiffjan.jpg" alt="Dim sum mural by Tiffany Jan" loading="lazy" width="1200" height="1500"><figcaption>Mural by Tiffany Jan.</figcaption></figure>
+        <figure><img src="/about/mural-houyee.jpg" alt="Volunteers in front of a mural by Houyee Chow" loading="lazy" width="1200" height="1500"><figcaption>Mural by Houyee Chow.</figcaption></figure>
+        <figure><img src="/about/mural-youbeen.jpg" alt="Paper crane mural by YouBeen Kim Robles" loading="lazy" width="1200" height="1500"><figcaption>Mural by YouBeen Kim Robles.</figcaption></figure>
+        <figure><img src="/about/mural-beatrix.jpg" alt="Oakland teacup and lion dance mural by Beatrix Lui" loading="lazy" width="1200" height="1500"><figcaption>Mural by Beatrix Lui.</figcaption></figure>
+      </div>
+      <div class="ctl"><button type="button" aria-label="Previous photo" data-d="-1">&larr;</button><span class="dots"></span><button type="button" aria-label="Next photo" data-d="1">&rarr;</button></div>
+    </div></div>
+  <div class="txt">
+    <h2 class="sub">Why this work</h2>
+    <h3 class="big">Work that feels <em>aligned</em>.</h3>
+    <div class="r"></div>
+    <p>Before real estate, I was a project manager for the Toishan Benevolent Association in Oakland Chinatown, helping the neighborhood recover after the 2020 pandemic and the spike in anti-Asian hate crimes. Chinatown is where I grew up and where my parents' small business still is, so the work felt like a love letter back to the place that raised me. I loved the impact and the connections I made across the community. I also knew I wanted to build something of my own, where I could feel aligned from start to finish.</p>
+    <p>Real estate draws on everything I studied and cared about: communication and professional writing in college, community financial literacy work, and a keen interest in branding and content. The job keeps changing with market conditions, new systems and every client's way of communicating, and I learn something new every day.</p>
+    <p>I get to help buyers move into a home that fits their lives, and I get to help sellers who trust me with a place full of memories as they begin their next chapter.</p>
+  </div>
+</div></section>
+
+<section id="karate" class="sec band-espresso"><div class="wrap kar">
+  <div class="car" id="kar">
+    <div class="trk">
+      <figure><img class="ph-land" src="/about/karate-kumite.jpg" alt="Claudia mid-match at the 2017 Pan American Championships" loading="lazy" width="1500" height="1000"><figcaption>2017 Pan American Championships. Buenos Aires, Argentina.</figcaption></figure>
+      <figure><img class="ph-land" src="/about/karate-medal.jpg" alt="Claudia on the podium with a gold medal at the 2014 US Team Trials" loading="lazy" width="1500" height="1000"><figcaption>2014 US Nationals. Gold at US Team Trials. Reno, Nevada.</figcaption></figure>
+      <figure><img class="ph-land" src="/about/karate-team.jpg" alt="The 2016 US Junior National Team at the Pan American Championships" loading="lazy" width="1500" height="1000"><figcaption>2016 Pan American Championships, US Jr. National Team. We won first in overall medal count that year.</figcaption></figure>
+    </div>
+    <div class="ctl"><button type="button" aria-label="Previous photo" data-d="-1">&larr;</button><span class="dots"></span><button type="button" aria-label="Next photo" data-d="1">&rarr;</button></div>
+  </div>
+  <div class="txt">
+    <h2 class="sub">Karate and discipline</h2>
+    <h3 class="big">Practice every day, then <span class="box"><em>refine</em></span>.</h3>
+    <div class="r"></div>
+    <p>As a kid I wanted to go wherever my dad and sister went, which meant the karate tournaments. My dad's answer was that I'd have to earn it. He wasn't going to fly me to Portland, Oregon at 9 years old unless I was going to give it everything, so I practiced hard and earned my plane tickets. I watched my sister train every day while keeping up with school, and her discipline stayed with me. I went on to become a multiple-time national champion and a three-time member of the US national team.</p>
+    <p>Karate taught me that results don't always show up right away, and that the work pays off eventually. It also taught me to review the film. Now I look back at past deals and past clients and ask what I'd do better next time, so the next client gets an even better experience.</p>
+  </div>
+</div></section>
+
+<section id="insider" class="sec band-dune"><div class="wrap split rev">
+  <div class="txt">
+    <h2 class="sub">What “insider” means</h2>
+    <h3 class="big">What <em>insider</em> means to me.</h3>
+    <div class="r"></div>
+    <p>It means a transparent, jargon-free look at how buying and selling really works in San Francisco, explained so you understand what's happening at every step. It also means the local nuggets you'd find in the SF Standard: a new spot, an upcoming event, what city life is actually like.</p>
+    <p>And it means advocate. I'm your person on the inside of the industry, helping you reach your real estate goals.</p>
+  </div>
+  <div class="pic"><img class="ph-portrait" src="/about/hug.jpg" alt="Claudia hugging a friend" loading="lazy" width="933" height="1400"></div>
+</div></section>
+
+<section id="expect" class="sec"><div class="wrap split">
+  <div class="pic"><img class="ph-portrait" src="/about/DSC05516.jpg" alt="Claudia Lee smiling" loading="lazy" width="933" height="1400"></div>
+  <div class="txt">
+    <h2 class="sub">My approach</h2>
+    <h3 class="big">What to <em>expect</em>.</h3>
+    <div class="r"></div>
+    <p>You'll feel taken care of. My clients appreciate my white-glove service and deep attention to detail, and your priorities are my priorities. I'll be honest with you, including when it isn't what you were hoping to hear.</p>
+    <p>I'm an education-first agent: the best buyers and sellers are the most prepared, so I treat every step as a chance to teach and never assume you already know something. I care whether a decision is right for your life, your timeline and your long-term finances, and I'm more interested in the long game than a quick commission.</p>
+    <p>I'll also be part of your life long after closing.</p>
+  </div>
+</div></section>
+
+<section id="glance" class="sec band-taupe"><div class="wrap">
+  <h2 class="sub">Education and credentials</h2>
+  <h3 class="big" style="color:var(--linen);max-width:18ch">Claudia Lee, at a <em>glance</em>.</h3>
+  <dl class="glance">
+    <div><dt>Brokerage</dt><dd>Vantage Realty, San Francisco</dd></div>
+    <div><dt>License</dt><dd>California DRE #02380540</dd></div>
+    <div><dt>Serves</dt><dd>San Francisco, with East Bay roots and trusted referral partners elsewhere</dd></div>
+    <div><dt>Works with</dt><dd>First-time buyers, repeat buyers, relocators and sellers</dd></div>
+    <div><dt>Approach</dt><dd>Education-first: financial literacy, plain-English explanations and honest advice before you buy or sell</dd></div>
+    <div><dt>Education</dt><dd>University of California, Santa Barbara, highest honors · Phillips Exeter Academy, cum laude</dd></div>
+    <div><dt>Background</dt><dd>Born and raised in Oakland; grew up helping manage family rental properties; former nonprofit project manager in Oakland Chinatown</dd></div>
+  </dl>
+</div></section>
+
+<section id="fun" class="sec band-taupe"><div class="wrap">
+  <h2 class="sub">A few things about me</h2>
+  <div class="facts" style="margin-top:34px">
+    <div class="f"><div class="r"></div><p>I was a stem cell match for a stranger, and I donated.</p></div>
+    <div class="f"><div class="r"></div><p>I hiked Half Dome and attempted to solo it fueled by Hot Cheetos.</p></div>
+    <div class="f"><div class="r"></div><p>I hit an 815 credit score and $100K invested before I turned 24.</p></div>
+  </div>
+</div></section>
+
+<section id="faq" class="sec"><div class="wrap faq">
+  <div class="head"><h2 class="sub">FAQs</h2><h3 class="big">Questions people <em>ask</em>.</h3><div class="r"></div></div>
+  <div>
+<details open><summary>Who do you work with?</summary><p>First-time buyers, repeat buyers, relocators and sellers.</p></details>
+<details><summary>Do you only work in San Francisco?</summary><p>Primarily, yes. Real estate works hyper-locally, and San Francisco is the market I know best. Some agents try to cover the whole Bay Area, and I don&#x27;t. I know the East Bay well and will work there for special clients and my own circle. For other parts of the Bay, the state and the country, I have referral partners I trust, so you get the best of their market too.</p></details>
+<details><summary>Are you new to real estate, and does that matter for me?</summary><p>I&#x27;m newer as an agent, but real estate isn&#x27;t new to me: my first job was helping manage my grandmother&#x27;s properties. I focus on quality of service over volume, so I bring a hunger to learn and a fresh approach to marketing, presentation and the technology that makes the process smoother.</p></details>
+<details><summary>What does education-first mean?</summary><p>It means I&#x27;d rather teach you how San Francisco real estate works than rush you into a decision. Before you buy or sell, we go through the numbers, the process and the trade-offs in plain English, so you understand every step and can make the call that&#x27;s right for your life and your long-term finances.</p></details>
+<details><summary>Why do you call yourself an insider?</summary><p>Because I want you to see how San Francisco real estate really works. I explain buying and selling in plain English, share what I know about the city, and act as your advocate from inside the industry.</p></details>
+<details><summary>I&#x27;m not ready to buy yet. Is it okay to reach out?</summary><p>Yes, please do. Trust builds over years, not transactions, and the best buyers are the most prepared. Time does matter in real estate, but rushing into a decision you weren&#x27;t ready for often leads to regret. I&#x27;d rather help you prepare for the long term and learn before you&#x27;re ready. Financial literacy matters so much, so reach out early.</p></details>
+<details><summary>What&#x27;s the difference between the discovery call and the consult?</summary><p>The 20-minute discovery call is about connection and fit: your priorities, and whether I&#x27;m the right agent for you. There&#x27;s a saying that there&#x27;s a lid for every pot, and I&#x27;d rather we find yours, even if it isn&#x27;t me. We&#x27;re choosing each other, so think of it as a first date. The 60-minute consult is where we build trust and a game plan tailored to you.</p></details>
+<details><summary>How do you help me figure out what I can afford?</summary><p>We start with your numbers, using my calculator and a &quot;what&#x27;s left to live on&quot; approach that shows what remains each month after housing and taxes. Then we look at your financial priorities. Maybe you&#x27;d buy below your means to keep room for spending. Maybe you&#x27;re committed to a specific home and willing to adjust your lifestyle for it. My job is to align your financial goals with your real estate goals.</p></details>
+<details><summary>What happens after we close?</summary><p>Closing is the start of the relationship, not the end. I stay part of your life long after.</p></details>
+  </div>
+</div></section>
+
+<!-- 10 · CLOSE -->
+<section class="sec band-dune close"><div class="wrap">
+  <h3 class="big">Find the place that <em>feels right</em>.</h3>
+  <p class="lede">Book a free 20-minute discovery call. Bring your questions, and I'll give it to you straight.</p>
+  <a class="btn" href="https://calendar.app.google/Unk61s7yj1tfr7eD7">Book a 20-min discovery call</a>
+  <p class="fine">Claudia Lee · DRE #02380540 · Vantage Realty · @claudiainsider</p>
+</div></section>
+
+</main>
+<script is:inline>
+(function(){function f(){var h=document.querySelector('.nav');if(h)document.documentElement.style.setProperty('--navh',(h.offsetHeight-1)+'px')}f();addEventListener('load',f);addEventListener('resize',f);})();
+(function(){var links=document.querySelectorAll('.guide a');if(!links.length||!('IntersectionObserver' in window))return;
+var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=map[e.target.id];if(a){a.classList.add('on');a.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'})}}})},{rootMargin:'-40% 0px -55% 0px'});
+Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});})();
+document.querySelectorAll('.car').forEach(function(c){var t=c.querySelector('.trk'),imgs=t.querySelectorAll('figure'),d=c.querySelector('.dots');
+imgs.forEach(function(){d.appendChild(document.createElement('i'))});
+function idx(){return Math.round(t.scrollLeft/t.clientWidth)}
+function paint(){var i=idx();d.querySelectorAll('i').forEach(function(e,j){e.classList.toggle('on',j===i)})}
+t.addEventListener('scroll',paint,{passive:true});paint();
+c.querySelectorAll('.ctl button').forEach(function(b){b.onclick=function(){var n=(idx()+ +b.dataset.d+imgs.length)%imgs.length;t.scrollTo({left:n*t.clientWidth,behavior:'smooth'})}});
+});
+</script>
+<footer class="foot"><div class="wrap"><div class="grid">
+  <div class="wm"><img src="/home/logo/primary_logos_3-linen.svg" alt="claudia lee"><p style="font-size:14px;font-weight:300;margin-top:20px;max-width:32ch">SF real estate, explained by someone who lives here and reads the disclosures for fun.</p></div>
+  <div><h4>Explore</h4><ul><li><a href="/#buyers">Buyers</a></li><li><a href="/#sellers">Sellers</a></li><li><a href="/tics/">Condos vs. TICs</a></li></ul></div>
+  <div><h4>Claudia</h4><ul><li><a href="/about/">About</a></li><li><a href="/#newsletter">Newsletter</a></li><li><a href="/collab/">Collab</a></li><li><a href="https://calendar.app.google/Unk61s7yj1tfr7eD7">Discovery call</a></li></ul></div>
+  <div><h4>Say hi</h4><ul><li><a href="https://www.instagram.com/claudiainsider/">@claudiainsider</a></li><li><a href="mailto:claudia@claudiainsider.com">claudia@claudiainsider.com</a></li></ul></div>
+</div><div class="base"><span>Claudia Lee · DRE #02380540 · Vantage Realty</span><span>© 2026 claudiainsider.com</span></div></div></footer>
+</body></html>
