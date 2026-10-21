@@ -1,0 +1,24 @@
+---
+import HubLayout from '../layouts/HubLayout.astro';
+const BOOK_20 = 'https://calendar.app.google/Unk61s7yj1tfr7eD7';
+---
+<HubLayout title="Contact, Coming Soon · Claudia Lee, SF Real Estate Insider" description="Contact Claudia Lee, San Francisco real estate insider. A contact form is coming soon; email claudia@claudiainsider.com in the meantime." current="contact">
+<div class="hub-top soon">
+  <img class="mono" src="/home/logo/swoosh_dune.svg" alt="">
+  <section class="hub-hero"><div class="wrap g" style="grid-template-columns:1fr">
+    <div>
+      <p class="sub terra">Coming soon</p>
+      <h1>A contact form is <em>on its way.</em></h1>
+      <div class="rule"></div>
+      <p class="lede">In the meantime, email me at <a href="mailto:claudia@claudiainsider.com">claudia@claudiainsider.com</a> or send a message on Instagram <a href="https://www.instagram.com/claudiainsider/">@claudiainsider</a>.</p>
+      <div class="acts"><a class="btn" href={BOOK_20}>Book a 20-min discovery call</a><a class="btn ghost" href="mailto:claudia@claudiainsider.com">Email me</a></div>
+    </div>
+  </div></section>
+</div>
+</HubLayout>
+<style is:inline>
+.soon .hub-hero .g{min-height:calc(100vh - 77px);padding-block:clamp(48px,8vh,110px)}
+.soon .hub-hero .lede a{color:var(--terracotta)}
+.soon>.mono{left:auto;right:-14%;width:52%}
+@media(max-width:900px){.soon .hub-hero .g{min-height:0;padding-block:56px 72px}.soon>.mono{right:-60%;width:120%}}
+</style>
