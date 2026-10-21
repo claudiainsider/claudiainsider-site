@@ -1,0 +1,34 @@
+---
+import HubLayout from '../layouts/HubLayout.astro';
+const BOOK_20 = 'https://calendar.app.google/Unk61s7yj1tfr7eD7';
+---
+<HubLayout title="Resources · Claudia Lee, SF Real Estate Insider" description="Plain-English guides to buying and selling in San Francisco: condos vs. TICs, the buyer's and seller's guides, and The SF Insider newsletter archive." current="resources">
+<div class="hub-top">
+  <img class="mono" src="/home/logo/swoosh_dune.svg" alt="">
+  <section class="hub-hero"><div class="wrap g">
+    <div>
+      <p class="sub terra">Resources</p>
+      <h1>Learn first. <em>Decide</em> when you're ready.</h1>
+      <div class="rule"></div>
+      <p class="lede">Plain-English guides to buying and selling in San Francisco. Read the education up front; the downloads are free with a quick sign-up.</p>
+      <div class="acts"><a class="btn" href="/tics/">Start with condos vs. TICs</a></div>
+    </div>
+    <img class="ph-land pic" src="/home/img/gg-view.jpg" alt="Rooftops of San Francisco with the Golden Gate Bridge">
+  </div></section>
+  <section class="hub-cards" style="--n:4"><div class="wrap">
+    <h2>The <em>library.</em></h2>
+    <div class="row">
+      <div class="cardH"><img class="ph-land" src="/tics/img/facade.jpg" alt=""><div class="b"><p class="tag">Education · free cheat sheet</p><h3>Condos vs. TICs</h3><div class="r"></div><p>How TICs work, how they compare to condos, financing basics, and the checklist I run on every TIC.</p><a class="btn" href="/tics/">Start learning</a></div></div>
+      <div class="cardH"><img class="ph-land" src="/home/img/baywindow.jpg" alt=""><div class="b"><p class="tag">Free guide</p><h3>The SF Buyer's Guide</h3><div class="r"></div><p>Pre-approval, broker tours, disclosures, and what "over asking" actually means here.</p><a class="btn" href="/buyer-guide/">Get the guide</a></div></div>
+      <div class="cardH"><img class="ph-land" src="/home/img/living.jpg" alt=""><div class="b"><p class="tag">Free guide</p><h3>The SF Seller's Guide</h3><div class="r"></div><p>Prep that moves the needle, and how pricing really works in this market.</p><a class="btn" href="/seller-guide/">Get the guide</a></div></div>
+      <div class="cardH"><img class="ph-land" src="/home/img/coit.jpg" alt=""><div class="b"><p class="tag">Archive · subscribers</p><h3>The SF Insider</h3><div class="r"></div><p>Past issues of my monthly newsletter: market context, neighborhood notes and the money stuff.</p><a class="btn" href="/newsletter/">Open the archive</a></div></div>
+    </div>
+    <div class="pad"></div>
+  </div></section>
+</div>
+<section class="hub-close" slot="close"><div class="wrap g">
+  <h2>Have a question the guides <em>don't</em> answer?</h2>
+  <p class="lede">Book a free 20-minute discovery call and ask me directly.</p>
+  <div class="acts"><a class="btn linen" href={BOOK_20}>Book a 20-min discovery call</a><a class="btn ghost" href="/newsletter/">Join the newsletter</a></div>
+</div></section>
+</HubLayout>

@@ -1,0 +1,44 @@
+---
+import HubLayout from '../layouts/HubLayout.astro';
+const BOOK_20 = 'https://calendar.app.google/Unk61s7yj1tfr7eD7';
+const BOOK_60 = 'https://calendar.app.google/ZBgZUVKh1PhqP9bd8';
+---
+<HubLayout title="Buying in San Francisco · Claudia Lee, SF Real Estate Insider" description="Buying a home in San Francisco, explained. Free buyer's guide, condo vs. TIC education, and a 20-minute discovery call with Claudia Lee." current="buyers" ogImage="https://claudiainsider.com/home/img/victorian.jpg">
+<div class="hub-top">
+  <img class="mono" src="/home/logo/swoosh_dune.svg" alt="">
+  <section class="hub-hero"><div class="wrap g">
+    <div>
+      <p class="sub terra">Buying in San Francisco</p>
+      <h1>Understand the market <em>before</em> you make an offer.</h1>
+      <div class="rule"></div>
+      <p class="lede">Buying here moves fast, and the rules are local. Start with the basics, run your numbers, and bring your questions. I'd rather you feel prepared than rushed.</p>
+      <div class="acts"><a class="btn" href="/buyer-guide/">Get the buyer's guide</a><a class="btn ghost" href={BOOK_20}>Book a 20-min discovery call</a></div>
+    </div>
+    <img class="ph-land pic" src="/home/img/victorian.jpg" alt="Victorian facades in San Francisco">
+  </div></section>
+  <section class="hub-cards"><div class="wrap">
+    <h2>Start <em>here.</em></h2>
+    <p class="lede">Free resources for San Francisco buyers.</p>
+    <div class="row">
+      <div class="cardH"><img class="ph-land" src="/home/img/baywindow.jpg" alt=""><div class="b"><p class="tag">Free guide</p><h3>The SF Buyer's Guide</h3><div class="r"></div><p>Pre-approval, broker tours, disclosures, and what "over asking" actually means here, from start to finish.</p><a class="btn" href="/buyer-guide/">Get the guide</a></div></div>
+      <div class="cardH"><img class="ph-land" src="/tics/img/facade.jpg" alt=""><div class="b"><p class="tag">Education</p><h3>Condos vs. TICs</h3><div class="r"></div><p>Many of the Victorians you'll tour are TICs. Learn how they work, how financing differs, and what to check before you write an offer.</p><a class="btn" href="/tics/">Learn the difference</a></div></div>
+      <div class="cardH"><img class="ph-land" src="/home/img/kitchen.jpg" alt=""><div class="b"><p class="tag">Coming soon</p><h3>Can I even afford this?</h3><div class="r"></div><p>Rent vs. own, side by side, down to what's left to live on each month.</p><a class="btn" href="/calculator/">See the calculator</a></div></div>
+    </div>
+    <div class="pad"></div>
+  </div></section>
+</div>
+<section class="hub-steps band-dune"><div class="wrap g">
+  <p class="sub">How we'd work together</p>
+  <h2>Three steps, <em>no pressure.</em></h2>
+  <div class="row">
+    <div><p class="n">1</p><h3>Discovery call · 20 min</h3><p>Your priorities, your timeline, and whether we're the right fit. A first conversation, not a commitment.</p><a class="tlink" href={BOOK_20}>Book the discovery call</a></div>
+    <div><p class="n">2</p><h3>Consult · 60 min</h3><p>We build your game plan: budget, neighborhoods, property types and the trade-offs. You'll get a short questionnaire after you book.</p><a class="tlink" href={BOOK_60}>Book a consult</a></div>
+    <div><p class="n">3</p><h3>Search and offer</h3><p>Tours, disclosures and offer strategy, with honest numbers at every step and a steady hand through closing.</p></div>
+  </div>
+</div></section>
+<section class="hub-close" slot="close"><div class="wrap g">
+  <h2>Not ready yet? <em>That's okay.</em></h2>
+  <p class="lede">The best buyers are the most prepared. Get monthly market context from The San Francisco Insider, or reach out early with your questions.</p>
+  <div class="acts"><a class="btn linen" href="/newsletter/">Join the newsletter</a><a class="btn ghost" href={BOOK_20}>Book a 20-min discovery call</a></div>
+</div></section>
+</HubLayout>

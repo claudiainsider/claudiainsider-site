@@ -1,0 +1,44 @@
+---
+import HubLayout from '../layouts/HubLayout.astro';
+const BOOK_20 = 'https://calendar.app.google/Unk61s7yj1tfr7eD7';
+const BOOK_60 = 'https://calendar.app.google/ZBgZUVKh1PhqP9bd8';
+---
+<HubLayout title="Selling in San Francisco · Claudia Lee, SF Real Estate Insider" description="Selling a home in San Francisco, explained. Free seller's guide, market context, and a 20-minute discovery call with Claudia Lee." current="sellers" ogImage="https://claudiainsider.com/home/img/coit.jpg">
+<div class="hub-top">
+  <img class="mono" src="/home/logo/swoosh_dune.svg" alt="">
+  <section class="hub-hero"><div class="wrap g">
+    <div>
+      <p class="sub terra">Selling in San Francisco</p>
+      <h1>Sell with a plan, <em>not</em> a guess.</h1>
+      <div class="rule"></div>
+      <p class="lede">Pricing, prep and timing shape how a sale goes. I'll walk you through the numbers, what's worth fixing and what isn't, so every decision is made with the full picture.</p>
+      <div class="acts"><a class="btn" href="/seller-guide/">Get the seller's guide</a><a class="btn ghost" href={BOOK_20}>Book a 20-min discovery call</a></div>
+    </div>
+    <img class="ph-land pic" src="/home/img/coit.jpg" alt="View of Coit Tower from a bay window">
+  </div></section>
+  <section class="hub-cards"><div class="wrap">
+    <h2>Start <em>here.</em></h2>
+    <p class="lede">Free resources for San Francisco sellers.</p>
+    <div class="row">
+      <div class="cardH"><img class="ph-land" src="/home/img/living.jpg" alt=""><div class="b"><p class="tag">Free guide</p><h3>The SF Seller's Guide</h3><div class="r"></div><p>Prep that moves the needle vs. money you'll never see again, and how pricing really works in this market.</p><a class="btn" href="/seller-guide/">Get the guide</a></div></div>
+      <div class="cardH"><img class="ph-land" src="/tics/img/facade.jpg" alt=""><div class="b"><p class="tag">Education</p><h3>Selling a TIC</h3><div class="r"></div><p>The full TIC guide covers the selling side: how buyers finance a TIC and what they'll ask about your agreement.</p><a class="btn" href="/tics/">Read the TIC guide</a></div></div>
+      <div class="cardH"><img class="ph-land" src="/home/img/gg-view.jpg" alt=""><div class="b"><p class="tag">Monthly</p><h3>The SF Insider</h3><div class="r"></div><p>Market context without the panic, so you can plan your timing with real information.</p><a class="btn" href="/newsletter/">Read the newsletter</a></div></div>
+    </div>
+    <div class="pad"></div>
+  </div></section>
+</div>
+<section class="hub-steps band-dune"><div class="wrap g">
+  <p class="sub">How we'd work together</p>
+  <h2>Three steps, <em>no pressure.</em></h2>
+  <div class="row">
+    <div><p class="n">1</p><h3>Discovery call · 20 min</h3><p>Your goals, your timing, and whether we're the right fit. A first conversation, not a commitment.</p><a class="tlink" href={BOOK_20}>Book the discovery call</a></div>
+    <div><p class="n">2</p><h3>Consult · 60 min</h3><p>We go through your home, your goals and your timeline, and map out pricing, prep and the plan. You'll get a short questionnaire after you book.</p><a class="tlink" href={BOOK_60}>Book a consult</a></div>
+    <div><p class="n">3</p><h3>Prep and listing</h3><p>Prep priorities, presentation and launch, with clear numbers and regular updates through closing.</p></div>
+  </div>
+</div></section>
+<section class="hub-close" slot="close"><div class="wrap g">
+  <h2>Thinking about selling <em>someday?</em></h2>
+  <p class="lede">Timing matters, and so does preparation. Let's talk early, even if the sale is a year out.</p>
+  <div class="acts"><a class="btn linen" href={BOOK_20}>Book a 20-min discovery call</a><a class="btn ghost" href="/newsletter/">Join the newsletter</a></div>
+</div></section>
+</HubLayout>

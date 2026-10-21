@@ -75,7 +75,7 @@
 </style></head><body>
 <header class="nav"><div class="in">
   <a class="logo" href="/"><img src="logo/primary_logos_1-black.svg" alt="claudia lee — SF real estate insider"></a>
-  <ul class="menu"><li><a href="/buyer-guide/">Buyers</a></li><li><a href="/seller-guide/">Sellers</a></li><li class="has-sub"><a href="/tics/" class="on">Resources</a><button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show Resources pages">+</button><ul class="sub"><li><a href="/tics/" aria-current="page">TICs, explained</a></li><li><a href="/tics/guide/">The full TIC guide</a></li></ul></li><li><a href="/#about">About</a></li><li><a href="/newsletter/">Newsletter</a></li></ul>
+  <ul class="menu"><li><a href="/buyers/">Buyers</a></li><li><a href="/sellers/">Sellers</a></li><li class="has-sub"><a href="/resources/" class="on">Resources</a><button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show Resources pages">+</button><ul class="sub"><li><a href="/resources/">All resources</a></li><li><a href="/tics/" aria-current="page">Condos vs. TICs</a></li><li><a href="/calculator/">Calculator</a></li></ul></li><li><a href="/about/">About</a></li><li><a href="/newsletter/">Newsletter</a></li></ul>
   <a class="cta" href="https://calendar.app.google/Unk61s7yj1tfr7eD7">Book a free chat</a>
   <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
@@ -152,16 +152,16 @@
   <div>
     <p class="sub">The one-page version</p>
     <h2>Keep the cheat sheet, <em>skip</em> the homework.</h2>
-    <p class="lede" style="margin-top:16px">Everything above on one page: the stats, the comparison, financing basics, and the buyer checklist I run on every TIC. It's the sheet I'd hand you at a first tour.</p>
+    <p class="lede" style="margin-top:16px">Everything above on one page: the stats, the comparison, financing basics, and the buyer checklist I run on every TIC. It's the sheet I'd hand you at a first tour. Signing up also unlocks the full guide, with the FAQs and the selling section.</p>
     <form id="cs-form" class="cs-form" name="tic-cheat-sheet" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
       <input type="hidden" name="form-name" value="tic-cheat-sheet">
       <input type="text" name="name" placeholder="First name" aria-label="First name">
       <input type="email" name="email" placeholder="Email" aria-label="Email" required>
-      <button class="btn" type="submit">Send me the cheat sheet</button>
-      <p class="fine">One email with the sheet. No drip campaign.</p>
+      <button class="btn" type="submit">Unlock the cheat sheet + guide</button>
+      <p class="fine">One email with the links. No drip campaign.</p>
     </form>
-    <div id="cs-done" hidden><p class="lede" style="margin-top:22px">It's on its way. You can also <a class="plink" href="/tics/cheat-sheet/">open it right now</a>.</p><a class="btn ghost" href="https://calendar.app.google/Unk61s7yj1tfr7eD7" style="margin-top:14px">Book a free 20-min chat</a></div>
+    <div id="cs-done" hidden><p class="lede" style="margin-top:22px">You're in. Open the <a class="plink" href="/tics/cheat-sheet/">cheat sheet</a> or the <a class="plink" href="/tics/guide/">full guide</a> any time from this device.</p><a class="btn ghost" href="https://calendar.app.google/Unk61s7yj1tfr7eD7" style="margin-top:14px">Book a free 20-min chat</a></div>
   </div>
 </div></section>
 
@@ -184,7 +184,14 @@ const boxes=[...document.querySelectorAll('.check input')];boxes.forEach(c=>c.ad
 (function(){var f=document.getElementById('cs-form'),d=document.getElementById('cs-done');if(!f)return;
 f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button');b.textContent='Sending\u2026';b.disabled=true;
 fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-.then(function(){f.hidden=true;d.hidden=false;}).catch(function(){f.hidden=true;d.hidden=false;});});})();
+.then(done).catch(done);});
+function done(){try{localStorage.setItem('ci_tics','1')}catch(e){}f.hidden=true;d.hidden=false;unlockLinks();}
+function unlocked(){try{return localStorage.getItem('ci_tics')==='1'}catch(e){return false}}
+function unlockLinks(){document.querySelectorAll('a[data-gated]').forEach(function(a){a.setAttribute('href',a.dataset.gated)});}
+document.querySelectorAll('a[href="/tics/guide/"],a[href="/tics/cheat-sheet/"]').forEach(function(a){if(a.closest('#cs-done'))return;a.dataset.gated=a.getAttribute('href');a.setAttribute('href','#guide');});
+if(unlocked()){f.hidden=true;d.hidden=false;unlockLinks();}
+if(location.search.indexOf('unlock')>-1){var g=document.getElementById('guide');if(g)g.scrollIntoView();}
+})();
 
 (function(){var n=document.querySelector('.nav'),b=n.querySelector('.burger'),t=n.querySelector('.sub-toggle'),h=n.querySelector('.has-sub');
 b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});

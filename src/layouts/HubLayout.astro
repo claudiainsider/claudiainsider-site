@@ -1,0 +1,28 @@
+---
+// Inner-page shell: head, shared nav, page content, espresso closer + footer.
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+const { title, description, current = '', ogImage = 'https://claudiainsider.com/home/img/gg-view.jpg' } = Astro.props;
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:image" content={ogImage}>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/brand.css">
+<link rel="stylesheet" href="/site.css">
+</head><body>
+<SiteNav current={current} />
+<main>
+<slot />
+</main>
+<div class="hub-bottom">
+  <img class="mono" src="/home/logo/swoosh_toffee.svg" alt="">
+  <slot name="close" />
+  <SiteFooter />
+</div>
+</body></html>
