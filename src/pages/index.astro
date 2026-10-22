@@ -107,7 +107,7 @@ body.has-opener .nav ul.sub a{color:var(--espresso)}
 .mono{position:absolute;pointer-events:none;opacity:.55}
 .top .mono{width:66%;left:-22%;top:-1%;transform:rotate(-12deg);opacity:.42;z-index:0}
 .top>section{position:relative;z-index:1}
-.heroT .g{position:relative;padding-block:clamp(28px,min(7vw,4.5vh),100px)}
+.heroT .g{position:relative;padding-block:clamp(56px,min(9vw,9vh),128px) clamp(28px,min(7vw,4.5vh),100px)}
 .heroT .txt{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:auto auto auto auto auto auto;column-gap:clamp(40px,7vw,110px);align-items:center}
 .heroT .txt>*{grid-column:1}
 .heroT .txt .pic{grid-column:2;grid-row:1/-1}
@@ -115,7 +115,8 @@ body.has-opener .nav ul.sub a{color:var(--espresso)}
 .heroT .name{font-family:var(--sans);text-transform:uppercase;letter-spacing:.32em;font-size:14px;margin:clamp(18px,3vh,34px) 0 0;color:var(--espresso)}
 .heroT .rule{width:120px;height:1px;background:var(--espresso);margin:clamp(14px,2.4vh,24px) 0 clamp(18px,3vh,32px)}
 .heroT .body{font-weight:300;font-size:16px;max-width:64ch}
-.heroT .body b{font-weight:700}
+.heroT .body+.body{margin-top:1em}
+.heroT .body em{font-weight:300}
 .heroT .closer{font-weight:700;font-size:17px;margin-top:clamp(12px,2vh,20px)}
 .heroT .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:clamp(18px,3vh,32px)}
 .heroT .pic{position:relative;width:100%;max-width:min(440px,calc((100vh - 190px)*2/3));justify-self:end;align-self:center}
@@ -192,9 +193,9 @@ body.has-opener .nav ul.sub a{color:var(--espresso)}
 /* ---- about: Tatjana p.15 ---- */
 .aboutT{position:relative;overflow:hidden}
 .aboutT .mono{width:64%;left:-22%;top:-38%;transform:rotate(-14deg)}
-.aboutT .g{position:relative;display:grid;grid-template-columns:min(320px,calc((100vh - 220px)*2/3)) 1fr;gap:clamp(32px,6vw,90px);align-items:center;padding-block:clamp(56px,min(8vw,10vh),120px)}
+.aboutT .g{position:relative;display:grid;grid-template-columns:min(320px,calc((100vh - 220px)*2/3)) 1fr;gap:clamp(110px,9vw,150px);align-items:center;padding-block:clamp(56px,min(8vw,10vh),120px)}
 .aboutT .pic{position:relative;width:min(320px,calc((100vh - 220px)*2/3))}
-.aboutT .pic .stamp{position:absolute;right:-80px;top:-80px;width:180px}
+.aboutT .pic .stamp{position:absolute;right:-70px;top:-80px;width:170px}
 .aboutT .g > div:last-child{padding-top:clamp(40px,8vh,120px)}
 .aboutT h2{font-size:clamp(30px,3.4vw,46px)}
 @media(max-width:900px){.aboutT .g{grid-template-columns:1fr;gap:28px;padding-block:72px 64px}.aboutT .g > div:last-child{padding-top:0}.aboutT .pic{width:min(300px,72%);margin-top:40px}.aboutT .pic .stamp{right:-56px;top:-64px;width:132px}}
@@ -224,7 +225,8 @@ body.has-opener .nav ul.sub a{color:var(--espresso)}
       </div>
       <p class="name">Claudia Lee</p>
       <div class="rule"></div>
-      <p class="body">Buying in San Francisco is competitive and overwhelming, and the stakes are real. It's <b>the morning light you'll wake up to</b>, the walk you'll take a thousand times, <b>the front door that starts to feel like yours</b>, and the number that has to make sense on paper before it can make sense anywhere else. Selling means handing <b>a place full of your memories</b> to whoever comes next, and trusting someone to find the right next stewards for it. I don't take either lightly. You get my full attention, <b>honest numbers, and a steady hand</b> through every step. <b>It's an honor</b> to be the one walking beside you, and I treat it like one.</p>
+      <p class="body">Buying in San Francisco is competitive and overwhelming, and the stakes are real. It's the morning light you'll wake up to, the walk you'll take a thousand times, <em>the front door that starts to feel like yours</em>, and the number that has to make sense on paper before it can make sense anywhere else.</p>
+      <p class="body">Selling means handing <em>a place full of your memories</em> to whoever comes next, and trusting someone to find the right next stewards for it. I don't take either lightly. You get my full attention, honest numbers, and a steady hand through every step. It's an honor to be the one walking beside you, and I treat it like one.</p>
       <p class="closer">Find the place that feels right.</p>
       <div class="acts"><a class="btn" href="https://calendar.app.google/Unk61s7yj1tfr7eD7">Book a 20-min discovery call</a></div>
     </div>
@@ -247,8 +249,9 @@ body.has-opener .nav ul.sub a{color:var(--espresso)}
     <div class="pic"><img class="ph-portrait" src="/home/img/DSC05935.jpg" alt="Claudia Lee"><img class="stamp" src="/home/logo/stamp_name_black.png" alt="claudia lee — real estate insider, San Francisco"></div>
     <div>
       <h2>Helping you navigate <em>San Francisco</em> with knowledge, confidence, and a personal approach.</h2>
-      <p class="lede" style="margin-top:22px">I grew up helping my grandma manage her East Bay rentals, hit an 815 credit score before 24, and competed on the US national karate team three times (calm under pressure is a real skill in a multiple-offer situation). I'd rather you understand your numbers than sign anything fast.</p>
-      <a class="btn" href="/about/" style="margin-top:28px">Read more</a>
+      <p class="lede" style="margin-top:22px">Claudia Lee is a San Francisco REALTOR® (DRE #02380540), a three-time member of the US national karate team, and a UC Santa Barbara graduate with highest honors. She's proud to be part of Vantage Realty, an intentionally boutique brokerage that's hyperlocal to San Francisco, where the experience and judgment of the city's top-producing agents meet her tech-forward, adaptable approach and sharp eye for marketing. Seasoned wisdom and fresh thinking, working together, and entirely to your advantage.</p>
+      <p class="lede" style="margin-top:18px">But there's so much more to it than accolades. I grew up in Oakland helping my grandma manage her East Bay rentals, which is where I first saw what a home can do for a family across generations. Karate taught me to stay calm under pressure (handy in a multiple-offer situation) and to review the film after every deal. I'd rather you understand your numbers than sign anything fast, and I'll still be in your corner long after closing.</p>
+      <a class="btn" href="/about/" style="margin-top:28px">More about me</a>
     </div>
   </div>
 </section>
