@@ -1,24 +1,135 @@
 ---
 import HubLayout from '../layouts/HubLayout.astro';
 const BOOK_20 = 'https://calendar.app.google/Unk61s7yj1tfr7eD7';
+const BOOK_60 = 'https://calendar.app.google/ZBgZUVKh1PhqP9bd8';
 ---
-<HubLayout title="Contact, Coming Soon · Claudia Lee, SF Real Estate Insider" description="Contact Claudia Lee, San Francisco real estate insider. A contact form is coming soon; email claudia@claudiainsider.com in the meantime." current="contact">
-<div class="hub-top soon">
-  <img class="mono" src="/home/logo/swoosh_dune.svg" alt="">
-  <section class="hub-hero"><div class="wrap g" style="grid-template-columns:1fr">
-    <div>
-      <p class="sub terra">Coming soon</p>
-      <h1>A contact form is <em>on its way.</em></h1>
+<HubLayout title="Contact · Claudia Lee, SF Real Estate Insider" description="Send Claudia Lee a note about buying, selling or anything San Francisco, or book a one-on-one chat." current="contact" ogImage="https://claudiainsider.com/contact/DSC05949.jpg">
+<div class="hub-top contact">
+  <section class="hub-hero"><div class="wrap g">
+    <div class="intro">
+      <p class="sub terra">Contact</p>
+      <h1>Let's start the <em>conversation.</em></h1>
       <div class="rule"></div>
-      <p class="lede">In the meantime, email me at <a href="mailto:claudia@claudiainsider.com">claudia@claudiainsider.com</a> or send a message on Instagram <a href="https://www.instagram.com/claudiainsider/">@claudiainsider</a>.</p>
-      <div class="acts"><a class="btn" href={BOOK_20}>Book a 20-min discovery call</a><a class="btn ghost" href="mailto:claudia@claudiainsider.com">Email me</a></div>
+      <div class="note">
+        <p class="lede">Hi there! Whether you're a year out from buying, curious what your home might be worth, or have a San Francisco question you can't find a straight answer to, I'd love to hear from you. Every message comes to me, and I reply personally.</p>
+        <p class="lede">I look forward to learning more about you!</p>
+        <img class="sig" src="/contact/wordmark_claudia_black.png" alt="Claudia">
+      </div>
+      <div class="meet">
+        <img class="ph-portrait" src="/contact/DSC05949.jpg" alt="Claudia Lee">
+        <ul class="direct">
+          <li><span>Email</span><a href="mailto:claudia@claudiainsider.com">claudia@claudiainsider.com</a></li>
+          <li><span>Instagram</span><a href="https://www.instagram.com/claudiainsider/">@claudiainsider</a></li>
+          <li><span>Everything else</span><a href="/links/">claudiainsider.com/links</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="formcard">
+      <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="_subject" value="New message from claudiainsider.com">
+        <div class="row2">
+          <div class="field"><label for="first">First name</label><input type="text" id="first" name="first_name" autocomplete="given-name" required></div>
+          <div class="field"><label for="last">Last name</label><input type="text" id="last" name="last_name" autocomplete="family-name"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Phone <span>optional</span></label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="topic">What's this about?</label>
+          <select id="topic" name="topic" required>
+            <option value="" disabled selected>Choose one</option>
+            <option>Buying</option>
+            <option>Selling</option>
+            <option>Buying and selling</option>
+            <option>Just a question</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field msg"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <label class="check"><input type="checkbox" name="wants_chat" value="yes"><span>I'd like to book a one-on-one chat.</span></label>
+        <label class="check consent"><input type="checkbox" name="consent" value="yes" required><span>It's okay for Claudia to follow up by email, call or text about this message. Reply STOP at any time to opt out. Message and data rates may apply.</span></label>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+      <div class="thanks" id="contact-thanks" hidden>
+        <p class="sub terra">Sent</p>
+        <h2>Thank you, <em>talk soon.</em></h2>
+        <p>Your note is on its way to me. If you'd rather skip the inbox, pick a time below.</p>
+        <div class="acts"><a class="btn" href={BOOK_20}>Discovery call · 20 min</a><a class="btn ghost" href={BOOK_60}>Buyer or seller consult · 60 min</a></div>
+      </div>
     </div>
   </div></section>
 </div>
+<section class="hub-steps band-dune talk"><div class="wrap g">
+  <p class="sub">Prefer to talk it through?</p>
+  <h2>Book a <em>one-on-one.</em></h2>
+  <div class="row">
+    <div><p class="n">20</p><h3>Discovery call · 20 min</h3><p>Your priorities, your timeline, and whether we're the right fit. A first conversation, not a commitment.</p><a class="tlink" href={BOOK_20}>Book the discovery call</a></div>
+    <div><p class="n">60</p><h3>Buyer or seller consult · 60 min</h3><p>We build your game plan: budget, neighborhoods, property types and the trade-offs. You'll get a short questionnaire after you book.</p><a class="tlink" href={BOOK_60}>Book a consult</a></div>
+  </div>
+</div></section>
 </HubLayout>
 <style is:inline>
-.soon .hub-hero .g{min-height:calc(100vh - 77px);padding-block:clamp(48px,8vh,110px)}
-.soon .hub-hero .lede a{color:var(--terracotta)}
-.soon>.mono{left:auto;right:-14%;width:52%}
-@media(max-width:900px){.soon .hub-hero .g{min-height:0;padding-block:56px 72px}.soon>.mono{right:-60%;width:120%}}
+.contact .hub-hero .g{grid-template-columns:.95fr 1.05fr;align-items:stretch;padding-block:clamp(44px,7vh,96px)}
+.contact .note .lede{margin-bottom:14px}
+.contact .sig{width:120px;margin-top:6px}
+.contact .meet{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:end;margin-top:clamp(26px,4vh,40px)}
+.contact .meet img{width:320px}
+.contact .meet .direct{margin:0 0 6px}
+.contact .direct{list-style:none;padding:0}
+.contact .direct li{display:flex;flex-direction:column;gap:2px;align-items:flex-start;font-size:15px;margin-bottom:14px}
+.contact .direct span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe)}
+.contact .direct a{text-decoration:none;border-bottom:1px solid var(--terracotta);padding-bottom:2px}
+.contact .direct a:hover{color:var(--terracotta)}
+.formcard{background:#fff;padding:clamp(24px,3vw,40px)}
+.formcard .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.formcard .field{margin-bottom:16px}
+.formcard label{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);margin-bottom:6px}
+.formcard label span{text-transform:none;letter-spacing:0;color:var(--dune);font-size:11px;margin-left:6px}
+.formcard input,.formcard select,.formcard textarea{width:100%;font-family:var(--sans);font-size:15px;padding:13px 14px;border:1px solid var(--dune);background:var(--linen);color:var(--espresso);border-radius:0;-webkit-appearance:none;appearance:none}
+.formcard select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23502E22' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.formcard textarea{resize:vertical;min-height:120px}
+.formcard input:focus,.formcard select:focus,.formcard textarea:focus{outline:none;border-color:var(--terracotta)}
+.formcard .check{display:flex;gap:12px;align-items:flex-start;font-size:14px;font-weight:300;letter-spacing:0;text-transform:none;color:var(--espresso);margin:0 0 14px;cursor:pointer}
+.formcard .check input{width:16px;height:16px;flex:0 0 16px;margin-top:5px;padding:0;border:1px solid var(--taupe);background:#fff;cursor:pointer;position:relative}
+.formcard .check input:checked{background:var(--terracotta);border-color:var(--terracotta)}
+.formcard .check input:checked::after{content:"";position:absolute;left:5px;top:2px;width:4px;height:8px;border:solid var(--linen);border-width:0 1.5px 1.5px 0;transform:rotate(45deg)}
+.formcard .check.consent{font-size:12px;color:var(--taupe);margin-bottom:22px}
+.formcard .btn{border:1px solid var(--terracotta);cursor:pointer;width:auto}
+.formcard .thanks h2{margin-top:6px}
+.formcard .thanks p{font-weight:300;margin-top:14px;max-width:40ch}
+.formcard .thanks .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.talk .row{grid-template-columns:repeat(2,1fr);max-width:860px}
+@media(min-width:901px){
+  .formcard{display:flex;flex-direction:column}
+  .formcard form{display:flex;flex-direction:column;flex:1}
+  .formcard .field.msg{flex:1;display:flex;flex-direction:column}
+  .formcard textarea{flex:1}
+  .formcard .btn{align-self:flex-start}
+}
+@media(max-width:900px){
+  .contact .hub-hero .g{grid-template-columns:1fr;gap:28px}
+  .contact .meet{grid-template-columns:168px 1fr;gap:16px;margin-top:22px}
+  .contact .meet img{width:168px}
+  .contact .direct a{overflow-wrap:anywhere;font-size:13px}
+  .formcard{margin:0 calc(-1 * var(--gut));padding:28px var(--gut)}
+  .formcard .row2{grid-template-columns:1fr;gap:0}
+  .formcard .btn{width:100%;text-align:center}
+  .formcard .thanks .acts .btn{width:100%}
+  .talk .row{grid-template-columns:1fr}
+}
 </style>
+<script is:inline>
+(function(){
+  var f=document.getElementById('contact-form'),t=document.getElementById('contact-thanks');
+  if(!f||!window.fetch)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=f.querySelector('button[type=submit]');b.disabled=true;b.textContent='Sending';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+      .then(function(){f.hidden=true;t.hidden=false;t.scrollIntoView({block:'nearest'})})
+      .catch(function(){b.disabled=false;b.textContent='Send message';f.submit()});
+  });
+})();
+</script>
