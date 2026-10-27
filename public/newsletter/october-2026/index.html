@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,date=no,address=no,email=no">
+<meta name="x-apple-disable-message-reformatting">
 <title>The San Francisco Insider — October 2026</title>
 <!--[if mso]><style>body{font-family:'Trebuchet MS',Verdana,sans-serif!important;}h1,h2,h3,.serif{font-family:Georgia,'Times New Roman',serif!important;}</style><![endif]-->
 <style>
@@ -345,6 +347,8 @@
     font-weight: 600;
   }
   .coming-soon h3 { color: #E8E4D7; margin: 0 0 14px; font-size: 24px; }
+  a[x-apple-data-detectors], u + .body a, #MessageViewBody a { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; }
+  .coming-soon h3 a, .coming-soon h3 span, .footer .addr, .footer .addr a { color: #E8E4D7 !important; text-decoration: none !important; }
   .coming-soon p { color: #E8E4D7; font-size: 15px; margin-bottom: 14px; opacity: 0.9; }
   .coming-soon .specs {
     font-family: 'Nunito Sans', sans-serif;
@@ -381,7 +385,7 @@
     gap: 14px;
     padding: 0 4px;
   }
-  .listing-grid > a { flex: 0 0 250px; text-decoration: none; color: inherit; }
+  .listing-grid > a { flex: 0 0 250px; text-decoration: none; color: inherit; display: block; }
   .listing-card {
     border: 1px solid #C7B8A3;
     background: #E8E4D7;
@@ -389,7 +393,7 @@
     width: 100%;
   }
   .listing-card img { width: 100%; height: 155px; object-fit: cover; }
-  .listing-card-body { padding: 14px 16px; }
+  .listing-card-body { padding: 14px 16px; height: 128px; overflow: hidden; }
   .listing-address {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 12px;
@@ -398,6 +402,7 @@
     color: #502E22;
     margin: 0 0 2px;
     font-weight: 600;
+    white-space: nowrap;
   }
   .listing-city {
     font-family: 'Nunito Sans', sans-serif;
@@ -406,6 +411,7 @@
     text-transform: uppercase;
     color: #8D624B;
     margin: 0 0 8px;
+    white-space: nowrap;
   }
   .listing-specs { font-size: 13px; color: #5C4C4C; margin: 0 0 4px; }
   .listing-price {
@@ -772,7 +778,7 @@
        ═══════════════════════════════════════ -->
   <div class="coming-soon" style="background:#502E22;">
     <p class="eyebrow-cs">Just Ratified</p>
-    <h3>331 Swallowtail Court, Brisbane</h3>
+    <h3 style="color:#E8E4D7 !important;"><span style="color:#E8E4D7 !important; text-decoration:none !important;">331 Swallowtail Court, Brisbane</span></h3>
     <a href="https://zenlist.com/app/listing/sfar:426167043?as=claudia.lee" target="_blank" style="display:block;">
       <img src="https://claudiainsider.com/newsletter/october-2026/images/swallowtail.jpg" alt="331 Swallowtail Court, Brisbane" width="568" style="width:100%;max-width:568px;height:auto;display:block;margin:0 0 20px;border-radius:4px;">
     </a>
@@ -785,7 +791,7 @@
        ═══════════════════════════════════════ -->
   <div class="coming-soon">
     <p class="eyebrow-cs">Coming Soon</p>
-    <h3>401 Crescent Court #4101, San Francisco</h3>
+    <h3 style="color:#E8E4D7 !important;"><span style="color:#E8E4D7 !important; text-decoration:none !important;">401 Crescent Court #4101, San Francisco</span></h3>
     <a href="https://zenlist.com/app/listing/sfar:424020231?as=claudia.lee" target="_blank" style="display:block;">
       <img src="https://claudiainsider.com/newsletter/october-2026/images/crescent.jpg" alt="401 Crescent Court #4101, Candlestick Point" width="568" style="width:100%;max-width:568px;height:auto;display:block;margin:0 0 20px;border-radius:4px;">
     </a>
@@ -949,8 +955,9 @@
        COMPLIANCE FOOTER — Espresso bg
        ═══════════════════════════════════════ -->
   <div class="footer">
-    <p><strong>Vantage Realty</strong> · 1980 Union St, San Francisco, CA 94123</p>
+    <p><strong>Vantage Realty</strong> · <span class="addr" style="color:#C7B8A3 !important; text-decoration:none !important;">1980 Union St, San Francisco, CA 94123</span></p>
     <p>Brokerage DRE #02223213 · Agent DRE #02380540</p>
+    <p><a href="https://www.claudiainsider.com" style="color:#E8E4D7; text-decoration:underline;">claudiainsider.com</a></p>
     <p style="margin-top:10px; font-size:9px; line-height:1.7; max-width:480px; margin-left:auto; margin-right:auto;">
       Equal Housing Opportunity. All information deemed reliable but not guaranteed. This newsletter is for informational purposes only and does not constitute legal, financial, or real estate advice. Data sourced from SFAR MLS, Freddie Mac, Bureau of Labor Statistics, NAR, FHFA, and CME FedWatch as of September and October 2026. Claudia Lee is a licensed real estate salesperson affiliated with Vantage Realty.
     </p>
