@@ -47,6 +47,13 @@ const BOOK_60 = 'https://calendar.app.google/ZBgZUVKh1PhqP9bd8';
             <option>Something else</option>
           </select>
         </div>
+        <div class="field"><label for="meeting_pref">Preferred way to connect <span>optional</span></label>
+          <select id="meeting_pref" name="meeting_pref">
+            <option value="" selected>No preference</option>
+            <option>Phone call</option>
+            <option>Google Meet</option>
+          </select>
+        </div>
         <div class="field msg"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
         <label class="check"><input type="checkbox" name="wants_chat" value="yes"><span>I'd like to book a one-on-one chat.</span></label>
         <label class="check consent"><input type="checkbox" name="consent" value="yes" required><span>It's okay for Claudia to follow up by email, call or text about this message. Reply STOP at any time to opt out. Message and data rates may apply.</span></label>
