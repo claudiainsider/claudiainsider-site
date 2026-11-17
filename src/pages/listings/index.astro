@@ -1,0 +1,41 @@
+---
+import HubLayout from '../../layouts/HubLayout.astro';
+const BOOK_20 = 'https://calendar.app.google/Unk61s7yj1tfr7eD7';
+---
+<HubLayout title="Listings · Claudia Lee, SF Real Estate Insider" description="Homes Claudia Lee has listed in San Francisco and the Peninsula, with past sales and how they sold." current="listings" canonical="https://claudiainsider.com/listings/">
+<style slot="head" is:inline>
+.ls-past .head{margin-bottom:28px}
+.ls-past .card{display:grid;grid-template-columns:2fr 1fr;background:#fff;text-decoration:none;color:inherit}
+.ls-past .card img{width:100%;height:100%;object-fit:cover;display:block}
+.ls-past .card .b{padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;justify-content:center}
+.ls-past .card h3{font-size:clamp(28px,2.8vw,40px);line-height:1.1}
+.ls-past .card .addr{font-weight:300;margin:14px 0 0}
+.ls-past .card .r{width:48px;height:2px;background:var(--terracotta);margin:22px 0}
+.ls-past .card .spec{font-size:14px;margin:0}
+.ls-past .card .spec b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;margin-bottom:6px}
+.ls-past .card .btn{align-self:flex-start;margin-top:26px}
+.ls-past .tagc{position:absolute;left:18px;top:18px;background:var(--linen);color:var(--espresso);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px}
+.ls-past .ph{position:relative;min-height:260px}
+@media(max-width:900px){.ls-past .card{grid-template-columns:1fr}.ls-past .card .btn{align-self:stretch;text-align:center}.ls-past .ph{min-height:0;aspect-ratio:3/2}}
+</style>
+<section class="sec ls-past" id="past-sales"><div class="wrap">
+  <p class="sub terra">Listings</p>
+  <div class="head"><h1>Past <em>sales</em></h1></div>
+  <a class="card" href="/listings/331-swallowtail-ct/">
+    <div class="ph"><img loading="lazy" src="/listings/331-swallowtail-ct/band.jpg" alt="Balcony with a bistro set facing the San Bruno Mountains"><span class="tagc">Sold</span></div>
+    <div class="b">
+      <p class="sub terra">Altamar at the Ridge</p>
+      <h3>Perch on <em>Swallowtail</em></h3>
+      <p class="addr">331 Swallowtail Court · Brisbane, CA 94005</p>
+      <div class="r"></div>
+      <p class="spec"><b>Sold for $700,000</b>2 bed · 2 bath · 1,070 sq ft · 27 days on market</p>
+      <span class="btn">View the sale</span>
+    </div>
+  </a>
+</div></section>
+<section class="hub-close" slot="close"><div class="wrap g">
+  <h2>Thinking about <em>selling</em>?</h2>
+  <p class="lede">Book a free 20-minute discovery call and we'll map out what's worth doing before you list.</p>
+  <div class="acts"><a class="btn linen" href={BOOK_20}>Book a 20-min discovery call</a></div>
+</div></section>
+</HubLayout>

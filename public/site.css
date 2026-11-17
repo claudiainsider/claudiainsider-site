@@ -4,6 +4,8 @@
 .nav ul.sub{display:none;position:absolute;top:100%;left:-18px;min-width:200px;padding:14px 18px;margin:8px 0 0;list-style:none;flex-direction:column;gap:12px;background:var(--linen);border:1px solid var(--dune)}
 .nav ul.sub::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px}
 .nav .has-sub:hover ul.sub,.nav .has-sub:focus-within ul.sub{display:flex}
+.nav ul.sub li.sub-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);padding-top:10px;border-top:1px solid var(--dune);margin-top:2px}
+.menu nav .mres .mlist .mlabel{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);padding:12px 0 2px}
 .nav ul a[aria-current]{border-bottom-color:var(--terracotta)}
 .menu nav .mres{border-bottom:1px solid var(--toffee)}
 .menu nav .mres button{display:block;width:100%;background:none;border:0;cursor:pointer;font-family:var(--serif);font-size:24px;letter-spacing:.06em;text-transform:uppercase;color:var(--linen);padding:16px 0}

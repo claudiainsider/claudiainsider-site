@@ -1,0 +1,199 @@
+---
+// Perch on Swallowtail sold page: 331 Swallowtail Court, Brisbane (approved mockup v1, Nov 16, 2026).
+// Photos live in public/listings/331-swallowtail-ct/. Shared styles: public/listings/listing.css.
+import HubLayout from '../../layouts/HubLayout.astro';
+const TITLE = 'Perch on Swallowtail | Sold: 331 Swallowtail Ct, Brisbane, CA 94005';
+const DESC = 'Perch on Swallowtail: a 2 bed, 2 bath top-floor corner condo at 331 Swallowtail Court in Brisbane, CA, in the Altamar at the Ridge. Sold for $700,000 after 27 days on market.';
+const URL = 'https://claudiainsider.com/listings/331-swallowtail-ct/';
+const SHARE = 'https://claudiainsider.com/listings/331-swallowtail-ct/share.jpg';
+const FAQ_LD = {
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What did 331 Swallowtail Court sell for?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "331 Swallowtail Court in Brisbane, CA sold for $700,000 in November 2026, after 27 days on market."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How big is the condo?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It is a two-bedroom, two-bath top-floor corner condominium with 1,070 square feet per tax records."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What was updated before it sold?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The kitchen was the main focus, with all-new stainless steel appliances, countertops and backsplash."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it have parking and outdoor space?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. There are two assigned parking spaces plus guest parking, and a private balcony reached from both the living room and the bedroom."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "I'm thinking of selling in Brisbane. Can Claudia help?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Get in touch below and Claudia will map out what is worth doing before you list, and what is not."
+   }
+  }
+ ]
+};
+---
+<HubLayout title={TITLE} description={DESC} ogImage={SHARE} canonical={URL} current="listings">
+<link slot="head" rel="stylesheet" href="/listings/listing.css">
+<style slot="head" is:inline>
+.l-cover .sold{position:absolute;left:var(--gut);top:22px;background:var(--linen);color:var(--espresso);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:10px 16px}
+.l-head .facts{list-style:none;margin:0 0 22px;padding:0}
+.l-head .facts li{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);line-height:1.9}
+.l-story .top p+p{margin-top:1.1em}
+.l-story .top p{font-size:18px}
+.l-sched .btn.lnk{display:block;text-decoration:none}
+.l-by .who2{margin-left:clamp(0px,2vw,24px)}
+@media(max-width:900px){.l-by .who2{margin-left:0}}
+</style>
+<script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(FAQ_LD)}></script>
+<section class="l-cover">
+  <div class="stage">
+    <img id="cv" src="/listings/331-swallowtail-ct/cover.jpg" alt="Balcony with a bistro set facing the San Bruno Mountains">
+    <span class="sold">Sold</span>
+    <button type="button" class="arr prev" aria-label="Previous photo">&#8592;</button>
+    <button type="button" class="arr next" aria-label="Next photo">&#8594;</button>
+    <span class="count">1 / 24</span>
+    <a class="btn linen all" href="#photos">View all photos</a>
+  </div>
+</section>
+<section class="l-head"><div class="wrap"><div class="g">
+  <div>
+    <p class="sub terra">Altamar at the Ridge</p>
+    <h1>Perch on <em>Swallowtail</em></h1>
+    <p class="addr">331 Swallowtail Court · Brisbane, CA 94005</p>
+  </div>
+  <div class="r">
+    <p class="price"><small>Sold for</small>$700,000</p>
+    <ul class="facts"><li>27 days on market</li><li>Sold November 2026</li></ul>
+    <a class="btn" href="#talk">Thinking of selling?</a>
+  </div>
+</div></div></section>
+
+<section class="l-specs band-dune"><div class="wrap"><div class="row">
+  <div class="it"><p class="n">2</p><p class="sub">Bedrooms</p></div>
+  <div class="it"><p class="n">2</p><p class="sub">Baths</p></div>
+  <div class="it"><p class="n">1,070</p><p class="sub">Sq ft<span>per tax records</span></p></div>
+  <div class="it"><p class="n">2</p><p class="sub">Parking<span>assigned spaces</span></p></div>
+</div></div></section>
+
+<section class="sec l-unit"><div class="wrap">
+  <p class="sub terra">The home</p>
+  <div class="u">
+    <div class="pic"><img src="/listings/331-swallowtail-ct/home-1.jpg" alt="Tall windows framing the San Bruno Mountains above the living room"></div>
+    <div class="t"><p>Perched atop the prestigious Altamar at the Ridge, with the San Bruno Mountains as its dramatic backdrop, this beautifully updated top-floor corner condominium offers a serene respite from the everyday. Step inside and exhale. The open floor plan unravels effortlessly, while sweeping mountain views immediately draw the eye outward. Take a moment to breathe them in – they’re here to stay. Step outside: the private balcony, accessible from both the living room and bedroom, extends the living space into the landscape. Inspired to cook? The refreshed kitchen awaits, appointed with all-new stainless steel appliances, crisp countertops and a fresh backsplash. The adjoining dining and living areas have a versatile capability to feel intimate on a quiet evening yet expansive when welcoming family and friends.</p></div>
+  </div>
+  <div class="u flip">
+    <div class="pic"><img src="/listings/331-swallowtail-ct/home-2.jpg" alt="Bedroom with a sliding door to the balcony"></div>
+    <div class="t"><p>Both bedrooms are generously proportioned with functional closet space. The primary suite enjoys the privacy of an ensuite bath with double vanity, while the east-facing second bedroom glistens in the morning light. Everyday ease is thoughtfully accounted for with in-unit laundry, abundant storage, two assigned parking spaces and guest parking. Beyond your front door, an idyllic lifestyle unfolds amid scenic trails, the Mission Blue Center, Brisbane Community Pool, tennis, volleyball and pickleball courts, parks, shops and more. And when the city calls, you are well connected with convenient access to San Francisco, Highways 101 and 280, BART, Caltrain and SFO. For those seeking tranquility without surrendering the pleasures and conveniences of urban life, swoop into 331 Swallowtail and stay awhile.</p></div>
+  </div>
+</div></section>
+
+<section class="sec band-espresso l-comm l-story"><div class="wrap">
+  <div class="top">
+    <div><p class="sub">The sale</p><h2>How it <em>sold</em></h2></div>
+    <div>
+      <p>Bran and I put the prep budget where buyers’ eyes land first: the kitchen. New appliances, countertops and a fresh backsplash, new carpet, and a deep clean everywhere else. The bathrooms stayed simple because the comps couldn’t show us a return on anything bigger (nothing ran late, which still surprises me!).</p>
+      <p>Then the price. Condos nearby were moving slowly, so we priced for the market we were actually in, with no offer date and no bidding war to manufacture. The goal was one right buyer through the door.</p>
+      <p>That buyer came through the very first open house. Every dollar of prep had a reason, and the sellers could see exactly where it went.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec band-dune l-gal" id="photos"><div class="wrap">
+  <div class="head"><h2>Photos</h2><p>Tap any photo to view it larger</p></div>
+  <div class="grid"><button type="button" class="g" data-i="0" aria-label="Open photo: Balcony with a bistro set facing the San Bruno Mountains"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g01.jpg" alt="Balcony with a bistro set facing the San Bruno Mountains"></button><button type="button" class="g" data-i="1" aria-label="Open photo: Living room with tall mountain-view windows"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g02.jpg" alt="Living room with tall mountain-view windows"></button><button type="button" class="g" data-i="2" aria-label="Open photo: Dining and living area with a round table and large windows"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g03.jpg" alt="Dining and living area with a round table and large windows"></button><button type="button" class="g" data-i="3" aria-label="Open photo: Living room looking toward the windows"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g04.jpg" alt="Living room looking toward the windows"></button><button type="button" class="g" data-i="4" aria-label="Open photo: Tall windows framing the San Bruno Mountains"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g05.jpg" alt="Tall windows framing the San Bruno Mountains"></button><button type="button" class="g" data-i="5" aria-label="Open photo: Dining table beside the kitchen"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g06.jpg" alt="Dining table beside the kitchen"></button><button type="button" class="g" data-i="6" aria-label="Open photo: Kitchen open to the dining and living area"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g07.jpg" alt="Kitchen open to the dining and living area"></button><button type="button" class="g" data-i="7" aria-label="Open photo: Kitchen with stainless steel appliances and a gas cooktop"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g08.jpg" alt="Kitchen with stainless steel appliances and a gas cooktop"></button><button type="button" class="g" data-i="8" aria-label="Open photo: Kitchen sink and counter looking into the living room"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g09.jpg" alt="Kitchen sink and counter looking into the living room"></button><button type="button" class="g" data-i="9" aria-label="Open photo: Kitchen with refrigerator, wall oven and window"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g10.jpg" alt="Kitchen with refrigerator, wall oven and window"></button><button type="button" class="g" data-i="10" aria-label="Open photo: Mountain view from the balcony railing"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g11.jpg" alt="Mountain view from the balcony railing"></button><button type="button" class="g" data-i="11" aria-label="Open photo: Balcony seen through the bedroom sliding door"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g12.jpg" alt="Balcony seen through the bedroom sliding door"></button><button type="button" class="g" data-i="12" aria-label="Open photo: Bedroom with a sliding door to the balcony"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g13.jpg" alt="Bedroom with a sliding door to the balcony"></button><button type="button" class="g" data-i="13" aria-label="Open photo: Bedroom with the hallway beyond"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g14.jpg" alt="Bedroom with the hallway beyond"></button><button type="button" class="g" data-i="14" aria-label="Open photo: Second bedroom with tall windows"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g15.jpg" alt="Second bedroom with tall windows"></button><button type="button" class="g" data-i="15" aria-label="Open photo: Second bedroom"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g16.jpg" alt="Second bedroom"></button><button type="button" class="g" data-i="16" aria-label="Open photo: Bath with a double vanity"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g17.jpg" alt="Bath with a double vanity"></button><button type="button" class="g" data-i="17" aria-label="Open photo: Second bath"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g18.jpg" alt="Second bath"></button><button type="button" class="g" data-i="18" aria-label="Open photo: Laundry closet with washer and dryer"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g19.jpg" alt="Laundry closet with washer and dryer"></button><button type="button" class="g" data-i="19" aria-label="Open photo: View from a bedroom window"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g20.jpg" alt="View from a bedroom window"></button><button type="button" class="g" data-i="20" aria-label="Open photo: Walkways and landscaping at Altamar at the Ridge"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g21.jpg" alt="Walkways and landscaping at Altamar at the Ridge"></button><button type="button" class="g" data-i="21" aria-label="Open photo: Walkway to the front entrances"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g22.jpg" alt="Walkway to the front entrances"></button><button type="button" class="g" data-i="22" aria-label="Open photo: Parking and grounds"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g23.jpg" alt="Parking and grounds"></button><button type="button" class="g" data-i="23" aria-label="Open photo: Front door of 331 Swallowtail Court"><img class="ph-land" loading="lazy" src="/listings/331-swallowtail-ct/g24.jpg" alt="Front door of 331 Swallowtail Court"></button></div>
+</div></section>
+
+<section class="sec l-det"><div class="wrap">
+  <h2>Details</h2>
+  <div class="cols">
+    <div>
+      <h3>Interior</h3>
+      <dl>
+        <div><dt>Kitchen</dt><dd>All-new stainless steel appliances, countertops and backsplash</dd></div>
+        <div><dt>Laundry</dt><dd>In-unit</dd></div>
+        <div><dt>Balcony</dt><dd>Private, accessible from the living room and bedroom</dd></div>
+        <div><dt>Views</dt><dd>San Bruno Mountains</dd></div>
+      </dl>
+    </div>
+    <div>
+      <h3>Building</h3>
+      <dl>
+        <div><dt>Type</dt><dd>Condominium</dd></div>
+        <div><dt>Building</dt><dd>Altamar at the Ridge</dd></div>
+        <div><dt>Level</dt><dd>Top floor, corner</dd></div>
+        <div><dt>Year built</dt><dd>2000</dd></div>
+        <div><dt>Parking</dt><dd>Two assigned spaces, plus guest parking</dd></div>
+      </dl>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec l-faq"><div class="wrap"><div class="g">
+  <div><p class="sub terra">Good to know</p><h2>Frequently asked <em>questions</em></h2></div>
+  <div class="qs"><details><summary>What did 331 Swallowtail Court sell for?</summary><p>331 Swallowtail Court in Brisbane, CA sold for $700,000 in November 2026, after 27 days on market.</p></details><details><summary>How big is the condo?</summary><p>It is a two-bedroom, two-bath top-floor corner condominium with 1,070 square feet per tax records.</p></details><details><summary>What was updated before it sold?</summary><p>The kitchen was the main focus, with all-new stainless steel appliances, countertops and backsplash.</p></details><details><summary>Does it have parking and outdoor space?</summary><p>Yes. There are two assigned parking spaces plus guest parking, and a private balcony reached from both the living room and the bedroom.</p></details><details><summary>I'm thinking of selling in Brisbane. Can Claudia help?</summary><p>Yes. Get in touch below and Claudia will map out what is worth doing before you list, and what is not.</p></details></div>
+</div></div></section>
+
+
+<section class="l-sched" id="talk">
+  <div class="pic"><img src="/listings/331-swallowtail-ct/talk.jpg" alt="Balcony seen through the bedroom sliding door"></div>
+  <div class="panel">
+    <p class="sub terra">Your home, your plan</p>
+    <h2>Thinking about <em>selling</em>?</h2>
+    <p class="intro">Tell me about your place and we’ll map out what’s worth doing (and what isn’t).</p>
+    <a class="btn lnk" href="/contact/">Get in touch</a>
+  </div>
+</section>
+
+<section class="l-by"><div class="wrap">
+  <div class="row">
+    <p class="sub">Presented by</p>
+    <p class="who">Claudia Lee<span>DRE #02380540</span><span class="c">claudia@claudiainsider.com</span></p>
+    <p class="who who2">With Brandea Bunnag<span>Willowmar Real Estate</span></p>
+    <div class="logos"><img class="cl" src="/home/logo/primary_logos_1-black.svg" alt="claudia lee, SF real estate insider"><img class="vr" src="/listings/331-swallowtail-ct/vantage-realty.jpg" alt="Vantage Realty"></div>
+  </div>
+  <p class="l-fine">Listed by Brandea Bunnag (License #02143049), Willowmar Real Estate (DRE #02014153), and Claudia Lee (DRE #02380540), Vantage Realty (DRE #02014153). Square footage per tax records. All information is deemed reliable but not guaranteed and should be independently reviewed and verified.</p>
+</div></section>
+
+<div class="lb" id="lb" role="dialog" aria-label="Photo viewer"><button class="x" aria-label="Close">&times;</button><button class="p" aria-label="Previous photo">&#8592;</button><img alt=""><button class="n" aria-label="Next photo">&#8594;</button><p class="cap"></p></div>
+<script is:inline>
+(function(){var g=[].slice.call(document.querySelectorAll('.l-gal .g')),lb=document.getElementById('lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),i=0;
+function show(k){i=(k+g.length)%g.length;var s=g[i].querySelector('img');im.src=s.src;im.alt=s.alt;cap.textContent=s.alt+'  ·  '+(i+1)+' / '+g.length;lb.classList.add('on');}
+g.forEach(function(b,k){b.addEventListener('click',function(){show(k)})});
+lb.querySelector('.x').onclick=function(){lb.classList.remove('on')};
+lb.querySelector('.p').onclick=function(){show(i-1)};lb.querySelector('.n').onclick=function(){show(i+1)};
+lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('on')});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});
+})();
+</script>
+<script is:inline>
+(function(){var st=document.querySelector('.l-cover .stage');if(!st)return;var im=st.querySelector('#cv'),ct=st.querySelector('.count');
+var g=[].slice.call(document.querySelectorAll('.l-gal .g img')),first={src:im.src,alt:im.alt},i=0;
+function show(k){i=(k+g.length)%g.length;var x=i===0?first:g[i];im.src=x.src;im.alt=x.alt;ct.textContent=(i+1)+' / '+g.length;}
+st.querySelector('.prev').onclick=function(){show(i-1)};st.querySelector('.next').onclick=function(){show(i+1)};
+var x0=null;st.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+st.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)show(i+(d<0?1:-1));x0=null});
+document.addEventListener('keydown',function(e){if(document.getElementById('lb').classList.contains('on'))return;if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});
+})();
+</script>
+</HubLayout>

@@ -2,7 +2,7 @@
 // Inner-page shell: head, shared nav, page content, espresso closer + footer.
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
-const { title, description, current = '', ogImage = 'https://claudiainsider.com/home/img/gg-view.jpg' } = Astro.props;
+const { title, description, current = '', ogImage = 'https://claudiainsider.com/home/img/gg-view.jpg', canonical = '' } = Astro.props;
 ---
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
@@ -10,11 +10,19 @@ const { title, description, current = '', ogImage = 'https://claudiainsider.com/
 <meta property="og:title" content={title}>
 <meta property="og:description" content={description}>
 <meta property="og:image" content={ogImage}>
+{canonical && <link rel="canonical" href={canonical}>}
+{canonical && <meta property="og:url" content={canonical}>}
+{canonical && <meta property="og:type" content="website">}
+{canonical && <meta name="twitter:card" content="summary_large_image">}
+{canonical && <meta name="twitter:title" content={title}>}
+{canonical && <meta name="twitter:description" content={description}>}
+{canonical && <meta name="twitter:image" content={ogImage}>}
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/brand.css">
 <link rel="stylesheet" href="/site.css">
+<slot name="head" />
 </head><body>
 <SiteNav current={current} />
 <main>
