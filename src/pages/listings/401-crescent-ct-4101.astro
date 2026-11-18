@@ -1,0 +1,355 @@
+---
+// Cove on Crescent listing page: 401 Crescent Court #4101 (approved v18 mockup, Nov 13, 2026).
+// Photos live in public/listings/401-crescent-ct-4101/. Styles: public/listings/listing.css.
+import HubLayout from '../../layouts/HubLayout.astro';
+const TITLE = 'Cove on Crescent | 401 Crescent Ct #4101, San Francisco, CA 94134';
+const DESC = 'Cove on Crescent: a 1 bed, 1 bath ground-floor corner condo at 401 Crescent Court #4101 in gated Candlestick Point, San Francisco, with an extra large private patio. Offered at $515,000.';
+const URL = 'https://claudiainsider.com/listings/401-crescent-ct-4101/';
+const SHARE = 'https://claudiainsider.com/listings/401-crescent-ct-4101/share.jpg';
+const FAQ_LD = {
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How much is 401 Crescent Court #4101?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "401 Crescent Court #4101 in San Francisco is offered at $515,000."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How big is the home?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It is a one-bedroom, one-bath condominium with 807 square feet per tax records."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there outdoor space?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. There is a private patio facing the garden, plus access to community amenities and nearby bayside trails."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Where is 401 Crescent Court #4101?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It is a ground-floor corner home at The Cove, in the gated Candlestick Point community in San Francisco, CA 94134."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it come with parking?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. The home has one deeded parking space, and guest parking is available."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there laundry in the unit?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. There is a washer and dryer in the unit, for this home's use only."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there extra storage?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "There is no separate storage space. Inside the home there is a coat closet, built-in shelving and two bedroom closets."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the HOA dues and what do they cover?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "HOA dues are $738 per month. They cover common area maintenance, landscaping, garbage and recycling, the dog area, the fitness facility, water, gas, and management and security."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What amenities does Candlestick Point have?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The community has a gym, a dog play area, a grill and picnic area, and 24/7 security, with waterfront trails nearby."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I get to BART, Caltrain or SFO from here?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A shuttle, free to community members, connects Balboa Park BART, Bayshore Caltrain and SFO. Highway 101 is nearby for drivers."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the rules on pets?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "One cat or dog under 20 lbs is allowed, with a dog registration fee of up to $50 per month. Service animals, caged birds and fish are also allowed."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is being built at Candlestick Point?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Construction began in September 2026 on the redevelopment of the former Candlestick Park stadium site. The plan from the city and developer FivePoint calls for 7,200 homes, an innovation district with up to 2.8 million square feet of commercial space, 100 acres of parks and open space, and 2.5 miles of public waterfront. The first phase, about 700 homes, is expected in 2029. Plans and timelines can change."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When was the building built, and how many homes are in the complex?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The building was built in 2007. There are 176 homes in the complex."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I tour the home? Are there open houses?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Open houses are Saturday, November 21 and Sunday, November 22, 2026, from 2 to 4 PM. Private showings are also available by appointment, and you can request a day and time on this page."
+   }
+  }
+ ]
+};
+---
+<HubLayout title={TITLE} description={DESC} ogImage={SHARE} canonical={URL}>
+<link slot="head" rel="stylesheet" href="/listings/listing.css">
+<script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(FAQ_LD)}></script>
+<section class="l-cover">
+  <div class="stage">
+    <img id="cv" fetchpriority="high" width="2925" height="1763" src="/listings/401-crescent-ct-4101/cover.jpg" alt="Kitchen with blue-gray cabinetry and a waterfall peninsula, open to the dining and living area with greenery beyond the glass door">
+    <button type="button" class="arr prev" aria-label="Previous photo">&#8592;</button>
+    <button type="button" class="arr next" aria-label="Next photo">&#8594;</button>
+    <span class="count">1 / 28</span>
+    <a class="btn linen all" href="#photos">View all photos</a>
+  </div>
+</section>
+<section class="l-head"><div class="wrap"><div class="g">
+  <div>
+    <p class="sub terra">Candlestick Point</p>
+    <h1>Cove on <em>Crescent</em></h1>
+    <p class="tagline">Room to gather. A patio to linger.</p>
+    <p class="addr">401 Crescent Court #4101 · San Francisco, CA 94134</p>
+  </div>
+  <div class="r">
+    <p class="price"><small>Offered at</small>$515,000</p>
+    <p class="oh"><a href="#open-house">Open houses Nov 21 and 22 · 2 to 4 PM</a></p>
+    <a class="btn" href="#showing">Request a private showing</a>
+  </div>
+</div></div></section>
+
+<section class="l-specs band-dune"><div class="wrap"><div class="row">
+  <div class="it"><p class="n">1</p><p class="sub">Bedroom</p></div>
+  <div class="it"><p class="n">1</p><p class="sub">Bath<span>split layout</span></p></div>
+  <div class="it"><p class="n">807</p><p class="sub">Sq ft<span>per tax records</span></p></div>
+  <div class="it"><p class="n">1</p><p class="sub">Parking<span>deeded space</span></p></div>
+</div></div></section>
+
+<section class="sec l-unit"><div class="wrap">
+  <p class="sub terra">The home</p>
+  <div class="u">
+    <div class="pic"><img loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/home-1.jpg" alt="Dining area and living room with built-in wood shelving and the patio door beyond"></div>
+    <div class="t"><p>Greenery frames the windows of this ground-floor corner condominium at The Cove, where an extra large patio gives the home its own outdoor space. The open living area flows along a single run of wood flooring into the kitchen, beneath tall ceilings. A built-in wood shelf gives the living room its focal point, while recessed lighting and the glass door draw the eye toward the patio. The updated kitchen is the room everyone drifts toward. Quartz countertops, modern appliances and blue-gray cabinetry surround an oversized waterfall peninsula with plenty of counter space to prep, plate, and gather around for easy meals and connected conversations. Slide back the glass door and the day moves outside, ready for hosting friends or unwinding in private.</p></div>
+  </div>
+  <div class="u flip">
+    <div class="pic"><img loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/home-2.jpg" alt="Bedroom with shuttered windows looking onto greenery"></div>
+    <div class="t"><p>Storage starts at the front door with a coat closet and built-in shelving, and the generously sized bedroom follows suit with deep his and hers closets and efficient storage. The split bath adds flexibility, with a dual vanity and laundry closet in one room and the toilet and tub with shower in the other.</p><p>Gated Candlestick Point keeps daily routines conveniently close to home with a gym, a dog play area, a grill and picnic area, and 24/7 security. One deeded space and ample guest parking make arrivals simple. Nearby waterfront trails invite walks in the bay breeze and sunshine. A shuttle, free to community members, connects Balboa Park BART, Bayshore Caltrain and SFO for seamless transit to the city, the Peninsula, the East Bay and beyond. Drivers are just as well placed, with Highway 101 nearby. A one-bedroom that lives larger than it reads on paper, 401 Crescent Ct #4101 makes room for company and quiet alike.</p></div>
+  </div>
+</div></section>
+
+<section class="sec band-espresso l-comm"><div class="wrap">
+  <div class="top">
+    <div><p class="sub">The complex</p><h2>Candlestick <em>Point</em></h2></div>
+    <ul class="pts">
+      <li>Gym</li>
+      <li>Dog play area</li>
+      <li>Viewpoints</li>
+      <li>Access to walking trails</li>
+      <li class="wide">HOA dues cover common area maintenance, landscaping, garbage and recycling, the dog area, the fitness facility, water, gas, and management and security</li>
+    </ul>
+  </div>
+  <div class="shuttle2"><p class="sub">Free community shuttle</p><ul><li>Bayshore Caltrain</li><li>Balboa Park BART</li><li>SFO</li></ul></div>
+  <div class="trio">
+    <img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/complex-8.jpg" alt="Pergola and bench overlooking the bay">
+    <img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/complex-7.jpg" alt="Picnic area with bay outlook">
+    <img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/complex-6.jpg" alt="Community lawn and path">
+    <img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/complex-1.jpg" alt="Landscaped grounds at Candlestick Point">
+    <img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/complex-4.jpg" alt="Courtyard at The Cove">
+    <img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/complex-10.jpg" alt="Mailboxes and elevator lobby">
+  </div>
+</div></section>
+
+<section class="sec l-hood"><div class="wrap">
+  <div class="top">
+    <div><p class="sub terra">The neighborhood</p><h2>Around <em>Candlestick Point</em></h2></div>
+    <div class="cols">
+      <div><p class="sub">By the bay</p><p>Candlestick Point State Recreation Area, California's first urban state park, is nearby, with trails, picnic areas with grills, a public fishing pier, windsurfing and wide bay views. The main entrance is about a mile away: around 6 minutes by car or bike, or a 22-minute walk.</p></div>
+      <div><p class="sub">What's planned</p><p>Construction began in September 2026 on the long-planned redevelopment of the former Candlestick Park stadium site, about half a mile away by road. The plan from the city and developer FivePoint calls for 7,200 homes, an innovation district with up to 2.8 million square feet of commercial space, shops, restaurants and a hotel across 270 acres. The first phase, about 700 homes, is expected in 2029, with the full build-out running into the 2040s.</p><p class="more"><a class="tlink" href="https://www.sf.gov/news-mayor-lurie-breaks-ground-on-7200-long-awaited-new-homes-at-former-candlestick-park-site" target="_blank" rel="noopener">More about the project and plans</a></p></div>
+    </div>
+  </div>
+  <div class="nums">
+    <div><p class="n">7,200</p><p class="sub">Homes planned</p></div>
+    <div><p class="n">100</p><p class="sub">Acres of parks and open space planned</p></div>
+    <div><p class="n">2.5</p><p class="sub">Miles of public waterfront planned</p></div>
+  </div>
+  <p class="l-fine">Sources: California State Parks; City of San Francisco and FivePoint, September 2026. Travel times from Google Maps and vary with traffic. Plans and timelines can change.</p>
+</div></section>
+
+<section class="sec band-dune l-gal" id="photos"><div class="wrap">
+  <div class="head"><h2>Photos</h2><p>Tap any photo to view it larger</p></div>
+  <div class="grid"><button type="button" class="g" data-i="0" aria-label="Open photo: Kitchen, dining and living"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g01.jpg" alt="Kitchen, dining and living"></button><button type="button" class="g" data-i="1" aria-label="Open photo: Living room and patio door"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g02.jpg" alt="Living room and patio door"></button><button type="button" class="g" data-i="2" aria-label="Open photo: Dining area"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g03.jpg" alt="Dining area"></button><button type="button" class="g" data-i="3" aria-label="Open photo: Living and dining"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g04.jpg" alt="Living and dining"></button><button type="button" class="g" data-i="4" aria-label="Open photo: Kitchen peninsula"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g05.jpg" alt="Kitchen peninsula"></button><button type="button" class="g" data-i="5" aria-label="Open photo: Kitchen"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g06.jpg" alt="Kitchen"></button><button type="button" class="g" data-i="6" aria-label="Open photo: Kitchen and dining"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g07.jpg" alt="Kitchen and dining"></button><button type="button" class="g" data-i="7" aria-label="Open photo: Dining and kitchen"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g08.jpg" alt="Dining and kitchen"></button><button type="button" class="g" data-i="8" aria-label="Open photo: Living room"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g09.jpg" alt="Living room"></button><button type="button" class="g" data-i="9" aria-label="Open photo: Built-in shelving"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g10.jpg" alt="Built-in shelving"></button><button type="button" class="g" data-i="10" aria-label="Open photo: Bedroom"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g11.jpg" alt="Bedroom"></button><button type="button" class="g" data-i="11" aria-label="Open photo: Bedroom window"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g12.jpg" alt="Bedroom window"></button><button type="button" class="g" data-i="12" aria-label="Open photo: Bedroom"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g13.jpg" alt="Bedroom"></button><button type="button" class="g" data-i="13" aria-label="Open photo: Closets"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g14.jpg" alt="Closets"></button><button type="button" class="g" data-i="14" aria-label="Open photo: Dual vanity"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g15.jpg" alt="Dual vanity"></button><button type="button" class="g" data-i="15" aria-label="Open photo: Bath"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g16.jpg" alt="Bath"></button><button type="button" class="g" data-i="16" aria-label="Open photo: Bath"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g17.jpg" alt="Bath"></button><button type="button" class="g" data-i="17" aria-label="Open photo: Laundry closet"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g18.jpg" alt="Laundry closet"></button><button type="button" class="g" data-i="18" aria-label="Open photo: Patio"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g19.jpg" alt="Patio"></button><button type="button" class="g" data-i="19" aria-label="Open photo: Patio and garden"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g20.jpg" alt="Patio and garden"></button><button type="button" class="g" data-i="20" aria-label="Open photo: Patio"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g21.jpg" alt="Patio"></button><button type="button" class="g" data-i="21" aria-label="Open photo: Front entry"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g22.jpg" alt="Front entry"></button><button type="button" class="g" data-i="22" aria-label="Open photo: Bay outlook"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g23.jpg" alt="Bay outlook"></button><button type="button" class="g" data-i="23" aria-label="Open photo: Picnic area"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g24.jpg" alt="Picnic area"></button><button type="button" class="g" data-i="24" aria-label="Open photo: Lawn"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g25.jpg" alt="Lawn"></button><button type="button" class="g" data-i="25" aria-label="Open photo: Candlestick Point grounds"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g26.jpg" alt="Candlestick Point grounds"></button><button type="button" class="g" data-i="26" aria-label="Open photo: The Cove"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g27.jpg" alt="The Cove"></button><button type="button" class="g" data-i="27" aria-label="Open photo: Courtyard"><img class="ph-land" loading="lazy" decoding="async" src="/listings/401-crescent-ct-4101/g28.jpg" alt="Courtyard"></button></div>
+</div></section>
+
+<section class="sec l-det"><div class="wrap">
+  <h2>Details</h2>
+  <div class="cols">
+    <div>
+      <h3>Interior</h3>
+      <dl>
+        <div><dt>Kitchen</dt><dd>Quartz countertops, waterfall peninsula</dd></div>
+        <div><dt>Appliances</dt><dd>French-door refrigerator, gas range, microwave, dishwasher</dd></div>
+        <div><dt>Laundry</dt><dd>In-unit washer and dryer</dd></div>
+        <div><dt>Flooring</dt><dd>Wood, with tile in the bath</dd></div>
+        <div><dt>Outdoor space</dt><dd>Private patio facing the garden</dd></div>
+      </dl>
+      <h3>HOA</h3>
+      <dl>
+        <div><dt>Monthly dues</dt><dd>$738 per month</dd></div>
+      </dl>
+    </div>
+    <div>
+      <h3>Building</h3>
+      <dl>
+        <div><dt>Type</dt><dd>Condominium</dd></div>
+        <div><dt>Year built</dt><dd>2007</dd></div>
+        <div><dt>Building</dt><dd>The Cove</dd></div>
+        <div><dt>Level</dt><dd>Ground floor, corner</dd></div>
+        <div><dt>Homes in the complex</dt><dd>176</dd></div>
+        <div><dt>Guest parking</dt><dd>Available</dd></div>
+      </dl>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec band-dune"><div class="wrap"><div class="l-plan">
+  <div><p class="sub">Layout</p><h2>Floor plan</h2></div>
+  <div class="fp"><img src="/listings/401-crescent-ct-4101/floor-plan.jpg" alt="Floor plan of 401 Crescent Court #4101: foyer, kitchen, dining area, living room, en-suite bedroom, split bath, laundry and exclusive-use patio"></div>
+</div></div></section>
+
+<section class="sec l-faq"><div class="wrap"><div class="g">
+  <div><p class="sub terra">Good to know</p><h2>Frequently asked <em>questions</em></h2></div>
+  <div class="qs"><details><summary>How much is 401 Crescent Court #4101?</summary><p>401 Crescent Court #4101 in San Francisco is offered at $515,000.</p></details><details><summary>How big is the home?</summary><p>It is a one-bedroom, one-bath condominium with 807 square feet per tax records.</p></details><details><summary>Is there outdoor space?</summary><p>Yes. There is a private patio facing the garden, plus access to community amenities and nearby bayside trails.</p></details><details><summary>Where is 401 Crescent Court #4101?</summary><p>It is a ground-floor corner home at The Cove, in the gated Candlestick Point community in San Francisco, CA 94134.</p></details><details><summary>Does it come with parking?</summary><p>Yes. The home has one deeded parking space, and guest parking is available.</p></details><details><summary>Is there laundry in the unit?</summary><p>Yes. There is a washer and dryer in the unit, for this home's use only.</p></details><details><summary>Is there extra storage?</summary><p>There is no separate storage space. Inside the home there is a coat closet, built-in shelving and two bedroom closets.</p></details><details><summary>What are the HOA dues and what do they cover?</summary><p>HOA dues are $738 per month. They cover common area maintenance, landscaping, garbage and recycling, the dog area, the fitness facility, water, gas, and management and security.</p></details><details><summary>What amenities does Candlestick Point have?</summary><p>The community has a gym, a dog play area, a grill and picnic area, and 24/7 security, with waterfront trails nearby.</p></details><details><summary>How do I get to BART, Caltrain or SFO from here?</summary><p>A shuttle, free to community members, connects Balboa Park BART, Bayshore Caltrain and SFO. Highway 101 is nearby for drivers.</p></details><details><summary>What are the rules on pets?</summary><p>One cat or dog under 20 lbs is allowed, with a dog registration fee of up to $50 per month. Service animals, caged birds and fish are also allowed.</p></details><details><summary>What is being built at Candlestick Point?</summary><p>Construction began in September 2026 on the redevelopment of the former Candlestick Park stadium site. The plan from the city and developer FivePoint calls for 7,200 homes, an innovation district with up to 2.8 million square feet of commercial space, 100 acres of parks and open space, and 2.5 miles of public waterfront. The first phase, about 700 homes, is expected in 2029. Plans and timelines can change.</p></details><details><summary>When was the building built, and how many homes are in the complex?</summary><p>The building was built in 2007. There are 176 homes in the complex.</p></details><details><summary>Can I tour the home? Are there open houses?</summary><p>Yes. Open houses are Saturday, November 21 and Sunday, November 22, 2026, from 2 to 4 PM. Private showings are also available by appointment, and you can request a day and time on this page.</p></details></div>
+</div></div></section>
+
+<section class="sec band-dune l-open" id="open-house"><div class="wrap"><div class="g">
+  <div><p class="sub">Schedule</p><h2>Open <em>houses</em></h2></div>
+  <div class="dates">
+    <div class="d"><p class="sub">Saturday</p><p class="n">21</p><p class="sub">November</p><p class="t">2 to 4 PM</p></div>
+    <div class="d"><p class="sub">Sunday</p><p class="n">22</p><p class="sub">November</p><p class="t">2 to 4 PM</p></div>
+  </div>
+</div></div></section>
+
+<section class="l-sched" id="showing">
+  <div class="pic"><img src="/listings/401-crescent-ct-4101/showing.jpg" alt="Living room with the glass door open to the patio"></div>
+  <div class="panel">
+    <p class="sub terra">Private showings by appointment</p>
+    <h2>Schedule a <em>showing</em></h2>
+    <div class="step s1">
+      <p class="intro">Pick a day and time that works for you and I'll be in touch to confirm.</p>
+      <div class="days"><button type="button" class="arr prev" aria-label="Earlier days">&#8592;</button><div class="cards"></div><button type="button" class="arr next" aria-label="Later days">&#8594;</button></div>
+      <select class="time" aria-label="Choose a time"><option value="">Choose a time</option></select>
+      <div class="how"><button type="button" class="on" data-h="In person">In person</button><button type="button" data-h="Video chat">Video chat</button></div>
+      <button type="button" class="btn go" disabled>Next</button>
+    </div>
+    <div class="step s2" hidden>
+      <p class="picked"><span></span><a href="#showing" class="chg">Change time</a></p>
+      <form id="showing-form" name="showing-401-crescent" method="POST" action="/listings/401-crescent-ct-4101/" data-netlify="true" netlify-honeypot="bot-field">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="hidden" name="form-name" value="showing-401-crescent">
+        <input type="hidden" name="listing" value="401 Crescent Ct #4101">
+        <input type="hidden" name="day" value="">
+        <input type="hidden" name="time" value="">
+        <input type="hidden" name="how" value="In person">
+        <div class="field"><label for="sn">Full name</label><input id="sn" name="full_name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="sp">Phone</label><input id="sp" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="se">Email</label><input id="se" name="email" type="email" autocomplete="email" required></div>
+        <label class="check"><input type="checkbox" name="consent" value="yes" required><span>It's okay for Claudia to follow up by email, call or text about this showing. Reply STOP at any time to opt out. Message and data rates may apply.</span></label>
+        <button type="submit" class="btn send">Request this showing</button>
+      </form>
+    </div>
+    <div class="step s3" hidden><p class="intro">Thank you! Your request is in, and I'll confirm your showing shortly.</p></div>
+  </div>
+</section>
+
+<section class="l-by"><div class="wrap">
+  <div class="row">
+    <p class="sub">Presented by</p>
+    <p class="who">Claudia Lee<span>DRE #02380540</span><span class="c">claudia@claudiainsider.com</span></p>
+    <div class="logos"><img class="cl" src="/home/logo/primary_logos_1-black.svg" alt="claudia lee, SF real estate insider"><img class="vr" src="/listings/401-crescent-ct-4101/vantage-realty.jpg" alt="Vantage Realty"></div>
+  </div>
+  <p class="l-fine">Listed by Claudia Lee (DRE #02380540), Vantage Realty (DRE #02014153). Photography and floor plan by <a href="https://www.Open-Homes.com" target="_blank" rel="noopener">Open Homes Photography</a>. Square footage per tax records. All information is deemed reliable but not guaranteed and should be independently reviewed and verified.</p>
+</div></section>
+<div class="lb" id="lb" role="dialog" aria-label="Photo viewer"><button class="x" aria-label="Close">&times;</button><button class="p" aria-label="Previous photo">&#8592;</button><img alt=""><button class="n" aria-label="Next photo">&#8594;</button><p class="cap"></p></div>
+<script is:inline>
+(function(){var g=[].slice.call(document.querySelectorAll('.l-gal .g')),lb=document.getElementById('lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),i=0;
+function show(k){i=(k+g.length)%g.length;var s=g[i].querySelector('img');im.src=s.src;im.alt=s.alt;cap.textContent=s.alt+'  ·  '+(i+1)+' / '+g.length;lb.classList.add('on');}
+g.forEach(function(b,k){b.addEventListener('click',function(){show(k)})});
+lb.querySelector('.x').onclick=function(){lb.classList.remove('on')};
+lb.querySelector('.p').onclick=function(){show(i-1)};lb.querySelector('.n').onclick=function(){show(i+1)};
+lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('on')});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});
+})();
+</script>
+<script is:inline>
+(function(){var root=document.querySelector('.l-sched');if(!root)return;
+var cards=root.querySelector('.cards'),prev=root.querySelector('.prev'),next=root.querySelector('.next'),time=root.querySelector('.time'),go=root.querySelector('.go');
+var s1=root.querySelector('.s1'),s2=root.querySelector('.s2'),s3=root.querySelector('.s3'),how='In person',sel=null,off=0;
+var D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],ML=['January','February','March','April','May','June','July','August','September','October','November','December'];
+var now=new Date(),tm=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1),st=new Date(2026,10,19);if(tm>st)st=tm;
+var days=[];for(var i=0;i<18;i++){days.push(new Date(st.getFullYear(),st.getMonth(),st.getDate()+i));}
+for(var h=9;h<=17;h++){var o=document.createElement('option');o.textContent=((h+11)%12+1)+':00 '+(h<12?'AM':'PM');time.appendChild(o);}
+function draw(){cards.innerHTML='';days.slice(off,off+3).forEach(function(d){var b=document.createElement('button');b.type='button';b.className='day'+(sel&&+sel===+d?' on':'');b.innerHTML=D[d.getDay()]+'<b>'+d.getDate()+'</b>'+M[d.getMonth()];b.onclick=function(){sel=d;draw();chk();};cards.appendChild(b);});prev.disabled=off===0;next.disabled=off+3>=days.length;}
+function chk(){go.disabled=!(sel&&time.value);}
+prev.onclick=function(){off=Math.max(0,off-3);draw();};next.onclick=function(){off=Math.min(days.length-3,off+3);draw();};
+time.onchange=chk;
+[].forEach.call(root.querySelectorAll('.how button'),function(b){b.onclick=function(){[].forEach.call(root.querySelectorAll('.how button'),function(x){x.classList.remove('on')});b.classList.add('on');how=b.getAttribute('data-h');};});
+go.onclick=function(){root.querySelector('.picked span').textContent=D[sel.getDay()]+', '+ML[sel.getMonth()]+' '+sel.getDate()+' at '+time.value+' · '+how;s1.hidden=true;s2.hidden=false;};
+root.querySelector('.chg').onclick=function(e){e.preventDefault();s2.hidden=true;s1.hidden=false;};
+var f=root.querySelector('#showing-form');
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  f.elements.day.value=D[sel.getDay()]+', '+ML[sel.getMonth()]+' '+sel.getDate()+', '+sel.getFullYear();
+  f.elements.time.value=time.value;f.elements.how.value=how;
+  var b=f.querySelector('.send');b.disabled=true;b.textContent='Sending';
+  var done=function(){s2.hidden=true;s3.hidden=false;s3.scrollIntoView({block:'nearest'});};
+  if(!window.fetch){f.submit();return;}
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+    .then(function(r){if(!r.ok)throw 0;done();})
+    .catch(function(){b.disabled=false;b.textContent='Request this showing';f.submit();});
+});
+draw();})();
+</script>
+<script is:inline>
+(function(){var st=document.querySelector('.l-cover .stage');if(!st)return;var im=st.querySelector('#cv'),ct=st.querySelector('.count');
+var g=[].slice.call(document.querySelectorAll('.l-gal .g img')),first={src:im.src,alt:im.alt},i=0;
+function show(k){i=(k+g.length)%g.length;var x=i===0?first:g[i];im.src=x.src;im.alt=x.alt;ct.textContent=(i+1)+' / '+g.length;}
+st.querySelector('.prev').onclick=function(){show(i-1)};st.querySelector('.next').onclick=function(){show(i+1)};
+var x0=null;st.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+st.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)show(i+(d<0?1:-1));x0=null});
+document.addEventListener('keydown',function(e){if(document.getElementById('lb').classList.contains('on'))return;if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});
+})();
+</script>
+</HubLayout>
