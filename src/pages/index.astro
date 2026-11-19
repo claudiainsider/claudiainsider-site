@@ -63,6 +63,16 @@ body.has-opener.scrolled .burger span{background:var(--espresso)}
   .opener .ov img.lg{max-width:70%}
   .opener .arrows button{width:38px;height:38px;font-size:16px}
 }
+.h-list .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px}
+.h-list .card{display:grid;grid-template-columns:2fr 1fr;background:#fff;text-decoration:none}
+.h-list .card .b{padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;justify-content:center}
+.h-list .card h3{font-size:clamp(28px,2.8vw,40px);line-height:1.1}
+.h-list .card .addr{font-weight:300;margin:14px 0 0}
+.h-list .card .r{width:48px;height:2px;background:var(--terracotta);margin:22px 0}
+.h-list .card .spec{font-size:14px;margin:0}
+.h-list .card .spec b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;margin-bottom:6px}
+.h-list .card .btn{align-self:flex-start;margin-top:26px}
+@media(max-width:900px){.h-list .card{grid-template-columns:1fr}.h-list .card .btn{align-self:stretch;text-align:center}}
 </style>
 <section class="opener" id="top">
   <div class="slide on">
@@ -78,6 +88,20 @@ body.has-opener.scrolled .burger span{background:var(--espresso)}
     <div class="dots" aria-hidden="true"></div>
   </div>
 </section>
+<section class="sec h-list"><div class="wrap">
+  <div class="head"><h2>Listings</h2></div>
+  <a class="card" href="/listings/401-crescent-ct-4101/">
+    <img class="ph-land" loading="lazy" src="/listings/401-crescent-ct-4101/band.jpg" alt="Living and dining area at 401 Crescent Court #4101">
+    <div class="b">
+      <p class="sub terra">Candlestick Point</p>
+      <h3>Cove on <em>Crescent</em></h3>
+      <p class="addr">401 Crescent Court #4101 · San Francisco, CA 94134</p>
+      <div class="r"></div>
+      <p class="spec"><b>$515,000</b>1 bed · 1 bath · 807 sq ft</p>
+      <span class="btn">View the listing</span>
+    </div>
+  </a>
+</div></section>
 <script is:inline>
 document.body.classList.add('has-opener');
 let ci=0;const imgs=document.querySelectorAll('.opener .car img');const dots=document.querySelector('.opener .dots');imgs.forEach((_,i)=>{const d=document.createElement('i');if(i===0)d.className='on';dots.appendChild(d);});
